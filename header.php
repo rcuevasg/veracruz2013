@@ -30,10 +30,6 @@
 	    <meta name="description" content="<?php echo '' . get_bloginfo ( 'description' );  ?>">
 	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css" />
-		<!-- <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="<?php //bloginfo('stylesheet_directory'); ?>/css/iphone4.css" />-->
-		<!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="<?php //bloginfo('stylesheet_directory'); ?>/css/small600.css" /> -->
-	    <!-- <link rel="stylesheet" media="screen and (min-width: 601px)" href="<?php //bloginfo( 'stylesheet_url' ); ?>" />  -->
 	    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> 
 	    
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
