@@ -68,11 +68,11 @@
 					* then the sidebar simply doesn't exist, so we'll hard-code in
 					* some default sidebar stuff just in case.
 					*/
-					if ( is_active_sidebar( 'weather-widget-area' ) ) : ?>
+					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
 
-						<div class="weatherArea">
+						<div class="searchHeaderArea">
 							<?php //print obtenFechaEspaniol(); ?>
-							<?php dynamic_sidebar( 'weather-widget-area' ); ?>
+							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
 						</div>
 					<?php endif; ?>
 				</section>

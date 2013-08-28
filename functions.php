@@ -57,9 +57,9 @@ register_nav_menus(array(
 function veracruz2013_widgets_init() {
 	// Area 1, located int the header.
 	register_sidebar( array(
-		'name' => __( 'Weather Widget Area', 'veracruz2013' ),
-		'id' => 'weather-widget-area',
-		'description' => __( 'Weather widget area on the header', 'veracruz2013' ),
+		'name' => __( 'Widget Area Buscador', 'veracruz2013' ),
+		'id' => 'buscador-widget-area',
+		'description' => __( 'Widget area en el header para el buscador.', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
