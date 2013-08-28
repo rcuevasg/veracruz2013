@@ -47,8 +47,7 @@ add_theme_support('automatic-feed-links');
  *Defining a top menu, main menu and bottom menu
  */
 register_nav_menus(array(
-	'top-menu' => __('Top menu','veracruz2013'),
-	'bottom-menu' => __('Bottom menu', 'veracruz2013')
+	'top-menu' => __('Top menu','veracruz2013')
 )
 );
 

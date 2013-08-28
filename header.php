@@ -102,15 +102,22 @@
 				</hgroup>
 				</section>
 				
-				<?php 
-				if (!is_home() && !is_front_page()) {
-					?>
-					<div id="barraSeparadoraHeader"></div>
+				<nav>
 					<?php
-				}
-				?>
+					//Checks if there is something on top-menu
+					if (has_nav_menu('top-menu')):
+						//If so, adds it to the page
+						wp_nav_menu(array('menu'=>'Top menu',
+										'container'=>'div',
+										'container_class'=>'collapse navbar-collapse navbar-ex1-collapse',
+										'items_wrap' => '<ul class="nav navbar-nav">%3$s</ul>',
+										'theme-location'=>'top-menu'));
+					endif; 
+					?>
+				</nav>
 	
 			</header>
+			
 
 			<section id="main" role="main" class="row">
 			
