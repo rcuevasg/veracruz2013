@@ -28,6 +28,7 @@
 		?></title>
 			
 	    <meta name="description" content="<?php echo '' . get_bloginfo ( 'description' );  ?>">
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/normalize.css" />
 		<!-- <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="<?php //bloginfo('stylesheet_directory'); ?>/css/iphone4.css" />-->
@@ -37,7 +38,7 @@
 	    
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
-		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.custom.78184.js"></script>
+		
 
 		
 <?php
@@ -56,6 +57,7 @@
 		 */
 		wp_head();
 ?>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
 	</head>
 	<body <?php body_class(); ?>>
 	
