@@ -145,9 +145,9 @@ function veracruz2013_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Colocar Direecion en un Widget del Footer', 'veracruz2013' ),
+		'name' => __( 'Widget para la dirección en el area footer', 'veracruz2013' ),
 		'id' => 'direccion-home-widget-area',
-		'description' => __( 'Widget para la direccion en el area footer.', 'veracruz2013' ),
+		'description' => __( 'Colocar Dirección en el Footer.', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
