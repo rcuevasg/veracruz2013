@@ -62,6 +62,12 @@
 				</div>
 			<?php endif; ?>
 			
+			<?php if ( is_active_sidebar( 'fifth-footer-widget-area' ) ) : ?>
+				<div class="widget-footer span2">
+					<?php dynamic_sidebar( 'fifth-footer-widget-area' ); ?>
+				</div>
+			<?php endif; ?>
+			
 			<?php if ( is_active_sidebar( 'direccion-home-widget-area' ) ) : ?>
 				<div class="widget-footer direccionFooter">
 					<?php dynamic_sidebar( 'direccion-home-widget-area' ); ?>
