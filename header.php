@@ -115,6 +115,69 @@
 					endif; 
 					?>
 				</nav>
+				
+				<section id="mainCarousel" class="container">
+				
+				<div id="divCarrusel" class="col-lg-12">
+
+					<div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="2000">
+					
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+
+					
+					<div class="carousel-inner">
+						<?php
+						$categoriaSlider = get_category_by_slug('slider');
+						$categoriaSlider = $categoriaSlider->term_id;
+						      
+						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=3&post_type=post');
+						 while ($notasSlider->have_posts()) :
+						 	$notasSlider->the_post();
+						 	$wp_query->in_the_loop = true;
+						 	?>
+						 	<div class="item active">
+						 		<?php //Obtenemos la url de la imagen destacada
+					    		$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+					    		$thumbnailsrc = "";
+					    		if (!empty($domsxe)) {
+						    		$thumbnailsrc = $domsxe->attributes()->src;
+						    		$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
+						    	} else {
+							    	$urlTema = get_bloginfo('template_url');
+							    	$thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";
+							    }
+							   
+								if (!empty($thumbnailsrc)):
+								?>
+									<div class="">
+								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=1100&h=330' border=0 /></span>
+								 	</div>
+								 <?php
+								 endif;
+								 ?>
+				
+								<div class="carousel-caption">
+								<?php
+								print "<h4><a href='". get_permalink() ."' title='Ir a ". get_the_title() ."'>" . get_the_title() . "</a></h4>";
+								?>
+								</div>
+							</div>
+								<?php
+							endwhile;
+						?>
+						
+					</div>
+
+					
+					</div><!-- end #carousel-destacados -->
+
+				</div><!-- end #divCarrusel -->
+				
+				</section> <!-- end #mainCarrusel -->
 	
 			</header>
 			
