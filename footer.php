@@ -49,6 +49,23 @@
 	<footer role="contentinfo" class="span12">
 		<div id="footer-content" class="row">
 		
+        	<?php
+				//Checks if there is something on top-menu
+				if (has_nav_menu('redes-sociales-menu')):
+				//If so, adds it to the page
+				wp_nav_menu(array('menu'=>'Redes Sociales menu',
+								'container'=>'div',
+								'container-class'=>'bottom-menu',
+								'theme-location'=>'bottom-menu'));
+				endif;
+			?>
+            
+            <?php if ( is_active_sidebar( 'buscadorBottom-widget-area' ) ) : ?>
+				<div class="widget-footer buscadorBottom">
+					<?php dynamic_sidebar( 'buscadorBottom-widget-area' ); ?>
+				</div>
+			<?php endif; ?>
+        
 			<?php
 			/* When we call the dynamic_sidebar() function, it'll spit out
 			* the widgets for that widget area. If it instead returns false,
@@ -78,18 +95,6 @@
 					<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
-			
-			
-			<?php
-				//Checks if there is something on top-menu
-				if (has_nav_menu('bottom-menu')):
-				//If so, adds it to the page
-				wp_nav_menu(array('menu'=>'Bottom menu',
-								'container'=>'div',
-								'container-class'=>'bottom-menu',
-								'theme-location'=>'bottom-menu'));
-				endif;
-			?>
 			
 			<?php if ( is_active_sidebar( 'direccion-home-widget-area' ) ) : ?>
 				<div class="widget-footer direccionFooter">

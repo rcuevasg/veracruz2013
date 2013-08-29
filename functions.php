@@ -47,7 +47,8 @@ add_theme_support('automatic-feed-links');
  *Defining a top menu, main menu and bottom menu
  */
 register_nav_menus(array(
-	'top-menu' => __('Top menu','veracruz2013')
+	'top-menu' => __('Top menu','veracruz2013'),
+	'redes-sociales-menu' => __('Redes Sociales menu','veracruz2013')
 )
 );
 
@@ -57,9 +58,9 @@ register_nav_menus(array(
 function veracruz2013_widgets_init() {
 	// Area 1, located int the header.
 	register_sidebar( array(
-		'name' => __( 'Widget Area Buscador', 'veracruz2013' ),
+		'name' => __( 'Buscador Widget Area Header', 'veracruz2013' ),
 		'id' => 'buscador-widget-area',
-		'description' => __( 'Widget area en el header para el buscador.', 'veracruz2013' ),
+		'description' => __( 'Buscador Widget para el area header.', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
@@ -126,6 +127,27 @@ function veracruz2013_widgets_init() {
 		'name' => __( 'Fifth footer widget area', 'veracruz2013' ),
 		'id' => 'fifth-footer-widget-area',
 		'description' => __( 'Fifth widget area on the footer', 'veracruz2013' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+	
+	//Area 8, first area on the footer
+	register_sidebar( array(
+		'name' => __( 'Buscador Widget Area Footer', 'veracruz2013' ),
+		'id' => 'buscadorBottom-widget-area',
+		'description' => __( 'Buscador Widget para el area footer.', 'veracruz2013' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Colocar Direecion en un Widget del Footer', 'veracruz2013' ),
+		'id' => 'direccion-home-widget-area',
+		'description' => __( 'Widget para la direccion en el area footer.', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
