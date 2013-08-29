@@ -11,40 +11,6 @@
  */
 ?>
 
-	<div id="enLinea">
-	
-	<?php if ( is_active_sidebar( 'tvmas-home-widget-area' ) ) : ?>
-			<div class="onLine dashedVertical">
-				<?php dynamic_sidebar( 'tvmas-home-widget-area' ); ?>
-			</div>
-		<?php endif; ?>
-		
-		<?php if ( is_active_sidebar( 'radiomas-home-widget-area' ) ) : ?>
-			<div class="onLine" >
-				<?php dynamic_sidebar( 'radiomas-home-widget-area' ); ?>
-			</div>
-		<?php endif; ?>
-	
-	</div> <!-- Fin #enLinea -->
-	
-	<div id="lastWidgetHome">
-	
-	<?php if ( is_active_sidebar( 'sintonizanos-home-widget-area' ) ) : ?>
-			<div class="onLine dashedVertical">
-				<?php dynamic_sidebar( 'sintonizanos-home-widget-area' ); ?>
-			</div>
-		<?php endif; ?>
-		
-		<?php if ( is_active_sidebar( 'boletinencuesta-home-widget-area' ) ) : ?>
-			<div class="onLine encuestaNewsletter" >
-				<div id="innerContainer">
-				<?php dynamic_sidebar( 'boletinencuesta-home-widget-area' ); ?>
-				</div><!-- Fin #innerContainer -->
-			</div>
-		<?php endif; ?>
-	
-	</div> <!-- Fin #lastWidgetHome -->
-
 	
 	<footer role="contentinfo" class="span12">
 		<div id="footer-content" class="row">
@@ -55,8 +21,8 @@
 				//If so, adds it to the page
 				wp_nav_menu(array('menu'=>'Redes Sociales menu',
 								'container'=>'div',
-								'container-class'=>'bottom-menu',
-								'theme-location'=>'bottom-menu'));
+								'container-class'=>'redes-sociales-menu',
+								'theme-location'=>'redes-sociales-menu'));
 				endif;
 			?>
             
