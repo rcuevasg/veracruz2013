@@ -8,7 +8,7 @@
  */
 ?>
 
-<div id="sidebar">
+<aside id="sidebar" class="col-lg-4" >
 			
 <?php
 	/* When we call the dynamic_sidebar() function, it'll spit out
@@ -23,4 +23,4 @@
 			</ul>
 <?php endif; ?>
 
-</div>
+</aside>

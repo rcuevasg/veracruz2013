@@ -11,9 +11,9 @@
  */
 ?>
 
-	
-	<footer role="contentinfo" class="span12">
-		<div id="footer-content" class="row">
+	</section><!-- end #principalContent -->
+	<footer role="contentinfo" class="col-lg-12">
+		<div id="footer-content" class="container">
 		
         	<?php
 				//Checks if there is something on top-menu
