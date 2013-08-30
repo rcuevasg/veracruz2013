@@ -31,6 +31,7 @@
 	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 	    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> 
+	    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 	    
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
@@ -61,8 +62,23 @@
 				
 			<header id="header" role="banner">
 				
-				<section id="topBar">
-					<?php
+				<section id="topBar" class="container">
+				
+					
+				<hgroup id="site-title" class="col-md-5 col-lg-5 hidden-xs">
+					
+					<h1 >
+					<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						<span><?php bloginfo( 'name' ); ?></span>
+						<img src="<?php bloginfo('template_url') ?>/images/logo.png" border="0" class="img-responsive" />
+					</a>
+					</h1>
+			  
+					<h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
+					
+				</hgroup>
+				
+				<?php
 					/* When we call the dynamic_sidebar() function, it'll spit out
 					* the widgets for that widget area. If it instead returns false,
 					* then the sidebar simply doesn't exist, so we'll hard-code in
@@ -70,39 +86,15 @@
 					*/
 					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
 
-						<div class="searchHeaderArea">
+						<div class="searchHeaderArea col-md-7 col-lg-7 pull-right">
 							<?php //print obtenFechaEspaniol(); ?>
 							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
 						</div>
 					<?php endif; ?>
-				</section>
-					
-				<section id="mainCarousel">
-				<hgroup id="site-title">
-					
-					<?php
-					//Checks if there is something on top-menu
-					/*if (has_nav_menu('top-menu')):
-						//If so, adds it to the page
-						wp_nav_menu(array('menu'=>'Top menu',
-										'container'=>'div',
-										'container-class'=>'top-menu',
-										'theme-location'=>'top-menu'));
-					endif; */
-					?>
 				
-					<h1>
-					<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						<span><?php bloginfo( 'name' ); ?></span>
-					</a>
-					</h1>
-			  
-					<h2><span style="visibility:hidden;"><?php bloginfo( 'description' ); ?></span></h2>
-					
-				</hgroup>
 				</section>
 				
-				<nav>
+				<nav class="col-lg-12">
 					<?php
 					//Checks if there is something on top-menu
 					if (has_nav_menu('top-menu')):

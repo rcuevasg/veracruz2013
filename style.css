@@ -13,3 +13,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @import url('bootstrap/bootstrap.css');
+
+/** Estilos del header **/
+#site-title h1 span {
+	display: none;
+}
+
+#site-title h4 {
+	display: none;
+}
+
+.searchHeaderArea {
+	width: 30%;
+	margin-top: 3%;
+}
+
+/** Fin de los estilos del header **/

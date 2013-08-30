@@ -23,6 +23,11 @@ Archivo de funciones del tema
 endif;*/
 
 /*
+ *Adding theme support fot HTML5
+ */
+ add_theme_support('html5');
+
+/*
  *Adding theme support for thumbnails
  */
 add_theme_support('post-thumbnails');
