@@ -38,7 +38,7 @@ Template Name: Front page
                                 <div class="post-date"><?php the_time( 'j M' ); ?></div>
                                 <h1><?php the_title(); ?></h1>
                                 <?php the_excerpt(); ?>
-                                <a href="<?php the_permalink(); ?>" class="btn read-more">Leer Más</a>
+                                <!--<a href="<?php the_permalink(); ?>" class="btn read-more">Leer Más</a> -->
                             </div> <!-- Terminar DIV post-summary span6 -->
                         </div> <!-- Terminar DIV post row-fluid mover-der -->
                     <?php 
