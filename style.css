@@ -28,6 +28,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin-top: 3%;
 }
 
+.navbar-inverse {
+	background-color: #FFFFFF;
+    border: 2px solid #ECECEC;
+    padding: 2px;
+    margin-left: 2%;
+    width: 96%;
+}
+
+#mainMenu li {
+	border-right: 2px solid #EBEBEB;
+    height: 35px;
+    margin: 7px;
+    text-transform: uppercase;
+}
+
+#mainMenu li a {
+	padding-bottom: 15px;
+    padding-top: 7px;
+}
+
+.navbar-collapse {
+	background: #DEDEDE;
+}
+
 /** Fin de los estilos del header **/
 /* FONT FACE */
 @font-face {
