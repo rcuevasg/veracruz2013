@@ -22,6 +22,43 @@ Archivo de funciones del tema
 	$conten_width = 600;
 endif;*/
 
+
+/**
+ * jquery.js
+ *
+ * Load up jquery-1.10.2.min.js using the WordPress wp_enqueue_script function
+ *
+ */
+
+if( !is_admin()){
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '');
+   wp_enqueue_script('jquery');
+   
+   /**
+	* jQuery Cycle*/
+	//wp_enqueue_script('cycle', get_bloginfo('template_directory').'/js/jquery.cycle.all.js'); 
+	
+	
+	/**
+	* Modernizr.js
+	* Load up modernizr.min.js using the WordPress wp_enqueue_script function 	*/
+	
+	//wp_enqueue_script( 'modernizr', get_bloginfo('template_directory').'/js/modernizr.custom.49865.js');
+	
+	/**
+	* My code for lettering*/
+	
+	//wp_enqueue_script('lettering', get_bloginfo('template_directory').'/js/jquery.lettering-0.6.1.min.js'); 
+	
+	/**
+	* My code for jquery*/
+	
+	//wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
+	
+}
+
+
 /*
  *Adding theme support fot HTML5
  */

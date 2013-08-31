@@ -94,7 +94,15 @@
 				
 				</section>
 				
-				<nav class="col-lg-12">
+				<nav id="mainMenu" class="navbar navbar-inverse col-md-12 col-lg-12" role="navigation">
+						<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" > 
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button> 
+						<center><img src="<?php bloginfo('template_url') ?>/images/logo.png" border="0" class="img-responsive visible-xs" /></center>
+						</div>
 					<?php
 					//Checks if there is something on top-menu
 					if (has_nav_menu('top-menu')):
