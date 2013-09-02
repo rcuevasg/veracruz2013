@@ -52,6 +52,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: #DEDEDE;
 }
 
+.carousel-caption {
+    height: 100%;
+    left: 0;
+    padding-bottom: 30px;
+    right: 70%;
+    top: 0;
+    background: rgba(201,198,193,.5);
+}
+
+.carousel-caption h4 {
+	background: none repeat scroll 0 0 #DEDEDC;
+    border: 3px solid #FFFFFF;
+    height: 50%;
+    margin: 10px auto;
+    width: 70%;
+}
+
+.carousel-caption h4 a {
+	color: #8B857C;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 /** Fin de los estilos del header **/
 /* FONT FACE */
 @font-face {
