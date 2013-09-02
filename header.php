@@ -164,6 +164,7 @@
 								<?php
 								print "<h4><a href='". get_permalink() ."' title='Ir a ". get_the_title() ."'>" . get_the_title() . "</a></h4>";
 								?>
+								<a class="btn btn-default read-more" href="<?php print get_permalink(); ?>" title="Leer m&aacute;s de <?php print get_the_title(); ?>">Leer m&aacute;s</a>
 								</div>
 							</div>
 								<?php
