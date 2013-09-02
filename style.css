@@ -131,10 +131,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 .lista-post-home{
 	margin: 20px 0;
- 	padding-bottom: 250px;
-  	border-bottom: 1px solid #c5c5c5;
   	position:relative;
 	text-align:justify;
+	/* padding-bottom: 250px;
+  	border-bottom: 1px solid #c5c5c5; */
 	}
 .post-date {
   display: block;
@@ -150,6 +150,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
   background: transparent url(images/date_ribbon.png) no-repeat;
   font: normal 14px "GandhiSans";
 }
-
+.cls{
+	clear:both;
+  	border-bottom: 1px solid #c5c5c5;
+	padding-bottom:20px;
+	}
+.read-more{
+	float:right;
+	background: #206b33;
+  	border: 2px solid #fff;
+  	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  	color: #fff;
+  	text-transform: uppercase;
+  	font: bold 13px/18px "GandhiSans";
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  	-webkit-border-radius: 0;
+  	-moz-border-radius: 0;
+  	border-radius: 0;
+  	padding: 4px;
+	}
+.read-more:hover {
+  	background: #00894E;
+  	color: #FFF;
+}
 /* termina style para el front page */
 
