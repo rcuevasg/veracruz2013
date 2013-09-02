@@ -39,8 +39,8 @@ Template Name: Front page
                                 <div class="post-date"><?php the_time( 'j M' ); ?></div>
                                 <h3><?php the_title(); ?></h3>
                                 <?php the_excerpt(); ?>
-                                <!--<a href="<?php the_permalink(); ?>" class="btn read-more">Leer Más</a> -->
                             </div>
+                            <div class="cls"></div>
                         </div> <!-- Terminar DIV post -->
                     <?php 
 					endwhile;  //Terminar while de post dentro de BLOG
