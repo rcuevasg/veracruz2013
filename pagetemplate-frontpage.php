@@ -5,7 +5,7 @@ Template Name: Front page
 ?>
 <?php get_header(); ?>
 				<section id="principalContent" class="container">
-				<section class="col-lg-8 post-home">
+				<section class="col-md-8 col-lg-8 post-home">
 						 <?php
 						$categoriaBlog = get_category_by_slug('blog');
 						$categoriaBlog = $categoriaBlog->term_id;

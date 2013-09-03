@@ -8,7 +8,7 @@
  */
 ?>
 
-<aside id="sidebar" class="col-lg-4" >
+<aside id="sidebar" class="col-md-4 col-lg-4" >
 			
 <?php
 	/* When we call the dynamic_sidebar() function, it'll spit out
