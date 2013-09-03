@@ -208,6 +208,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin: 20px 0;
   	position:relative;
 	text-align:justify;
+	z-index:1;
 	/* padding-bottom: 250px;
   	border-bottom: 1px solid #c5c5c5; */
 	}
@@ -218,13 +219,34 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 4px 0 0 7px;
   position: absolute;
   top:30px;
-  left: -340px;
+  left: -100%;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   background: transparent url(images/date_ribbon.png) no-repeat;
   font: normal 14px "GandhiSans";
+  z-index:100;
 }
+@media (max-width: 991px) {
+	.post-date {
+		left:0%;
+		top:-150%;
+	}
+}
+@media (max-width: 768px) {
+		.post-date {
+		left:0%;
+		top:-130%;
+	}
+}
+
+@media (max-width: 400px) {
+		.post-date {
+		left:0%;
+		top:-55%;
+	}
+}
+
 .cls{
 	clear:both;
   	border-bottom: 1px solid #c5c5c5;
