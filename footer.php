@@ -11,8 +11,11 @@
  */
 ?>
 
+
 	</section><!-- end #principalContent -->
 	<footer role="contentinfo" class="col-lg-12">
+		<span class='img img-responsive'><img src="<?php bloginfo('template_url') ?>/images/footer_separator.png" border="0" class="img-responsive" /></span>
+		
 		<div id="footer-content" class="container">
 		
         	<?php
@@ -39,37 +42,37 @@
 			* some default sidebar stuff just in case.
 			*/
 			if ( is_active_sidebar( 'first-footer-widget-area' ) ) : ?>
-				<div class="widget-footer span2">
+				<div class="widget-footer col-md-2 col-lg-2">
 					<?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'second-footer-widget-area' ) ) : ?>
-				<div class="widget-footer span2">
+				<div class="widget-footer col-md-2 col-lg-2">
 					<?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'third-footer-widget-area' ) ) : ?>
-				<div class="widget-footer span2">
+				<div class="widget-footer col-md-3 col-lg-3">
 					<?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) : ?>
-				<div class="widget-footer span2">
+				<div class="widget-footer col-md-3 col-lg-3">
 					<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'fifth-footer-widget-area' ) ) : ?>
-				<div class="widget-footer span2">
+				<div class="widget-footer col-md-2 col-lg-2">
 					<?php dynamic_sidebar( 'fifth-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'direccion-home-widget-area' ) ) : ?>
-				<div class="widget-footer direccionFooter">
+				<div class="widget-footer direccionFooter col-md-12 col-lg-12">
 					<?php dynamic_sidebar( 'direccion-home-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
