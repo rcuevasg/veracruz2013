@@ -80,6 +80,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .carousel-caption .btn {
 	margin-right: 15%;
+	margin-top: 10px;
 }
 
 .carousel-indicators-wrapper {
@@ -265,6 +266,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	-moz-border-radius: 0;
   	border-radius: 0;
   	padding: 4px;
+  	margin-top: 40px;
 	}
 .read-more:hover {
   	background: #00894E;
