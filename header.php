@@ -121,12 +121,6 @@
 				<div id="divCarrusel" class="col-lg-12">
 
 					<div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="2000">
-					
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					</ol>
 
 					
 					<div class="carousel-inner">
@@ -172,7 +166,15 @@
 						?>
 						
 					</div>
-
+					
+					<div class="carousel-indicators-wrapper">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+						<div class="border-indicators"></div>
+					</div>
 					
 					</div><!-- end #carousel-destacados -->
 

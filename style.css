@@ -82,6 +82,51 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin-right: 15%;
 }
 
+.carousel-indicators-wrapper {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-indicators-wrapper .carousel-indicators {
+	background: none repeat scroll 0 0 #FFFFFF;
+    display: block;
+    height: 20px;
+    left: 75%;
+    position: relative;
+    top: 20%;
+    width: 10%;
+    z-index: 2;
+}
+
+.carousel-indicators-wrapper .border-indicators {
+	border-bottom: 2px solid #ae3f57;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    display: block;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    z-index: 1;
+}
+
+.carousel-indicators li {
+	background: #8B857C;
+	border: 1px solid #8B857C;
+	border-radius: 5px;
+	width: 10px;
+	height: 10px;
+}
+
+.carousel-indicators .active {
+	background: #BF0728;
+	border: 1px solid #BF0728;
+	border-radius: 5px;
+	width: 10px;
+	height: 10px;
+	margin: auto;
+}
+
 /** Fin de los estilos del header **/
 /* FONT FACE */
 @font-face {
