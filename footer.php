@@ -72,7 +72,7 @@
 			<?php endif; ?>
 			
 			<?php if ( is_active_sidebar( 'direccion-home-widget-area' ) ) : ?>
-				<div class="widget-footer direccionFooter col-md-12 col-lg-12">
+				<div class="widget-footer container direccionFooter col-md-12 col-lg-12">
 					<?php dynamic_sidebar( 'direccion-home-widget-area' ); ?>
 				</div>
 			<?php endif; ?>

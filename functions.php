@@ -99,7 +99,12 @@ add_filter('excerpt_more', 'new_excerpt_more');
  */
 register_nav_menus(array(
 	'top-menu' => __('Top menu','veracruz2013'),
-	'redes-sociales-menu' => __('Redes Sociales menu','veracruz2013')
+	'redes-sociales-menu' => __('Redes Sociales menu','veracruz2013'),
+	'footer-blog-menu' => __('Footer blog menu','veracruz2013'),
+	'footer-gobierno-menu' => __('Footer gobierno menu','veracruz2013'),
+	'footer-servicios-menu' => __('Footer servicios menu','veracruz2013'),
+	'footer-prensa-menu' => __('Footer prensa menu','veracruz2013'),
+	'footer-contacto-menu' => __('Footer contacto menu','veracruz2013')
 )
 );
 
