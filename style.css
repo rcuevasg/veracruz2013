@@ -272,6 +272,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	background: #00894E;
   	color: #FFF;
 }
+
 #menu-redes-sociales-menu li {
 	list-style:none; 
 	float:left;
@@ -301,3 +302,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-align:center;
 	}
 /* termina style para el front page */
+
+/* termina style para el front page */
+
+
+/* Estilos para el footer */
+.direccionFooter {
+	text-align: center;
+	display: inline-block;
+    margin: 20px 0;
+}
+/* Fin de los estilos del footer */
+
+
