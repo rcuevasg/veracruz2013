@@ -273,27 +273,45 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	color: #FFF;
 }
 
-#menu-redes-sociales-menu li {
+/* termina style para el front page */
+
+/* inicia style sidebar*/
+#menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
 	list-style:none; 
 	float:left;
 	margin-left:20px;
-	width: 50px !important;
-	height: 50px !important;
 	}
-#menu-redes-sociales-menu .iconFacebook {
+.iconFacebook a{
 	background-image:url(images/facebook_tag.png);
-	background-size: 50px 50px;	
+	background-size: 50px 50px;
+	display:block;
+	height:50px;
+	width:50px;	
+	} 
+.iconFacebook span{
+	visibility:hidden;
 	}
-#menu-redes-sociales-menu .iconTwitter {
+.iconTwitter a{
 	background-image:url(images/twitter_tag.png);
-	background-size: 50px 50px;	
+	background-size: 50px 50px;
+	display:block;
+	height:50px;
+	width:50px;
 	}
-#menu-redes-sociales-menu .iconYoutube {
+.iconTwitter span{
+	visibility:hidden;
+	}
+.iconYoutube a{
 	background-image:url(images/youtube_tag.png);
-	background-size: 50px 50px;	
+	background-size: 50px 50px;
+	display:block;
+	height:50px;
+	width:50px;	
+	}
+.iconYoutube span{
+	visibility:hidden;
 	}
 .widget-list h4{
-  margin-top: 0;
   font: normal 21px/28px "GandhiSans";
   text-align: left;
   color: #5b5b5b;
@@ -301,9 +319,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-top: 1px solid #ECECEC;
   text-align:center;
 	}
-/* termina style para el front page */
 
-/* termina style para el front page */
+/* termina style para el side bar */
 
 
 /* Estilos para el footer */
