@@ -272,5 +272,32 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	background: #00894E;
   	color: #FFF;
 }
+#menu-redes-sociales-menu li {
+	list-style:none; 
+	float:left;
+	margin-left:20px;
+	width: 50px !important;
+	height: 50px !important;
+	}
+#menu-redes-sociales-menu .iconFacebook {
+	background-image:url(images/facebook_tag.png);
+	background-size: 50px 50px;	
+	}
+#menu-redes-sociales-menu .iconTwitter {
+	background-image:url(images/twitter_tag.png);
+	background-size: 50px 50px;	
+	}
+#menu-redes-sociales-menu .iconYoutube {
+	background-image:url(images/youtube_tag.png);
+	background-size: 50px 50px;	
+	}
+.widget-list h4{
+  margin-top: 0;
+  font: normal 21px/28px "GandhiSans";
+  text-align: left;
+  color: #5b5b5b;
+  border-bottom: 1px solid #ECECEC;
+  border-top: 1px solid #ECECEC;
+  text-align:center;
+	}
 /* termina style para el front page */
-
