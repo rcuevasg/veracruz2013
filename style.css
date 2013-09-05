@@ -299,6 +299,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #sidebar .widget-container:first-child{
 		background:none;
 		border:none;
+		box-shadow:none;
 		}
 
 #menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
@@ -360,7 +361,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border: 3px solid #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
-.widget-list #text-3 a{
+#sidebar .widget-container .textwidget a{
 	background: #206b33;
   	border: 2px solid #fff;
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -374,7 +375,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	padding: 4px;
 	
 	}
-.widget-list #text-3 a:hover{
+#sidebar .widget-container .textwidget a:hover{
   	background: #00894E;
   	color: #FFF;
 }
