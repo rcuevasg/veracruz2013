@@ -22,5 +22,8 @@
 				<?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
 			</ul>
 <?php endif; ?>
-
+<div class="cajaTextoSide">
+        <h4>Atención Ciudadana</h4>
+        <center><a href="#" class="btn btn-default">Contáctanos</a></center>
+    </div>
 </aside>

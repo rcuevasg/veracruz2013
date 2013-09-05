@@ -311,7 +311,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .iconYoutube span{
 	visibility:hidden;
 	}
-.widget-list h4{
+.widget-list{
+	margin-bottom:100px;
+	}
+.widget-list h4, .cajaTextoSide h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
   color: #5b5b5b;
@@ -319,6 +322,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-top: 1px solid #ECECEC;
   text-align:center;
 	}
+.cajaTextoSide{
+  min-height: 20px;
+  padding: 19px;
+  margin-left:20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  border: 3px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+.cajaTextoSide a{
+	background: #206b33;
+  	border: 2px solid #fff;
+  	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  	color: #fff;
+  	text-transform: uppercase;
+  	font: bold 14px/18px "GandhiSans";
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  	-webkit-border-radius: 0;
+  	-moz-border-radius: 0;
+  	border-radius: 0;
+  	padding: 4px;
+	width:150px;
+	}
+.cajaTextoSide a:hover{
+  	background: #00894E;
+  	color: #FFF;
+}
 
 /* termina style para el side bar */
 
