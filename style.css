@@ -291,6 +291,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* termina style para el front page */
 
 /* inicia style sidebar*/
+#sidebar .widget-container{
+	display:inline-block;
+	width:80%;
+	margin:10px 0;}
 #menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
 	list-style:none; 
 	float:left;
