@@ -191,9 +191,9 @@ function veracruz2013_widgets_init() {
 	
 	//Area 8, first area on the footer
 	register_sidebar( array(
-		'name' => __( 'Buscador Widget Area Footer', 'veracruz2013' ),
-		'id' => 'buscadorBottom-widget-area',
-		'description' => __( 'Buscador Widget para el area footer.', 'veracruz2013' ),
+		'name' => __( 'Search footer widget area', 'veracruz2013' ),
+		'id' => 'search-footer-widget-area',
+		'description' => __( 'Search widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',

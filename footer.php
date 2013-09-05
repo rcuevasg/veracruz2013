@@ -17,7 +17,8 @@
 		<span class='img img-responsive'><img src="<?php bloginfo('template_url') ?>/images/footer_separator.png" border="0" class="img-responsive" /></span>
 		
 		<div id="footer-content" class="container">
-		
+			
+			<div id="redesSocialesFooter" class="col-md-6 col-lg-6">
         	<?php
 				//Checks if there is something on top-menu
 				if (has_nav_menu('redes-sociales-menu')):
@@ -28,10 +29,11 @@
 								'theme-location'=>'redes-sociales-menu'));
 				endif;
 			?>
+			</div>
             
-            <?php if ( is_active_sidebar( 'buscadorBottom-widget-area' ) ) : ?>
-				<div class="widget-footer buscadorBottom">
-					<?php dynamic_sidebar( 'buscadorBottom-widget-area' ); ?>
+            <?php if ( is_active_sidebar( 'search-footer-widget-area' ) ) : ?>
+				<div class="widget-footer buscadorBottom" class="col-md-6 col-lg-6" >
+					<?php dynamic_sidebar( 'search-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
         
