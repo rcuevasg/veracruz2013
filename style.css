@@ -294,7 +294,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #sidebar .widget-container{
 	display:inline-block;
 	width:80%;
-	margin:10px 0;}
+	margin:10px 0;
+	}
+#sidebar .widget-container:first-child{
+		background:none;
+		border:none;
+		}
+
 #menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
 	list-style:none; 
 	float:left;
@@ -330,10 +336,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .iconYoutube span{
 	visibility:hidden;
 	}
-.widget-list{
-	margin-bottom:100px;
-	}
-.widget-list h4{
+
+#sidebar .widget-container h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
   color: #5b5b5b;
@@ -341,7 +345,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-top: 1px solid #ECECEC;
   text-align:center;
 	}
-.widget-list #text-3{
+#sidebar .widget-container{
   min-height: 20px;
   padding: 19px;
   margin-left:20px;
