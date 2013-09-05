@@ -301,7 +301,42 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		border:none;
 		box-shadow:none;
 		}
-
+#sidebar .widget-container:first-child h4{
+	text-transform:none;
+}
+#sidebar .widget-container input[type="email"]{
+	background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    width: 100%;
+	}
+#sidebar .widget-container input[type="submit"]{
+	background: #206b33;
+  	border: 2px solid #fff;
+  	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  	color: #fff;
+  	text-transform: uppercase;
+  	font: bold 14px/18px "GandhiSans";
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  	-webkit-border-radius: 0;
+  	-moz-border-radius: 0;
+  	border-radius: 0;
+  	padding: 4px;
+	text-transform:uppercase;
+	}
+#sidebar .widget-container input[type="submit"]:hover{
+	background: #00894E;
+  	color: #FFF;
+}
 #menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
 	list-style:none; 
 	float:left;
@@ -345,6 +380,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-bottom: 1px solid #ECECEC;
   border-top: 1px solid #ECECEC;
   text-align:center;
+  	text-transform:uppercase;
 	}
 #sidebar .widget-container{
   min-height: 20px;
@@ -360,6 +396,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   border: 3px solid #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  	text-transform:uppercase;
   }
 #sidebar .widget-container .textwidget a{
 	background: #206b33;
@@ -373,11 +410,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	-moz-border-radius: 0;
   	border-radius: 0;
   	padding: 4px;
+	text-transform:uppercase;
 	
 	}
 #sidebar .widget-container .textwidget a:hover{
   	background: #00894E;
   	color: #FFF;
+	text-decoration:none;
 }
 
 /* termina style para el side bar */
