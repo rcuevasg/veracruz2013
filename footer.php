@@ -18,6 +18,7 @@
 		
 		<div id="footer-content" class="container">
 			
+			<div id="footerSearchAndSocial" class="row">
 			<div id="redesSocialesFooter" class="col-md-6 col-lg-6">
         	<?php
 				//Checks if there is something on top-menu
@@ -32,11 +33,12 @@
 			</div>
             
             <?php if ( is_active_sidebar( 'search-footer-widget-area' ) ) : ?>
-				<div class="widget-footer buscadorBottom" class="col-md-6 col-lg-6" >
+				<div class="widget-footer buscadorBottom col-md-6 col-lg-6" >
 					<?php dynamic_sidebar( 'search-footer-widget-area' ); ?>
 				</div>
 			<?php endif; ?>
-        
+			</div><!-- end .row -->
+			
 			<?php
 			/* When we call the dynamic_sidebar() function, it'll spit out
 			* the widgets for that widget area. If it instead returns false,

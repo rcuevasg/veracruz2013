@@ -360,10 +360,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 /* Estilos para el footer */
+
+footer h4 {
+	color: #7C635B;
+}
+
+footer .widget-footer ul {
+	list-style: none;
+	list-style: none outside none;
+    padding-left: 0;
+}
+
+footer .widget-footer ul a{
+	color: #869292;
+}
+
 .direccionFooter {
 	text-align: center;
 	display: inline-block;
     margin: 20px 0;
+}
+
+#footerSearchAndSocial {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#redesSocialesFooter .menu-redes-sociales-menu-container {
+	float: right
+}
+
+.buscadorBottom .widget_search{
+	width: 40%;
+	float: left;
 }
 /* Fin de los estilos del footer */
 
