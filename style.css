@@ -67,6 +67,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: #DEDEDE;
 }
 
+#mainCarousel, #divCarrusel {
+	padding: 5px;
+}
+
 .carousel-caption {
     height: 100%;
     left: 0;
