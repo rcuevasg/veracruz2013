@@ -273,11 +273,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 .post-home h3{
 	border-bottom: 1px solid #6D6D6C;
-  	font: normal 18pt "GandhiSerif";
+  	font: normal 20px "GandhiSerif";
   	color: #5b5b5;
   }
 .lista-post-home{
-	font: normal 14pt "GandhiSans";
+	font: normal 16px "GandhiSans";
 	/* padding-bottom: 250px;
 	margin: 20px 0;
   	border-bottom: 1px solid #c5c5c5; */
@@ -296,7 +296,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding-left:3%;
   padding-top:3%;
   margin-left:-5%;
-  margin-top:65%;
+  margin-top:43%;
   /* 
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   */
@@ -304,22 +304,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*
 @media (max-width: 991px) {
-	.post-date {
-		left:0%;
-		top:-150%;
+	.post-date .img-responsive{
+		width:280px;
+		height:240px;
 	}
 }
 @media (max-width: 768px) {
-		.post-date {
-		left:0%;
-		top:-130%;
+		.post-date .img-responsive{
+		
 	}
 }
 
 @media (max-width: 400px) {
-		.post-date {
-		left:0%;
-		top:-55%;
+		.post-date .img-responsive{
+		
 	}
 }
 */
@@ -342,18 +340,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	padding: 4px;
   	margin-top: 10%;
 	margin-left:30%;
-	width:30%;
 	}
 .read-more:hover {
   	background: #206b33;
   	color: #FFF;
 	/* 00894E*/
 }
+.lista-post-home .read-more{
+		width:30%;
+	}
 .blog-noticias{
 	float:right;
 	margin-top:5%;
-	margin-bottom:5%;
-	
 	}
 /* termina style para el front page */
 
@@ -496,7 +494,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	color: #FFF;
 	text-decoration:none;
 }
-
+.izq{
+	float:left;
+	}
+#principalContent{
+	border-bottom:1px solid #E2E2E2;
+	margin-bottom:5%;
+	}
 /* termina style para el side bar */
 
 
@@ -596,13 +600,24 @@ footer .widget-footer ul a{
 	background-position: center;
 	height:48px;
 	padding: 13px;
-	margin-bottom: 12px;
+	margin-bottom: 5%;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	text-transform: uppercase;
+  	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  	-webkit-border-radius: 0;
+  	-moz-border-radius: 0;
+	cursor:pointer;
+
 }
 .link-style a{
 	font-family: GandhiSans, Helvetica, sans-serif;
 	color:#5B5B5B;
 	font-size:19px;
 }
+.link-style a:hover{
+	text-decoration:none;
+	color:#5B5B5B;
+		}
 .widget_newsletterwidget{
 	border-top: #6C6C6B 3px solid;
 	background-image:url(images/bg-newsletter.png);

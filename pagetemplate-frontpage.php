@@ -28,17 +28,16 @@ Template Name: Front page
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-								 	<div class="col-md-5">
-                                    
+								 	<div class="col-md-5 izq">    
                                     <span class='img img-responsive'>
                                    <div class="post-date"><?php the_time( 'j M' ); ?></div>
-                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=300&h=260&a=cr' border=0 /></span>
+                                    <img class="img img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=285&h=175&a=cr' border=0 /></span>
                                     </div>
 
 								 <?php
 								 endif;
 								 ?>
-                                <div class="col-md-6 lista-post-home">
+                                <div class="col-md-6 lista-post-home izq">
                                 <h3><?php the_title(); ?></h3>
                                 <?php the_excerpt(); ?>
 								</div>
@@ -46,13 +45,8 @@ Template Name: Front page
                     <?php 
 					endwhile;  //Terminar while de post dentro de BLOG
 					wp_reset_query();
-					//if (function_exists('wp_pagenavi')):
-						//wp_pagenavi( array( 'query' => $blog_query ) );
-					//endif; 
-					//PAGINACION
-					//
 					?>
-                    <div class="link-style blog-noticias">
+                    <div class="link-style blog-noticias btn btn-default">
                     <a href="#">VER TODAS LAS NOTICIAS</a>
                     </div>
                  </section>
