@@ -203,8 +203,18 @@ function veracruz2013_widgets_init() {
 	
 	register_sidebar( array(
 		'name' => __( 'Widget para la direccion en el footer', 'veracruz2013' ),
-		'id' => 'menu-header-home-widget-area',
+		'id' => 'copyright-footer',
 		'description' => __( 'Colocar en el sidebar copyright footer', 'veracruz2013' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Widget para el menu del header', 'veracruz2013' ),
+		'id' => 'menu-header-home-widget-area',
+		'description' => __( 'Colocar el menu del header', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
