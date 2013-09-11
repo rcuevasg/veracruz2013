@@ -64,20 +64,6 @@
 				
 				<section id="topBar" class="container">
 				
-					
-				<hgroup id="site-title" class="col-md-5 col-lg-5 hidden-xs">
-					
-					<h1 >
-					<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						<span><?php bloginfo( 'name' ); ?></span>
-						<img src="<?php bloginfo('template_url') ?>/images/logo.png" border="0" class="img-responsive" />
-					</a>
-					</h1>
-			  
-					<h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
-					
-				</hgroup>
-				
 				<?php
 					/* When we call the dynamic_sidebar() function, it'll spit out
 					* the widgets for that widget area. If it instead returns false,
@@ -86,11 +72,28 @@
 					*/
 					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
 
-						<div class="searchHeaderArea col-md-7 col-lg-7 pull-right">
+						<div class="menuHeaderArea col-md-3 col-lg-3 pull-right">
 							<?php //print obtenFechaEspaniol(); ?>
-							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
+							<?php dynamic_sidebar( 'menu-header-home-widget-area' ); ?>
 						</div>
 					<?php endif; ?>
+				
+					
+				<hgroup id="site-title" class="col-md-12 col-lg-12 hidden-xs">
+					
+					<h1 >
+					<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						<span><?php bloginfo( 'name' ); ?></span>
+						<div class="img-responsive col-md-12 col-lg-12">
+						<img src="<?php bloginfo('template_url') ?>/images/imgHeader.png" border="0" class="img-responsive" />
+						</div>
+					</a>
+					</h1>
+			  
+					<h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
+					
+				</hgroup>
+				
 				
 				</section>
 				
@@ -173,7 +176,7 @@
 						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
 						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 					</ol>
-						<div class="border-indicators"></div>
+						<!-- <div class="border-indicators"></div> -->
 					</div>
 					
 					</div><!-- end #carousel-destacados -->
@@ -181,6 +184,22 @@
 				</div><!-- end #divCarrusel -->
 				
 				</section> <!-- end #mainCarrusel -->
+				
+				
+				
+				<?php
+					/* When we call the dynamic_sidebar() function, it'll spit out
+					* the widgets for that widget area. If it instead returns false,
+					* then the sidebar simply doesn't exist, so we'll hard-code in
+					* some default sidebar stuff just in case.
+					*/
+					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
+
+						<div class="searchHeaderArea col-md-12 col-lg-12">
+							<?php //print obtenFechaEspaniol(); ?>
+							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
+						</div>
+					<?php endif; ?>
 	
 			</header>
 			

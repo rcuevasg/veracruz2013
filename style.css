@@ -74,6 +74,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	font-family:'GandhiSerif';
 	}
 /** Estilos del header **/
+.menuHeaderArea ul {
+	list-style: none;
+}
+
+.menuHeaderArea li {
+    display: inline-block;
+    padding: 10px 10px 10px 0;
+    text-transform: uppercase;
+}
+
+.menuHeaderArea li a {
+	color: #686867;
+}
+
+.menuHeaderArea li:first-child a {
+	border-right: 2px solid #E2E2E2;
+	padding-right: 15px;
+	/*-moz-box-shadow: 10px 10px 5px #E2E2E2;
+	-webkit-box-shadow: 10px 10px 5px #E2E2E2;
+	box-shadow: 10px 10px 5px #E2E2E2; */
+}
+
+
 #site-title h1 span {
 	display: none;
 }
@@ -83,14 +106,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .searchHeaderArea {
-	width: 30%;
-	margin-top: 3%;
+	background: none repeat scroll 0 0 #F8F8F8;
+    border-bottom: 1px solid #D0D1D1;
+    border-top: 1px solid #D0D1D1;
+    margin-left: 2%;
+    padding: 10px 0;
+    width: 96%;
+}
+
+.searchHeaderArea .input-group {
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-box-shadow: 0 0 5px #999;
+	box-shadow: 0 0 5px #999;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.input-group .form-control {
+	height: 35px;
+}
+
+.searchHeaderArea div {
+	margin: 0 auto;
+    width: 50%;
 }
 
 .navbar-inverse {
 	background-color: #FFFFFF;
     border: 2px solid #ECECEC;
-    padding: 2px;
+    padding: 2px 0;
     margin-left: 2%;
     width: 96%;
 }
@@ -131,21 +175,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .carousel-caption {
-    height: 100%;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    height: 35%;
     left: 0;
-    padding-bottom: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
     right: 70%;
-    top: 0;
-    background: rgba(201,198,193,.5);
+    top: 65%;
+    width: 100%;
 }
 
 .carousel-caption h4 {
-	background: none repeat scroll 0 0 #DEDEDC;
-    border: 3px solid #FFFFFF;
-    height: 50%;
+	height: 60%;
     margin: 10px auto;
-    width: 70%;
-}
+    position: relative;
+    top: 0;
+    width: 90%;}
 
 .carousel-caption h4 a {
 	color: #8B857C;
@@ -157,8 +202,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .carousel-caption .btn {
-	margin-right: 15%;
-	margin-top: 10px;
+	bottom: 15px;
+    display: inline-block;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 0;
+    position: relative;
 }
 
 .carousel-indicators-wrapper {
@@ -190,20 +239,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .carousel-indicators li {
-	background: #8B857C;
-	border: 1px solid #8B857C;
-	border-radius: 5px;
-	width: 10px;
-	height: 10px;
+	background: url("images/sliderGris.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 14px;
+    margin: 1px;
+    width: 32px;
 }
 
 .carousel-indicators .active {
-	background: #BF0728;
-	border: 1px solid #BF0728;
-	border-radius: 5px;
-	width: 10px;
-	height: 10px;
-	margin: 1px;
+	background: url("images/sliderVerde.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 14px;
+    margin: 1px;
+    width: 32px;
 }
 
 /** Fin de los estilos del header **/

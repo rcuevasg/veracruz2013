@@ -11,7 +11,7 @@
 	
 	
 	<div class="input-group">
-      <input type="text" class="search-field form-control" placeholder="Buscar..." value="" name="s">
+      <input type="text" class="search-field form-control" placeholder="¿Qué estás buscando?" value="" name="s">
       <span class="input-group-btn">
         <button class="btn btn-default " type="submit"><span class="glyphicon glyphicon-search"></span></button>
       </span>

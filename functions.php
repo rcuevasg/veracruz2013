@@ -99,6 +99,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
  */
 register_nav_menus(array(
 	'top-menu' => __('Top menu','veracruz2013'),
+	'idioma-contacto-menu' => __('Contacto e idioma menu','veracruz2013'),
 	'redes-sociales-menu' => __('Redes Sociales menu','veracruz2013'),
 	'footer-blog-menu' => __('Footer blog menu','veracruz2013'),
 	'footer-gobierno-menu' => __('Footer gobierno menu','veracruz2013'),
@@ -204,6 +205,16 @@ function veracruz2013_widgets_init() {
 		'name' => __( 'Widget para la dirección en el area footer', 'veracruz2013' ),
 		'id' => 'direccion-home-widget-area',
 		'description' => __( 'Colocar Dirección en el Footer.', 'veracruz2013' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Widget para el menu en el area header', 'veracruz2013' ),
+		'id' => 'menu-header-home-widget-area',
+		'description' => __( 'Colocar el menu de contacto e idioma en el header', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
