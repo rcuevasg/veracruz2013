@@ -70,7 +70,7 @@
 					* then the sidebar simply doesn't exist, so we'll hard-code in
 					* some default sidebar stuff just in case.
 					*/
-					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
+					if ( is_active_sidebar( 'menu-header-home-widget-area' ) ) : ?>
 
 						<div class="menuHeaderArea col-md-3 col-lg-3 pull-right">
 							<?php //print obtenFechaEspaniol(); ?>
