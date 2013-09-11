@@ -216,14 +216,104 @@ function veracruz2013_widgets_init() {
 		'id' => 'menu-header-home-widget-area',
 		'description' => __( 'Colocar el menu de contacto e idioma en el header', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'name' => __( 'Copyright footer', 'veracruz2013' ),
+		'id' => 'copyright-footer',
+		'description' => __( 'Colocar Dirección en el Footer.', 'veracruz2013' ),
+		'before_widget' => '<div id="%1$s" class="widget-container-copyright %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
 	
 }
-
 /** Register sidebars by running steady_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'veracruz2013_widgets_init' );
+
+
+/*---Add custom post type, custom taxonomies and postmeta---*/
+/*
+if (!function_exists('init_custom_type')) {
+	add_action('init', 'init_custom_type');
+	function init_custom_type(){
+		$labels = array(
+			'name' => 'Sala de prensa',
+			'singular_name' => 'Sala de prensa',
+			'add_new' => 'Agregar entrada',
+			'add_new_item' => 'Agregar nueva entrada',
+			'edit_item' => 'Editar entrada',
+			'new_item' => 'Nueva entrada',
+			'view_item' => 'Ver entrada',
+			'search_items' => 'Buscar entradas',
+			'not_found' =>  'No se encontraron entradas',
+			'not_found_in_trash' => 'No hay entradas en la papelera', 
+			'parent_item_colon' => ''
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true, 
+			'query_var' => true,
+			'rewrite' => true,
+			'has_archive' => true,
+			'capability_type' => 'post',
+			'register_meta_box_cb' => 'add_prensa_metaboxes',
+			'hierarchical' => false,
+			'menu_position' => null,
+			'taxonomies' => array('medios'),
+			'supports' => array('title','editor','thumbnail'),
+		); 
+		register_post_type('prensa',$args);
+	}
+  	add_action( 'init', 'build_taxonomies', 0 ); 
+	function build_taxonomies() {
+		register_taxonomy('medios', 'prensa', array('hierarchical' => true, 'label' => 'Categorías', 'query_var' => true, 'rewrite' => true));
+	}
+	
+	function add_prensa_metaboxes(){
+			add_meta_box('media_info', 'Agregar o editar Video en Youtube', 'media_info', 'post', 'normal', 'default');
+	}
+	
+	function media_info(){
+		global $post;
+		echo '<input type="hidden" name="media_noncename" id="endeavor_noncename" value="'.wp_create_nonce(plugin_basename(__FILE__)).'" />';
+		$int1 = get_post_meta($post->ID, '_link_youtube', true);
+		echo'
+			<div class="my_meta_control">
+				<p>Agregar Liga de youtube</p>
+				<input type="text" name="_link_youtube" value="'.$int1.'" class="widefat" />
+				<span>Ejem. http://www.youtube.com/watch?v=qqXi8WmQ_WM </span>
+			</div>';
+	}
+	function wpt_save_post_meta($post_id, $post) {
+		if(!wp_verify_nonce($_POST['media_noncename'], plugin_basename(__FILE__))){
+			return $post->ID;
+		}
+		if(!current_user_can('edit_post', $post->ID))
+			return $post->ID;
+		$type=$_POST['post_type'];	
+		switch($type){
+			case 'prensa':
+				$media_meta['_link_youtube'] = $_POST['_link_youtube'];
+			break;
+		}
+		foreach ($media_meta as $key => $value) {
+			$value = implode(',', (array)$value);
+			if(get_post_meta($post->ID, $key, FALSE)) {
+				update_post_meta($post->ID, $key, $value);
+			} else { 
+				add_post_meta($post->ID, $key, $value);
+			}
+			if(!$value) delete_post_meta($post->ID, $key);
+		}
+	}
+	add_action('save_post', 'wpt_save_post_meta',1,2);
+}
+*/
+/*---End add custom post type, custom taxonomies and postmeta---*/
+
+add_image_size('img-sidebar', 249 , 153, true);
+
+/*---End add custom widtget---*/
 
 ?>

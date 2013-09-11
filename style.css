@@ -345,7 +345,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* inicia style sidebar*/
 #sidebar .widget-container{
 	display:inline-block;
-	width:80%;
+	/*width:80%;*/
 	margin:10px 0;
 	}
 #sidebar .widget-container:first-child{
@@ -364,7 +364,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #555555;
     display: block;
     font-size: 14px;
-    height: 34px;
+    height: 24px;
     line-height: 1.42857;
     padding: 6px 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -372,7 +372,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 100%;
 	}
 #sidebar .widget-container input[type="submit"]{
-	background: #206b33;
+	background: #5D5D5D;
   	border: 2px solid #fff;
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   	color: #fff;
@@ -386,7 +386,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	text-transform:uppercase;
 	}
 #sidebar .widget-container input[type="submit"]:hover{
-	background: #00894E;
+	background: #5D5D5D;
   	color: #FFF;
 }
 #menu-redes-sociales-menu li , #menu-redes-sociales-menu-1 li{
@@ -396,35 +396,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 .iconFacebook a{
 	background-image:url(images/facebook_tag.png);
-	background-size: 50px 50px;
+	background-size: 31px 31px;
 	display:block;
-	height:50px;
-	width:50px;	
+	height:31px;
+	width:31px;	
 	} 
 .iconFacebook span{
 	visibility:hidden;
 	}
 .iconTwitter a{
 	background-image:url(images/twitter_tag.png);
-	background-size: 50px 50px;
+	background-size: 31px 31px;
 	display:block;
-	height:50px;
-	width:50px;
+	height:31px;
+	width:31px;
 	}
 .iconTwitter span{
 	visibility:hidden;
 	}
 .iconYoutube a{
 	background-image:url(images/youtube_tag.png);
-	background-size: 50px 50px;
+	background-size: 31px 31px;
 	display:block;
-	height:50px;
-	width:50px;	
+	height:31px;
+	width:31px;	
 	}
 .iconYoutube span{
 	visibility:hidden;
 	}
 
+.iconPinterest a{
+	background-image:url(images/pinterest_tag.png);
+	background-size: 31px 31px;
+	display:block;
+	height:31px;
+	width:31px;	
+}
+.iconPinterest span{
+	visibility:hidden;
+	}
+.iconPlus a{
+	background-image:url(images/plus_tag.png);
+	background-size: 31px 31px;
+	display:block;
+	height:31px;
+	width:31px;	
+}
+.iconPlus span{
+	visibility:hidden;
+	}
 #sidebar .widget-container h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
@@ -436,20 +456,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 #sidebar .widget-container{
   min-height: 20px;
-  padding: 19px;
-  margin-left:20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  border: 3px solid #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  	text-transform:uppercase;
-  }
+  /*padding: 19px;
+  margin-left:20px;*/
+  background-color: #E5E3E3;
+  text-transform:uppercase;
+}
 #sidebar .widget-container .textwidget a{
 	background: #206b33;
   	border: 2px solid #fff;
@@ -506,9 +517,105 @@ footer .widget-footer ul a{
 }
 
 .buscadorBottom .widget_search{
-	width: 40%;
+	width: 55.5%;
 	float: left;
 }
 /* Fin de los estilos del footer */
 
+/*-- estilos footer ---*/
+#footer-content {
+	background-image: url(images/bg-shadow-footer.png);
+	background-repeat:repeat-x;
+	background-position: 0px 35px;
+	padding-bottom: 15px;
+}
+#footer-content .widget-title{
+	font-family: GandhiSans, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	color:#727272;
+}
+.widget-footer{
+	font-family: GandhiSans, Helvetica, sans-serif;
+	color:#727272;
+}
+.top-20{
+	padding-top:20px
+}
+.top-43{
+	padding-top:43px
+}
+.max-width-365{
+	max-width:365px;
+}
+.border-dotted{
+	border-top:1px dotted #4470B2;
+	display:block;
+	margin: 0 auto;
+}
+.widget-container-copyright{
+	text-align:center;
+	font-size: 13px;
+	color: #727272;
+}
+.search-form{
+	background-color:#FFF;
+	border:#706F6F solid 1px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border: 1px solid #CCC;
+}
+.widget_search{
+	border-top:1px solid #585656;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+}
 
+/*---style sidebar---*/
+.link-style{
+	background-image:url(images/bg-link-sidebar.png);
+	background-color:#E5E3E3;
+	background-repeat:repeat-y;
+	background-position: center;
+	height:48px;
+	padding: 13px;
+	margin-bottom: 12px;
+}
+.link-style a{
+	font-family: GandhiSans, Helvetica, sans-serif;
+	color:#5B5B5B;
+	font-size:19px;
+}
+.widget_newsletterwidget{
+	border-top: #6C6C6B 3px solid;
+	background-image:url(images/bg-newsletter.png);
+	background-repeat:repeat-y;
+	background-position:center;
+	padding: 0 7.1%;
+	width: 100%;
+}
+.newsletter-email{
+	font-size:13px;
+	color:#848585;
+	font-family: GandhiSans, Helvetica, sans-serif;
+}
+.widget_newsletterwidget h4{
+	font-size:14px !important;
+	margin-top: 9px !important;
+	margin-bottom: 0px !important;
+}
+#sidebar #menu-redes-sociales-menu{
+	list-style: none outside none; 
+	margin:0; padding: 0; 
+	text-align:center; 
+	padding:3px 0; overflow:hidden;
+	width:250px;
+}
+#sidebar #menu-redes-sociales-menu li{
+	display:block; 
+	width:16%; 
+	float:left; 
+	margin: 0 2%; 
+}
