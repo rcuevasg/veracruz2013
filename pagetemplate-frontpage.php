@@ -15,7 +15,6 @@ Template Name: Front page
 						 	$blog_query->the_post();
 						 	$wp_query->in_the_loop = true;
 						 ?>
-                        <div class="lista-post-home col-lg-12">
                             <?php
 								$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'full'));
 					    		$thumbnailsrc = "";
@@ -29,19 +28,21 @@ Template Name: Front page
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-									<div class="col-md-6">
-								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=255&h=160&a=cr' border=0 /></span>
-								 	</div>
+								 	<div class="col-md-5">
+                                    
+                                    <span class='img img-responsive'>
+                                   <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=300&h=260&a=cr' border=0 /></span>
+                                    </div>
+
 								 <?php
 								 endif;
 								 ?>
-                            <div class="col-md-6">
-                                <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                <div class="col-md-6 lista-post-home">
                                 <h3><?php the_title(); ?></h3>
                                 <?php the_excerpt(); ?>
-                            </div>
-                            <div class="cls"></div>
-                        </div> <!-- Terminar DIV post -->
+								</div>
+						<div class="cls"></div>
                     <?php 
 					endwhile;  //Terminar while de post dentro de BLOG
 					wp_reset_query();
@@ -51,6 +52,9 @@ Template Name: Front page
 					//PAGINACION
 					//
 					?>
+                    <div class="link-style blog-noticias">
+                    <a href="#">VER TODAS LAS NOTICIAS</a>
+                    </div>
                  </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

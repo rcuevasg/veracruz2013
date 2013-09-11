@@ -259,8 +259,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .post-home{
 	border-right: 1px solid #c5c5c5;
-	/*margin-right: 20px;*/
-  	padding-right: 40px;
+	overflow:auto;
+	/*margin-right: 20px;
+	padding-right: 40px;
+	border-top: 1px solid #c5c5c5;
+	*/
+  	
   }
 .post-home img{
 	border: 3px solid #fff;
@@ -268,33 +272,37 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin-top:20px;
   }
 .post-home h3{
-	border-bottom: 1px solid #a73c53;
-  	font: normal 20px/28px "GandhiSans";
+	border-bottom: 1px solid #6D6D6C;
+  	font: normal 18pt "GandhiSerif";
   	color: #5b5b5;
   }
 .lista-post-home{
-	margin: 20px 0;
-  	position:relative;
-	text-align:justify;
-	z-index:1;
+	font: normal 14pt "GandhiSans";
 	/* padding-bottom: 250px;
+	margin: 20px 0;
   	border-bottom: 1px solid #c5c5c5; */
 	}
-.post-date {
+.img .post-date {
   display: block;
-  width: 85px;
-  height: 36px;
-  padding: 4px 0 0 7px;
-  position: absolute;
-  top:30px;
-  left: -100%;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  width: 74px;
+  height: 32px;
+  position:absolute;
+  color:#999;
   text-transform: uppercase;
   background: transparent url(images/date_ribbon.png) no-repeat;
-  font: normal 14px "GandhiSans";
+  font: normal 16px "GandhiSans";
+  font-style:italic;
   z-index:100;
+  padding-left:3%;
+  padding-top:3%;
+  margin-left:-5%;
+  margin-top:65%;
+  /* 
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  */
 }
+
+/*
 @media (max-width: 991px) {
 	.post-date {
 		left:0%;
@@ -314,32 +322,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		top:-55%;
 	}
 }
-
+*/
 .cls{
 	clear:both;
-  	border-bottom: 1px solid #c5c5c5;
+	border-bottom: 1px dashed #c5c5c5;
 	padding-bottom:20px;
 	}
 .read-more{
-	float:right;
-	background: #206b33;
+	background:#007234;
   	border: 2px solid #fff;
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   	color: #fff;
   	text-transform: uppercase;
-  	font: bold 13px/18px "GandhiSans";
+  	font: bold 14px/18px "GandhiSans";
   	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   	-webkit-border-radius: 0;
   	-moz-border-radius: 0;
   	border-radius: 0;
   	padding: 4px;
-  	margin-top: 40px;
+  	margin-top: 10%;
+	margin-left:30%;
+	width:30%;
 	}
 .read-more:hover {
-  	background: #00894E;
+  	background: #206b33;
   	color: #FFF;
+	/* 00894E*/
 }
-
+.blog-noticias{
+	float:right;
+	margin-top:5%;
+	margin-bottom:5%;
+	
+	}
 /* termina style para el front page */
 
 /* inicia style sidebar*/
