@@ -202,19 +202,9 @@ function veracruz2013_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Widget para la dirección en el area footer', 'veracruz2013' ),
-		'id' => 'direccion-home-widget-area',
-		'description' => __( 'Colocar Dirección en el Footer.', 'veracruz2013' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Widget para el menu en el area header', 'veracruz2013' ),
+		'name' => __( 'Widget para la direccion en el footer', 'veracruz2013' ),
 		'id' => 'menu-header-home-widget-area',
-		'description' => __( 'Colocar el menu de contacto e idioma en el header', 'veracruz2013' ),
+		'description' => __( 'Colocar en el sidebar copyright footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widget-title">',
@@ -310,6 +300,89 @@ if (!function_exists('init_custom_type')) {
 
 add_image_size('img-sidebar', 249 , 153, true);
 
-/*---End add custom widtget---*/
+add_action('admin_print_scripts', 'admin_setup');
+function admin_setup() {
+		wp_enqueue_media();
+        // Register, localize and enqueue our custom JS.
+        wp_register_script( 'tgm-nmp-media', get_bloginfo('template_url').'/js/image-widget.js', true );
+        wp_localize_script( 'tgm-nmp-media', 'tgm_nmp_media',
+            array(
+                'title'     => __( 'Upload or Choose Your Custom Image File', 'tgm-nmp' ), // This will be used as the default title
+                'button'    => __( 'Insert Image into Input Field', 'tgm-nmp' )            // This will be used as the default button text
+            )
+        );
+        wp_enqueue_script( 'tgm-nmp-media' );
+}
+
+
+/*Widget 4- single*/
+class Widget_medios extends WP_Widget {
+	function metabox() {
+		echo '<div id="tgm-new-media-settings">';
+			echo '<p><strong>' . __( 'Por favor agrege su banner aqui', 'vrz' ) . '</strong></p>';
+			echo '<p><a href="#" class="tgm-open-media button" title="' . esc_attr__( 'Subir Imagen', 'vrz' ) . '">' . __( 'Subir Imagen', 'vrz' ) . '</a></p>';
+			echo '<img src="" id="img-src" width="250">';
+			echo '<p><label for="tgm-new-media-image">' . __( 'Imagen ', 'vrz' ) . '</label> <input type="text" id="tgm-new-media-image" size="70" value="" /></p>';
+		echo '</div>';
+	}
+	function Widget_medios() {
+		$widget_ops = array( 'classname' => 'widget_medios', 'description' => __('Widget para medios en sidebar main','vrz') );
+		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'medios-wt' );
+		$this->WP_Widget( 'medios-wt', __('Widget de texto | Single', 'vrz'), $widget_ops, $control_ops );
+	}
+	
+	function widget( $args, $instance ) {
+		extract( $args );
+
+		$title = apply_filters('widget_title', $instance['title'] );
+		$ima2 = $instance['ima2'];
+		$name = $instance['name'];
+		$archivo2 = $instance['archivo2'];		
+		echo $before_widget;
+		
+		if ( $name )
+			echo "<div id='item-curso'>";
+                  	if($ima2==''){ 
+                        	echo "<img src='".get_bloginfo('template_url')."/images/ima-conoce-default.png' width='64' height='64'>";
+                     } else{ 
+                     		echo '<img src="'.$ima2.'" width="64" height="64"/>';
+					 }
+			echo "<div id='text-curso'>";		 
+                     
+					 echo "<h3>".$title."</h3>";								
+				  	 echo "<p>".$name."</p>";
+					 echo "<a target='_blank' href='".$archivo2."'>» Descargar Archivo</a>";
+					 echo "</div>";
+            echo "</div>";
+			echo "<div class='clear'></div>";
+	
+	echo $after_widget;
+	}
+
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['name'] = strip_tags( $new_instance['name'] );
+		$instance['ima2'] = strip_tags( $new_instance['ima2'] );
+		$instance['archivo2'] = strip_tags( $new_instance['archivo2'] );
+
+		return $instance;
+	}
+
+	function form( $instance ) {
+
+		$defaults = array( 'title' => __('', 'spc'), 'name' => __('Escribe el contenido del widget', 'spc'), 'ima2' => __('', 'spc'));
+		$instance = wp_parse_args( (array) $instance, $defaults );
+		$this->metabox();
+		?>
+
+	<?php
+	}
+}
+add_action( 'widgets_init', 'load_widgets' );
+function load_widgets() {
+	register_widget( 'Widget_medios' );
+}
 
 ?>
