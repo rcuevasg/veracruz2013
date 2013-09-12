@@ -256,7 +256,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /** Fin de los estilos del header **/
 /* FONT FACE */
-
 .post-home{
 	border-right: 1px solid #c5c5c5;
 	display: inline-block;
@@ -275,7 +274,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .post-home h3{
 	border-bottom: 1px solid #6D6D6C;
   	font: normal 20px "GandhiSerif";
-  	color: #5b5b5;
   }
 @media (max-width: 768px) {
 		.post-home h3{
@@ -285,10 +283,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .lista-post-home{
 	font: normal 16px "GandhiSans";
+	color:#333333;
 	/* padding-bottom: 250px;
 	margin: 20px 0;
   	border-bottom: 1px solid #c5c5c5; */
 	}
+.lista-post-home h3{    
+	color: #5b5b5b !important;
+	line-height:30px; 
+	}	
 .img .post-date {
   display: block;
   width: 74px;
@@ -518,7 +521,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	float:left;
 	}
 #principalContent{
-	border-bottom:1px solid #E2E2E2;
+	border-bottom:1px solid #c5c5c5;
 	margin-bottom:5%;
 	}
 /* termina style para el side bar */
