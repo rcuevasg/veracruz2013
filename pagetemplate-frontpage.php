@@ -28,7 +28,7 @@ Template Name: Front page
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-								 	<div class="col-sm-5 col-md-6 col-lg-5 pull-left">    
+								 	<div class="col-sm-5 col-md-6 col-lg-5 pull-left arriba">    
                                     <span class='img img-responsive'>
                                    <div class="post-date"><?php the_time( 'j M' ); ?></div>
                                     <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=285&h=175&a=cr' border=0 /></span>
@@ -37,7 +37,7 @@ Template Name: Front page
 								 <?php
 								 endif;
 								 ?>
-                                <div class="col-sm-6 col-md-6 col-lg-6 lista-post-home pull-left">
+                                <div class="col-sm-6 col-md-6 col-lg-6 lista-post-home">
                                 <h3><?php the_title(); ?></h3>
                                 <?php the_excerpt(); ?>
 								</div>

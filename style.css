@@ -270,12 +270,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	border: 3px solid #fff;
   	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 	margin-top:20px;
+	z-index:100;
   }
 .post-home h3{
 	border-bottom: 1px solid #6D6D6C;
   	font: normal 20px "GandhiSerif";
   	color: #5b5b5;
   }
+@media (max-width: 768px) {
+		.post-home h3{
+			z-index:0;
+	}
+}
+
 .lista-post-home{
 	font: normal 16px "GandhiSans";
 	/* padding-bottom: 250px;
@@ -301,6 +308,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   */
 }
+.arriba{
+	z-index:1000;
+	}
 
 /*
 @media (max-width: 991px) {
@@ -349,6 +359,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .lista-post-home .read-more{
 		width:30%;
 	}
+@media (max-width: 768px) {
+	.lista-post-home .read-more{
+		width:25%;
+	}
+}
+@media (max-width: 400px) {
+	.lista-post-home .read-more{
+		width:35%;
+	}
+}
 .blog-noticias{
 	float:right;
 	margin-top:5%;
