@@ -119,6 +119,7 @@
 					?>
 				</nav>
 				
+				<?php if (is_home() || is_front_page()) : ?>
 				<section id="mainCarousel" class="container">
 				
 				<div id="divCarrusel" class="col-lg-12">
@@ -184,7 +185,7 @@
 				</div><!-- end #divCarrusel -->
 				
 				</section> <!-- end #mainCarrusel -->
-				
+				<?php endif; ?>
 				
 				
 				<?php
