@@ -5,7 +5,7 @@ Template Name: Front page
 ?>
 <?php get_header(); ?>
 				<section id="principalContent" class="container">
-				<section class="col-md-8 col-lg-8 post-home">
+				<div class="col-md-8 col-lg-8 post-home">
 						 <?php
 						$categoriaBlog = get_category_by_slug('blog');
 						$categoriaBlog = $categoriaBlog->term_id;
@@ -28,16 +28,16 @@ Template Name: Front page
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-								 	<div class="col-md-5 izq">    
+								 	<div class="col-sm-5 col-md-6 col-lg-5 pull-left">    
                                     <span class='img img-responsive'>
                                    <div class="post-date"><?php the_time( 'j M' ); ?></div>
-                                    <img class="img img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=285&h=175&a=cr' border=0 /></span>
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=285&h=175&a=cr' border=0 /></span>
                                     </div>
 
 								 <?php
 								 endif;
 								 ?>
-                                <div class="col-md-6 lista-post-home izq">
+                                <div class="col-sm-6 col-md-6 col-lg-6 lista-post-home pull-left">
                                 <h3><?php the_title(); ?></h3>
                                 <?php the_excerpt(); ?>
 								</div>
@@ -49,6 +49,6 @@ Template Name: Front page
                     <div class="link-style blog-noticias btn btn-default">
                     <a href="#">VER TODAS LAS NOTICIAS</a>
                     </div>
-                 </section>
+                 </div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

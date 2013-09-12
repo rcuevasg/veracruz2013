@@ -259,7 +259,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .post-home{
 	border-right: 1px solid #c5c5c5;
-	overflow:auto;
+	display: inline-block;
 	/*margin-right: 20px;
 	padding-right: 40px;
 	border-top: 1px solid #c5c5c5;
