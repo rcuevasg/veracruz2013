@@ -447,6 +447,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	height:31px;
 	width:31px;
 	}
+.iconTwitter a:hover{
+	background-image:url(images/twitter_tag_hover.png);
+	}
 .iconTwitter span{
 	visibility:hidden;
 	}
@@ -542,7 +545,10 @@ footer .widget-footer ul {
 footer .widget-footer ul a{
 	color: #869292;
 }
-
+footer .widget-footer ul a:hover{
+	text-decoration:none;
+	color: #333333;
+} 
 .direccionFooter {
 	text-align: center;
 	display: inline-block;
@@ -618,8 +624,9 @@ footer .widget-footer ul a{
 
 /*---style sidebar---*/
 .link-style{
+	display:block;
 	background-image:url(images/bg-link-sidebar.png);
-	background-color:#E5E3E3;
+	background-color:#E5E3E3 !important;
 	background-repeat:repeat-y;
 	background-position: center;
 	height:48px;
