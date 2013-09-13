@@ -727,3 +727,27 @@ footer .widget-footer ul a:hover{
 .searchHeaderArea .widget_search{
 	width: 30.5%;
 }
+/* estilo page principal */
+.principalContent{
+	border-bottom:1px solid #c5c5c5;
+	margin-bottom:10%;
+	color:#333333;	
+	}
+.post-page-child h3{
+	color: #5b5b5b !important;
+	line-height:30px; 
+	border-bottom: 1px solid #6D6D6C;
+	font-family:"GandhiSerif";
+	}
+.espacio{
+	margin-bottom:10%;
+	}
+.tituloPrincipal{
+	background-color:#F3F3F3;
+	font-family:"GandhiSerif";
+	color: #5b5b5b !important;
+	text-transform:uppercase;
+	top:0px;
+	}
+
+/* fin estilo page principal */

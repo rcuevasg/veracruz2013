@@ -24,7 +24,7 @@
 			    		$thumbnailsrc = "";
 			    		if (!empty($domsxe)) {
 				    		$thumbnailsrc = $domsxe->attributes()->src;
-				    		$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
+				    		//$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
 				    	} else {
 					    	$urlTema = get_bloginfo('template_url');
 					    	$thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";

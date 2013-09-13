@@ -4,13 +4,15 @@ Template Name: Principal page
 */
 ?>
 <?php get_header(); ?>
-
 <section class="container principalContent" id="content-list">
+<div class="tituloPrincipal">
 <h1>
+<?php the_post_thumbnail(array(250,150)); ?> 
 <?php
 echo get_the_title($post->post_parent);
 ?>
 </h1>
+</div>
 <?php
 	$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
 
@@ -23,6 +25,7 @@ echo get_the_title($post->post_parent);
 	?>
     <div class="col-md-6 col-lg-6">
     <?php 
+	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'full'));
 	$thumbnailsrc = "";
 					    		if (!empty($domsxe)) {
 						    		$thumbnailsrc = $domsxe->attributes()->src;
@@ -36,18 +39,19 @@ echo get_the_title($post->post_parent);
 								?>
 								 	<div class="col-sm-4 col-md-4 col-lg-4 pull-left">    
                                     <span class='img img-responsive'>
-                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=285&h=175&a=cr' border=0 /></span>
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>' border=0 /></span>
                                     </div>
 
 								 <?php
 								 endif;
 								 ?>
-    <div class="col-sm-7 col-md-7 col-lg-7">
+    <div class="col-sm-7 col-md-7 col-lg-7 post-page-child">
 	<h3><?php echo $page->post_title; ?></h3>
 		<div class="entry"><?php echo substr($content, 0, 255); ?></div>
         <a href="<?php echo get_page_link( $page->ID ); ?>" class="btn btn-default read-more">Leer más</a>
 	
     </div>
+    <div class="cls espacio"></div>
     </div>
 	<?php
 	}	
