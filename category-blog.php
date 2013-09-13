@@ -41,7 +41,7 @@
 						 endif;
 						 ?>
 						 <div class="">
-						<h6><a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></h6>
+						<h5><a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></h5>
 						<!-- <p><?php //print substr(strip_tags(get_the_content()), 0, 300); ?></p> -->
 						
 						
