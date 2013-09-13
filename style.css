@@ -680,13 +680,28 @@ footer .widget-footer ul a{
 	margin: 15px;
 }
 
-#content-list .divNotaListado {
-    
+#content-list .divNotaListado .contenedorNota div:first-child {
+    padding:10px 10px 10px 10px;
+}
+.listadoShareItem {
+	background: none repeat scroll 0 0 #E3E1E1;
+    border-top: 1px solid #C4C2C2;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.stButton .stFb, .stButton .stTwbutton, .stButton .stMainServices {
+	height: 26px !important;
+}
+
+.st_plusone_button div:first-child {
+	padding: 0 !important;
 }
 
 #content-list .divNotaListado .contenedorNota{
 	background: none repeat scroll 0 0 #E8E7E7;
-	padding: 10px 10px 0;
+	/*padding: 10px 10px 0;*/
 	text-align: center;
 	-moz-box-shadow: 5px 5px 5px #DFDFDF;
     -webkit-box-shadow: 5px 5px 5px #DFDFDF;
