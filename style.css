@@ -381,7 +381,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* inicia style sidebar*/
 #sidebar .widget-container{
 	display:inline-block;
-	/*width:80%;*/
+	width:100%;
 	margin:10px 0;
 	}
 #sidebar .widget-container:first-child{
@@ -494,7 +494,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   min-height: 20px;
   /*padding: 19px;
   margin-left:20px;*/
-  background-color: #E5E3E3;
+  /*background-color: #E5E3E3; */
   text-transform:uppercase;
 }
 #sidebar .widget-container .textwidget a{
@@ -643,7 +643,7 @@ footer .widget-footer ul a{
 		}
 .widget_newsletterwidget{
 	border-top: #6C6C6B 3px solid;
-	background-image:url(images/bg-newsletter.png);
+	background: #E5E3E3 url(images/bg-newsletter.png);
 	background-repeat:repeat-y;
 	background-position:center;
 	padding: 0 7.1%;
