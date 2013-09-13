@@ -432,20 +432,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 .iconFacebook a{
 	background-image:url(images/facebook_tag.png);
-	background-size: 31px 31px;
+	background-size: 33px 33px;
 	display:block;
-	height:31px;
-	width:31px;	
+	height:33px;
+	width:33px;	
 	} 
 .iconFacebook span{
 	visibility:hidden;
 	}
+.iconFacebook a:hover{
+	background-image:url(images/facebook_tag_hover.png);
+	} 
 .iconTwitter a{
 	background-image:url(images/twitter_tag.png);
-	background-size: 31px 31px;
+	background-size: 33px 33px;
 	display:block;
-	height:31px;
-	width:31px;
+	height:33px;
+	width:33px;
 	}
 .iconTwitter a:hover{
 	background-image:url(images/twitter_tag_hover.png);
@@ -463,7 +466,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .iconYoutube span{
 	visibility:hidden;
 	}
-
+.iconYoutube a:hover{
+	background-image:url(images/youtube_tag_hover.png);
+	}
 .iconPinterest a{
 	background-image:url(images/pinterest_tag.png);
 	background-size: 31px 31px;
@@ -474,6 +479,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .iconPinterest span{
 	visibility:hidden;
 	}
+.iconPinterest a:hover{
+	background-image:url(images/pinterest_tag_hover.png);
+}
 .iconPlus a{
 	background-image:url(images/plus_tag.png);
 	background-size: 31px 31px;
@@ -484,6 +492,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .iconPlus span{
 	visibility:hidden;
 	}
+.iconPlus a:hover{
+	background-image:url(images/plus_tag_hover.png);
+}
 #sidebar .widget-container h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
