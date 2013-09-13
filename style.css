@@ -719,6 +719,11 @@ footer .widget-footer ul a:hover{
 	padding: 0 !important;
 }
 
+#content-list .divNotaListado {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #content-list .divNotaListado .contenedorNota{
 	background: none repeat scroll 0 0 #E8E7E7;
 	/*padding: 10px 10px 0;*/
@@ -726,6 +731,11 @@ footer .widget-footer ul a:hover{
 	-moz-box-shadow: 5px 5px 5px #DFDFDF;
     -webkit-box-shadow: 5px 5px 5px #DFDFDF;
     box-shadow: 5px 5px 5px #DFDFDF;
+}
+
+#content-list .divNotaListado .contenedorNota .tituloShare h5{
+	height: 45px;
+    margin: 5px 10px;
 }
 
 #content-list .divNotaListado .contenedorNota span .post-date {
