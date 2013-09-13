@@ -16,11 +16,5 @@
                         <?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
                     </div>
         <?php endif; ?>
-        <div class="link-style">
-        	<a href="#">ATENCIÓN CIUDADANA</a>
-        </div>
-        <div class="link-style ">
-        	<a href="#">MULTIMEDIA</a>
-        </div>
     </center>
 </aside>
