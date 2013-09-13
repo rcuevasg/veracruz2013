@@ -128,7 +128,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .searchHeaderArea div {
 	margin: 0 auto;
-    width: 50%;
+    /*width: 50%; */
 }
 
 .navbar-inverse {
@@ -382,7 +382,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #sidebar .widget-container{
 	display:inline-block;
 	width:100%;
-	margin:10px 0 7px;
+	margin: 10px 0 7px;
 	}
 #sidebar .widget-container:first-child{
 		background:none;
@@ -600,7 +600,7 @@ footer .widget-footer ul a{
 	font-size: 13px;
 	color: #727272;
 }
-/*.search-form{
+.search-form{
 	background-color:#FFF;
 	border:#706F6F solid 1px;
 	border-radius: 4px 4px 4px 4px;
@@ -608,12 +608,13 @@ footer .widget-footer ul a{
 	-webkit-border-radius: 4px 4px 4px 4px;
 	border: 1px solid #CCC;
 }
+
 .widget_search{
 	border-top:1px solid #585656;
 	border-radius: 4px 4px 4px 4px;
 	-moz-border-radius: 4px 4px 4px 4px;
 	-webkit-border-radius: 4px 4px 4px 4px;
-}*/
+}
 
 /*---style sidebar---*/
 .link-style{
@@ -676,6 +677,7 @@ footer .widget-footer ul a{
 	padding-left: 0 !important;
 }
 
+
 #content-list {
 	margin: 15px;
 }
@@ -715,10 +717,6 @@ footer .widget-footer ul a{
     padding-top: 2%;
     position: absolute;
 }
-/* estilo page principal */
-.principalContent{
-	border-bottom:1px solid #c5c5c5;
-	margin-bottom:5%;	
-	}
-/* fin estilo page principal */
-
+.searchHeaderArea .widget_search{
+	width: 30.5%;
+}
