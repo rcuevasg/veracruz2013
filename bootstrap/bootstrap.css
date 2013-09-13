@@ -1095,8 +1095,8 @@ pre code {
     width: 25%;
   }
   .col-md-4 {
-	  width: 27.5% !important;
-   /* width: 33.33333333333333%; */
+	 /* width: 27.5% !important; */
+    width: 33.33333333333333%; 
   }
   .col-md-5 {
     width: 41.66666666666667%;

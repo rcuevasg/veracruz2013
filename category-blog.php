@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 
-	<div id="content-list" class="container">
+	<div id="content-list" class="container ">
 		<?php
 			$idCategoria = get_cat_ID(single_cat_title( '', false ));
 			
@@ -18,7 +18,7 @@
 
 					?>
 					<div class="divNotaListado col-md-4 col-lg-4">
-						
+						<div class="contenedorNota">
 						<?php //Obtenemos la url de la imagen destacada
 			    		$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
 			    		$thumbnailsrc = "";
@@ -32,29 +32,26 @@
 					   
 						if (!empty($thumbnailsrc)):
 						?>
-							<div class="col-sm-7 col-md-4 col-lg-4">
-						 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=289&h=160' border=0 /></span>
+							<div class="">
+						 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+						 	<div class="post-date"><?php the_time( 'j M' ); ?></div>
+						 	</span>
 						 	</div>
 						 <?php
 						 endif;
 						 ?>
-						 <div class="col-md-8 col-lg-8">
-						<h2><a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></h2>
+						 <div class="">
+						<h6><a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></h6>
 						<!-- <p><?php //print substr(strip_tags(get_the_content()), 0, 300); ?></p> -->
 						
-						<span class="bottom">
-							<small class="date"><?php print get_the_time('d M, Y'); ?></small>
-        				</span>
+						
+						<!-- <span class="bottom">
+							<small class="date"><?php print get_the_time('d, M'); ?></small>
+        				</span> -->
         				
-        				<span class="resumen">
-        					<?php print substr(strip_tags(get_the_content()), 0, 200) . " ..." ?>
-        				</span>
-        				
-        				<a class="linkLeerMas" href='<?php print get_permalink() ?>' title='Continuar leyendo <?php get_the_title() ?>'>Leer la nota</a>
         				
 						 </div><!-- end col-lg-6 -->
-        				
-        				<hr class="notaSeparador">
+						</div><!-- end .contenedorNota -->
 						
 					</div><!-- Fin del div featured clearfix -->
 					

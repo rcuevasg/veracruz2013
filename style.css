@@ -675,3 +675,29 @@ footer .widget-footer ul a{
 #sidebar{
 	padding-left: 0 !important;
 }
+
+
+#content-list {
+	margin: 15px;
+}
+
+#content-list .divNotaListado {
+    
+}
+
+#content-list .divNotaListado .contenedorNota{
+	background: none repeat scroll 0 0 #E8E7E7;
+	padding: 10px 10px 0;
+	text-align: center;
+	-moz-box-shadow: 5px 5px 5px #DFDFDF;
+    -webkit-box-shadow: 5px 5px 5px #DFDFDF;
+    box-shadow: 5px 5px 5px #DFDFDF;
+}
+
+#content-list .divNotaListado .contenedorNota span .post-date {
+	margin-left: -6.5%;
+    margin-top: -15%;
+    padding-left: 0;
+    padding-top: 2%;
+    position: absolute;
+}
