@@ -382,7 +382,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #sidebar .widget-container{
 	display:inline-block;
 	width:100%;
-	margin: 10px 0 7px;
+	margin:10px 0 7px;
 	}
 #sidebar .widget-container:first-child{
 		background:none;
@@ -676,7 +676,6 @@ footer .widget-footer ul a{
 	padding-left: 0 !important;
 }
 
-
 #content-list {
 	margin: 15px;
 }
@@ -701,3 +700,10 @@ footer .widget-footer ul a{
     padding-top: 2%;
     position: absolute;
 }
+/* estilo page principal */
+.principalContent{
+	border-bottom:1px solid #c5c5c5;
+	margin-bottom:5%;	
+	}
+/* fin estilo page principal */
+
