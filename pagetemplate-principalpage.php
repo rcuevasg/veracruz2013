@@ -23,7 +23,7 @@ echo get_the_title($post->post_parent);
 
 		$content = strip_tags(apply_filters( 'the_content', $content ));
 	?>
-    <div class="col-md-6 col-lg-6">
+    <div class="col-md-6 col-lg-6 contenedor-principal-post">
     <?php 
 	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'full'));
 	$thumbnailsrc = "";
@@ -37,7 +37,7 @@ echo get_the_title($post->post_parent);
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-								 	<div class="col-sm-4 col-md-4 col-lg-4 pull-left">    
+								 	<div class="col-sm-4 col-md-4 col-lg-4 pull-left arriba">    
                                     <span class='img img-responsive'>
                                     <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>' border=0 /></span>
                                     </div>

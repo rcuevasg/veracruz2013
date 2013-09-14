@@ -770,5 +770,9 @@ footer .widget-footer ul a:hover{
 	text-transform:uppercase;
 	top:0px;
 	}
-
+@media (max-width: 768px) {
+		.tituloPrincipal{
+			z-index:0;
+	}
+}
 /* fin estilo page principal */

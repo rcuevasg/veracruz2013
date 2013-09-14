@@ -52,7 +52,7 @@ $("a[rel^='prettyPhoto']").prettyPhoto();
 					wp_reset_query();
 					?>
                     <div class="link-style blog-noticias btn btn-default">
-                    <a href="#">VER TODAS LAS NOTICIAS</a>
+                    <a href="category/blog">VER TODAS LAS NOTICIAS</a>
                     </div>
                  </div>
 <?php get_sidebar(); ?>
