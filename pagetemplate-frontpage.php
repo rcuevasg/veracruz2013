@@ -52,7 +52,11 @@ $("a[rel^='prettyPhoto']").prettyPhoto();
 					wp_reset_query();
 					?>
                     <div class="link-style blog-noticias btn btn-default">
-                    <a href="category/blog">VER TODAS LAS NOTICIAS</a>
+                    <?php
+                    	$categoriaBlog = get_category_by_slug('blog');
+						$categoriaBlog = $categoriaBlog->term_id;
+                    ?>
+                    <a href="<?php print esc_url(get_category_link($categoriaBlog)) ?>">VER TODAS LAS NOTICIAS</a>
                     </div>
                  </div>
 <?php get_sidebar(); ?>
