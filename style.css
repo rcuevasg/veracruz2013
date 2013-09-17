@@ -536,7 +536,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 #principalContent{
 	border-bottom:1px solid #c5c5c5;
-	margin-bottom:5%;
+	margin-bottom:10%;
 	}
 /* termina style para el side bar */
 
@@ -775,4 +775,55 @@ footer .widget-footer ul a:hover{
 			z-index:0;
 	}
 }
+.tituloSingleArea{
+	background: none repeat scroll 0 0 #F3F3F3;
+    border-bottom: 1px solid #D0D1D1;
+    border-top: 1px solid #D0D1D1;
+    margin-left: 2%;
+    padding: 10px 0;
+    width: 96%;
+	alignment-adjust:middle;
+	font-family:"GandhiSerif";
+	color: #5b5b5b !important;
+	text-align:center;
+	margin: 0 auto;
+	}
+.single-img{
+	border: 3px solid #fff;
+	margin-top:3%;
+	z-index:100;
+	}
+.principalContent .post-home{
+	border-right:0px;
+	}
+.entrytext{
+	margin-top:5%;
+	font: normal 16px "GandhiSans";
+	color:#333333;
+	}
+.single-nombre{
+	margin-top:2%;
+	font: normal 28px "GandhiSans";
+  	text-align:center;
+	color: #5b5b5b !important;
+	background-image:url("images/background-bottom.png");
+  	background-position:50% 100%;
+  	background-repeat:no-repeat no-repeat;
+  	padding:0 0 3%;
+	}
+#single-redes{
+	margin-top:-3%;
+	padding:0 3% 3%;
+	}
+.titulo-single-redes{
+	margin-left:-10%;
+	padding:0 0 3%;
+	}
+#single-redes li{
+	list-style:none;
+	float:left;
+	}
+.single-nombre #single-redes{
+	margin-left:50%;
+	}
 /* fin estilo page principal */

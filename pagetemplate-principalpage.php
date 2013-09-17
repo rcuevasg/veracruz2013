@@ -23,7 +23,7 @@ echo get_the_title($post->post_parent);
 
 		$content = strip_tags(apply_filters( 'the_content', $content ));
 	?>
-    <div class="col-md-6 col-lg-6 contenedor-principal-post">
+    <div class="col-md-6 col-lg-6">
     <?php 
 	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'full'));
 	$thumbnailsrc = "";
