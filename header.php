@@ -31,7 +31,7 @@
 	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 	    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> 
-	    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	   
 	    
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
@@ -124,20 +124,21 @@
 				
 				<div id="divCarrusel" class="col-lg-12">
 
-					<div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="2000">
+					<div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="4000">
 
 					
 					<div class="carousel-inner">
 						<?php
 						$categoriaSlider = get_category_by_slug('slider');
 						$categoriaSlider = $categoriaSlider->term_id;
+						$counterActive = 1;
 						      
 						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=3&post_type=post');
 						 while ($notasSlider->have_posts()) :
 						 	$notasSlider->the_post();
 						 	$wp_query->in_the_loop = true;
 						 	?>
-						 	<div class="item active">
+						 	<div class="item <?php if ($counterActive==1) { print 'active'; } ?>">
 						 		<?php //Obtenemos la url de la imagen destacada
 					    		$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
 					    		$thumbnailsrc = "";
@@ -166,19 +167,19 @@
 								</div>
 							</div>
 								<?php
+								$counterActive++;
 							endwhile;
 						?>
 						
 					</div>
 					
 					<div class="carousel-indicators-wrapper">
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					</ol>
-						<!-- <div class="border-indicators"></div> -->
-					</div>
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+					</div><!-- end .carousel-indicators-wrapper -->
 					
 					</div><!-- end #carousel-destacados -->
 

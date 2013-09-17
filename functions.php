@@ -54,7 +54,7 @@ if( !is_admin()){
 	/**
 	* My code for jquery*/
 	
-	//wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
+	wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 	
 }
 
