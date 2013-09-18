@@ -254,6 +254,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 32px;
 }
 
+#popular ul {
+	padding: 0;
+}
+
+#popular img {
+	display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 /** Fin de los estilos del header **/
 /* FONT FACE */
 .post-home{

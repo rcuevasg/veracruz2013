@@ -7,11 +7,13 @@
 
 	<div id="content-list" class="container ">
 	
-		<div id="popular" class="col-sm-12 col-md-12 col-lg-12">
-			<?php wpp_get_mostpopular("range=all&limit=1"); ?>
+		<?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
+	
+		<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
+			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=330"); ?>
 		</div><!-- end #popular -->
 		<?php
-			$idCategoria = get_cat_ID(single_cat_title( '', false ));
+			
 			
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$notas = new WP_Query($query_string . '&posts_per_page=9');
