@@ -795,7 +795,6 @@ footer .widget-footer ul a:hover{
 	text-transform:uppercase;
 	top:0px;
 	}
-<<<<<<< HEAD
 @media (max-width: 768px) {
 		.tituloPrincipal{
 			z-index:0;
@@ -852,9 +851,6 @@ footer .widget-footer ul a:hover{
 .single-nombre #single-redes{
 	margin-left:50%;
 	}
-/* fin estilo page principal */
-=======
-
 /* fin estilo page principal */
 /*Estilos page gabinete*/
 .divNotaGabinete{
@@ -953,5 +949,41 @@ footer .widget-footer ul a:hover{
 .clear{
 	clear:both;
 }
+.item-search .read-more{
+	margin:0;
+}
+.item-search h3{
+	margin: 0;
+	font-family: "GandhiSans";
+	font-size: 20px;
+	font-weight: bold;
+}
+.item-search span{
+	color:#b92025;
+}
+.item-search p{
+	font: normal 13px "GandhiSans";
+	color: #333333;
+}
+.item-search{
+	background-image:url(images/post-bottom-shadow.png);
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	padding:0 15px 30px;
+	margin-top:30px;
+}
+.total-search{
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: "GandhiSans";
+	padding: 15px;
+}
+.total-search span{
+	color:#206b33;
+}
+.principalSearch .wp-pagenavi{
+	margin-top: 30px;
+}
 /*Fin estilos page gabinete*/
->>>>>>> Página de gabinete, correcciones de estilos varios
+
