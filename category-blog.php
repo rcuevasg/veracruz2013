@@ -10,7 +10,11 @@
 		<?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
 	
 		<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
-			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=330"); ?>
+			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=230"); ?>
+			
+			<!-- botones redes sociales -->
+			<?php include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 	
+			<!-- Fin botones redes sociales -->
 		</div><!-- end #popular -->
 		<?php
 			

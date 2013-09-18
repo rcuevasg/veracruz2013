@@ -254,8 +254,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 32px;
 }
 
+#popular {
+	background: none repeat scroll 0 0 #E8E7E7;
+    box-shadow: 5px 5px 5px #DFDFDF;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding-left: 0;
+    padding-top: 15px;
+    padding-right: 0;
+    text-align: center;
+    width: 97%;
+}
+
 #popular ul {
 	padding: 0;
+}
+
+#popular ul li span {
+	display: none;
+}
+
+#popular ul li a:nth-child(2) {
+	display: inline-block;
+    height: 45px;
+    margin: 15px 10px;
 }
 
 #popular img {
