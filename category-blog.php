@@ -6,11 +6,15 @@
 
 
 	<div id="content-list" class="container ">
+	
+		<div id="popular" class="col-sm-12 col-md-12 col-lg-12">
+			<?php wpp_get_mostpopular("range=all&limit=1"); ?>
+		</div><!-- end #popular -->
 		<?php
 			$idCategoria = get_cat_ID(single_cat_title( '', false ));
 			
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$notas = new WP_Query($query_string . '&posts_per_page=10');
+			$notas = new WP_Query($query_string . '&posts_per_page=9');
 			if ($notas->have_posts()) :
 			//$step = 1; //Variable para llevar el conteo y separar listados grandes de los pequeños
 			//$cierraPrimerDiv = false;
