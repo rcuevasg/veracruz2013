@@ -982,8 +982,8 @@ footer .widget-footer ul a:hover{
 .total-search span{
 	color:#206b33;
 }
-.principalSearch .wp-pagenavi{
-	margin-top: 30px;
+#principalSearch .wp-pagenavi{
+	margin: 30px 0 50px;
 }
 /*Fin estilos page gabinete*/
 

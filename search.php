@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="principalContent" class="container">
+<section id="principalSearch" class="container">
     <div class="col-md-8 col-lg-8">
         <?php
 			global $query_string, $wp_query;
