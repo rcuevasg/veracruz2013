@@ -393,7 +393,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #sidebar .widget-container{
 	display:inline-block;
 	width:100%;
-	margin: 10px 0 7px;
+	margin: 7px 0 7px;
 	}
 #sidebar .widget-container:first-child{
 		background:none;
@@ -448,10 +448,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	height:33px;
 	width:33px;	
 	} 
+a.iconFacebook{
+	background-image:url(images/facebook_tag.png);
+	background-size: 33px 33px;
+	display:block;
+	height:33px;
+	width:33px;	
+	}
 .iconFacebook span{
 	visibility:hidden;
 	}
-.iconFacebook a:hover{
+.iconFacebook a:hover, a.iconFacebook:hover {
 	background-image:url(images/facebook_tag_hover.png);
 	} 
 .iconTwitter a{
@@ -461,7 +468,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	height:33px;
 	width:33px;
 	}
-.iconTwitter a:hover{
+a.iconTwitter{
+	background-image:url(images/twitter_tag.png);
+	background-size: 33px 33px;
+	display:block;
+	height:33px;
+	width:33px;
+	}
+.iconTwitter a:hover, a.iconTwitter:hover{
 	background-image:url(images/twitter_tag_hover.png);
 	}
 .iconTwitter span{
@@ -781,6 +795,7 @@ footer .widget-footer ul a:hover{
 	text-transform:uppercase;
 	top:0px;
 	}
+<<<<<<< HEAD
 @media (max-width: 768px) {
 		.tituloPrincipal{
 			z-index:0;
@@ -838,3 +853,105 @@ footer .widget-footer ul a:hover{
 	margin-left:50%;
 	}
 /* fin estilo page principal */
+=======
+
+/* fin estilo page principal */
+/*Estilos page gabinete*/
+.divNotaGabinete{
+	padding-bottom:55px;
+}
+.item-gabinete{
+	text-align:center;
+}
+.img-gabinete{
+	-webkit-box-shadow: 0px 0px 4px 1px rgba(185,184,184,1);
+	-moz-box-shadow: 0px 0px 4px 1px rgba(185,184,184,1);
+	box-shadow: 0px 0px 4px 1px rgba(185,184,184,1);
+	padding:4px;
+	background-color: #fff;
+}
+.item-gabinete h3{
+	font-size:17px;
+	font-family:"GandhiSans";
+	text-align:center;
+	margin: 29px 0 15px;
+}
+.siglas-depencia{
+	background-image:url(images/bg-dependencias.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	height:39px;
+	padding-top: 5px;
+	position:relative;
+	font-family:"GandhiSans";
+	font-size:21px;
+	font-weight:bold;
+	margin-bottom: 16px;
+}
+.item-gabinete .gabinete-over {
+	border: 1px solid #ffffff;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	display: none;
+	left: 22px;
+	/*min-height: 325px; */
+	overflow: hidden;
+	padding: 20px 15px;
+	position: absolute;
+	top: -10px;
+	/*min-width: 506px; */
+	z-index: 1;
+}
+.item-gabinete h3, .item-gabinete .img-gabinete{
+	position: relative;
+	
+}
+.z_index-2{
+	z-index: 2;
+}
+.z_index-2-top{
+	z-index: 2;
+	margin-top:20px;
+}
+.margin-0{
+	margin:0 !important;
+}
+.gabinete-over{
+	background: #E3E3E3 url(images/bg-item-gabinete.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.data-card{
+	width:40%;
+	float:right;
+}
+.title-secretaria{
+	border-bottom: solid 1px #CCC;
+	padding: 20px 0 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: "GandhiSans";
+	font-weight: bold;
+}
+.miembro-gabinete{
+	font-size: 16px;
+	font-family: "GandhiSans";
+	padding-top: 25px;
+}
+.redes-gabinete{
+	padding: 35px 0 40px;
+}
+.redes-gabinete a{
+	display:inline-block;
+	
+}
+.mirror .gabinete-over{
+	margin-left: -273px;
+}
+.mirror .data-card{
+	float: left !important;
+}
+.clear{
+	clear:both;
+}
+/*Fin estilos page gabinete*/
+>>>>>>> Página de gabinete, correcciones de estilos varios
