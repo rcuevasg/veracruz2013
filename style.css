@@ -804,8 +804,9 @@ footer .widget-footer ul a:hover{
 .post-page-child h3{
 	color: #5b5b5b !important;
 	line-height:30px; 
-	border-bottom: 1px solid #6D6D6C;
+	/*border-bottom: 1px solid #6D6D6C;*/
 	font-family:"GandhiSerif";
+	text-align:center;
 	}
 .espacio{
 	margin-bottom:10%;
@@ -847,7 +848,10 @@ footer .widget-footer ul a:hover{
 	margin-top:5%;
 	font: normal 16px "GandhiSans";
 	color:#333333;
+
 	}
+.entry{
+	text-align:center;}
 .single-nombre{
 	margin-top:2%;
 	font: normal 28px "GandhiSans";
@@ -911,8 +915,20 @@ footer .widget-footer ul a:hover{
 	margin-top:3%;
 	}
 }
-
-
+.contenedor-paginas{
+	background-color:#F2F2F2;
+	margin-top:-6%;
+	}
+.contenedor-imagen{
+	background-color:#F2F2F2;
+	}
+.contenedor-paginas .read-more{
+	margin-top:8%;
+	margin-left:40%;
+	}
+.contenedor-pages{
+	margin-bottom:5%;
+	}
 
 /* fin estilo page principal */
 /*Estilos page gabinete*/

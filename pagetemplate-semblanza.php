@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Single page
+Template Name: Semblanza page
 */
 ?>
 <?php get_header(); ?>
 <section class="container principalContent" id="content-list">
-<div class="col-sm-12 col-md-12 col-lg-12">
+<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="tituloSingleArea">
 <h2>
@@ -16,20 +16,22 @@ echo get_the_title();//$post->post_parent
 </div>
 <?php
   $nombre = get_post_meta($post->ID, 'nombre', true);
-  if($nombre){
+  $secretaria = get_post_meta($post->ID, 'nombre-dependencia', true);
+  if($nombre || $secretaria){
     ?>
     <div class="single-nombre">
     <?php
-	echo "$nombre"; 
+	echo "$nombre"."<br>"."$secretaria"; 
 	?>
     </div>
    <?php }?>
+
 <?php 
-$facebook = get_post_meta($post->ID, 'facebook', true);
-$twitter = get_post_meta($post->ID, 'twitter', true);
-$youtube = get_post_meta($post->ID, 'youtube', true);
-$pinterest = get_post_meta($post->ID, 'pinterest', true);
-$plus = get_post_meta($post->ID, 'plus', true);
+$facebook = get_post_meta($post->ID, 'url-facebook', true);
+$twitter = get_post_meta($post->ID, 'url-twitter', true);
+$youtube = get_post_meta($post->ID, 'url-youtube', true);
+$pinterest = get_post_meta($post->ID, 'url-pinterest', true);
+$plus = get_post_meta($post->ID, 'url-plus', true);
   if($facebook || $twitter || $youtube || $pinterest || $plus){
 ?>
 <div class="single-siguele">
