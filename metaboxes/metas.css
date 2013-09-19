@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.my_meta_control table{
+	width:100%;
+}
+.my_meta_control input[type="text"]{
+	width:70%;
+}
+.my_meta_control .width-23{
+	width:23%;
+}
+.preview_wrap{
+	padding-right: 18px;
+	float: left;
+}
+.slide_preview .upload_image_button{
+	margin-top: 13px !important;
+}

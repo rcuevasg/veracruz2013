@@ -1068,4 +1068,36 @@ footer .widget-footer ul a:hover{
 	background:none !important;
 }
 /*Fin estilos page gabinete*/
-
+/*Estilos page eventos especiales*/
+.item-evento img{
+	max-width:251px;
+	float:left;
+}
+.content-eventos{
+	width:80%;
+	margin:0 auto;
+}
+.content-eventos table{
+	width:100%;
+}
+.content-eventos .title-evento{
+	font-family: "GandhiSans";
+	font-size:24px;
+	color:#606464;
+	padding-bottom: 14px;
+	border-bottom:1px dotted #6C6C6B;
+}
+.content-eventos .read-more{
+	margin:0;
+	float: right;
+}
+.content-eventos td{
+	padding-bottom: 55px;
+}
+.content-eventos .img-tumb{
+	margin: 40px 0 30px;
+	background-image: url(images/shadow-eventos.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 45px;
+}

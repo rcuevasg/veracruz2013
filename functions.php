@@ -224,6 +224,12 @@ function veracruz2013_widgets_init() {
 }
 add_action( 'widgets_init', 'veracruz2013_widgets_init' );
 /** Register sidebars by running steady_widgets_init() on the widgets_init hook. */
+
+/*Declarando tamaño de imagenes*/
 add_image_size('img-sidebar', 249 , 153, true);
 add_image_size('img-gabinete', 204 , 223, true);
+
+
+include_once 'metaboxes/setup.php';
+include_once 'metaboxes/function-eventos.php';
 ?>
