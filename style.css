@@ -863,9 +863,10 @@ footer .widget-footer ul a:hover{
 	padding:0 3% 3%;
 	}
 .titulo-single-redes{
-	margin-left:-10%;
-	padding:0 0 3%;
-	}
+ 	margin-left:-10%;
+ 	padding:0 0 3%;
+	margin-right:3%;
+ 	}
 #single-redes li{
 	list-style:none;
 	float:left;
@@ -873,6 +874,46 @@ footer .widget-footer ul a:hover{
 .single-nombre #single-redes{
 	margin-left:50%;
 	}
+.single-siguele{
+	margin-top:2%;
+	font: normal 28px "GandhiSans";
+  	text-align:center;
+	color: #5b5b5b !important;
+	background-image:url("images/background-bottom.png");
+  	background-position:50% 100%;
+  	background-repeat:no-repeat no-repeat;
+  	padding:0 0 3%;
+	}
+.single-siguele #single-redes{
+	 	margin-left:50%;
+ 	}
+@media (max-width: 991px) {
+#single-redes{
+	padding:0 8% 8%;
+	margin-top:-5%;
+		}
+}
+@media (max-width: 768px) {
+	#single-redes{
+		padding:0 5% 5%;
+		margin-top:-5%;
+		}
+}
+@media (max-width: 400px) {
+	#single-redes{
+	padding:-25% 30% 30%;
+		}
+		.single-siguele{
+			background-image:none;
+		}
+.single-siguele #single-redes{
+	margin-left:25%;
+	margin-top:3%;
+	}
+}
+
+
+
 /* fin estilo page principal */
 /*Estilos page gabinete*/
 .divNotaGabinete{

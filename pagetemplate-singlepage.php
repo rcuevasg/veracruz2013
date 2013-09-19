@@ -10,66 +10,93 @@ Template Name: Single page
 <div class="tituloSingleArea">
 <h2>
 <?php
-echo get_the_title($post->post_parent);
+echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
 <?php
-  $mykey_values = get_post_custom_values('nombre');
-  foreach ( $mykey_values as $key => $value ) {
+  $nombre = get_post_meta($post->ID, 'nombre', true);
+  if($nombre){
     ?>
     <div class="single-nombre">
     <?php
-	echo "$value"; 
+	echo "$nombre"; 
 	?>
     </div>
-    <?php
-  }
+   <?php }?>
+<?php 
+$facebook = get_post_meta($post->ID, 'facebook', true);
+$twitter = get_post_meta($post->ID, 'twitter', true);
+$youtube = get_post_meta($post->ID, 'youtube', true);
+$pinterest = get_post_meta($post->ID, 'pinterest', true);
+$plus = get_post_meta($post->ID, 'plus', true);
+  if($facebook || $twitter || $youtube || $pinterest || $plus){
 ?>
-<div class="single-nombre">
+<div class="single-siguele">
 <span class="titulo-single-redes">Síguele en:</span>
 <ul id="single-redes" class="menu">
 <?php
-  $mykey_valuesRed = get_post_custom_values('redesSociales');
-  $conta=0;
-  foreach ( $mykey_valuesRed as $keyRed => $valueRed ) {
-	  $claseIcon="";
-	  $cadenaF="facebook";
-	  if(strstr($valueRed,$cadenaF)){
-		  	  $claseIcon="iconFacebook";
-		  }
-	  $cadenaT="twitter";
-	  if(strstr($valueRed,$cadenaT)){
-		  	  $claseIcon="iconTwitter";
-		  }
-	  $cadenaY="youtube";
-	  if(strstr($valueRed,$cadenaY)){
-		  	  $claseIcon="iconYoutube";
-		  }
-	  $cadenaP="pinterest";
-	  if(strstr($valueRed,$cadenaP)){
-		  	  $claseIcon="iconPinterest";
-		  }
-	  $cadenaG="plus";
-	  if(strstr($valueRed,$cadenaG)){
-		  	  $claseIcon="iconPlus";
-		  }
-		
-	
-    ?>
-<li class="<?php echo $claseIcon; ?>">
-<a target="_blank" href="<?php echo "$valueRed"; ?>">
+  
+	  if($facebook){
+			  ?>
+<li class="iconFacebook">
+<a target="_blank" href="<?php echo "$facebook"; ?>">
 <span>Facebook</span>
 </a>
 </li>
-    <?php
-  }
-?>
+		<?php
+		  }
+	 if($twitter){
+	?>
+<li class="iconTwitter">
+<a target="_blank" href="<?php echo "$twitter"; ?>">
+<span>Twitter</span>
+</a>
+</li>
+	<?php	 
+	 }
+	  if($youtube){
+	?>
+<li class="iconYoutube">
+<a target="_blank" href="<?php echo "$youtube"; ?>">
+<span>YouTube</span>
+</a>
+</li>
+	<?php	  	  
+		  }
+	if($pinterest){
+		?>
+<li class="iconPinterest">
+<a target="_blank" href="<?php echo "$pinterest"; ?>">
+<span>Pinterest</span>
+</a>
+</li>	
+		<?php
+		}
+	  if($plus){
+		  ?>
+<li class="iconPlus">
+<a target="_blank" href="<?php echo "$plus"; ?>">
+<span>Pinterest</span>
+</a>
+</li>		  
+		  <?php
+		  }
+    ?>
 </ul>
 </div>
+<?php }?>
 <div class="col-md-12 col-lg-12 post-home">
-    <div class='col-sm-3 col-md-3 col-lg-3 pull-left single-img'>
-    <?php the_post_thumbnail(); ?> 
+    <div class='col-sm-5 col-md-4 col-lg-4 pull-left single-img'>
+    <?php 
+	$imagen = get_post_meta($post->ID, 'imagen', true);
+	if($imagen){
+	?>	
+		<span class='img img-responsive'>
+        <img class="img-responsive" src="<?php echo $imagen; ?>?w=250&h=300&a=cr" border=0 />
+        </span>
+		<?php }
+	?>
     </div>
   <div class="entrytext">
    <?php the_content(); ?>
