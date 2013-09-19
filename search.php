@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("a[rel^='prettyPhoto']").prettyPhoto();
+	});
+</script>
 <section id="principalSearch" class="container">
     <div class="col-md-8 col-lg-8">
         <?php

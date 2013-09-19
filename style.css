@@ -1007,5 +1007,8 @@ footer .widget-footer ul a:hover{
 #principalSearch .wp-pagenavi{
 	margin: 30px 0 50px;
 }
+.search-form button{
+	background:none !important;
+}
 /*Fin estilos page gabinete*/
 
