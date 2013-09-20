@@ -6,45 +6,39 @@ Template Name: Poderes del estado
 <?php get_header(); ?>
     <div id="content-list" class="container ">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		<?php $my_meta = get_post_meta($post->ID,'_eventos',true); ?>
+		<?php $my_meta = get_post_meta($post->ID,'_poderes',true); ?>
+        
         <div class="tituloSingleArea">
             <h2><?php the_title(); ?></h2>
         </div>
-        <div class="content-eventos">
-				<div class="img-tumb">
-					<?php 
-						if ( has_post_thumbnail() ) { 
-						   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
-						   echo "<img class='img-evento img-responsive' src='".$large_image_url[0]."' alt=''>";
-						}
-					?>
-                </div>
-                <table>
+        <div class="content-poderes">
 				<?php 
                 if($my_meta!=''){ 
-                    foreach($my_meta['eventos'] as $evento){  ?>
-                        <tr>                  
-                            <td class="col-xs-6 col-sm-4 col-lg-4">
-                            	<?php if($evento['image_src']!=""){ ?>
-                                	<img src="<?php echo esc_url($evento['image_src']) ?>" class="img-responsive">
-                            	<?php } ?>
-                            </td>
-                            <td class="col-xs-12 col-md-8">
-                                <div class='title-evento'>
-                                <?php if($evento['name_evento']!=""){ ?>
-                                    <?php echo $evento['name_evento']; ?>
+                    foreach($my_meta['poderes'] as $poder){  ?>
+                        <div class="item-poder">	
+                            <?php if($poder['image_src']!=""){ ?>
+                                <img src="<?php echo esc_url($poder['image_src']) ?>" class="img-responsive">
+                            <?php } ?>
+                            <div class='title-poder'>
+                                <?php if($poder['titulo']!=""){ ?>
+                                    <?php echo $poder['titulo']; ?>
                                 <?php } ?>
-                                <?php if($evento['url_evento']!=""){ ?>
-                                    <a href="<?php echo esc_url($evento['url_evento']); ?>" class="read-more" target="_blank">VISITAR SITIO</a>
+                            </div>
+                            <div class="descripcion-poder">
+                                <?php if($poder['Descripcion']!=""){ ?>
+                                    <?php echo $poder['Descripcion']; ?>
                                 <?php } ?>
-                                </div>
-                            </td>
-                        </tr>
+                            </div>
+                            <div class="clear"></div>
+                            <?php if($poder['url_poder']!=""){ ?>
+                                <center><a href="<?php echo esc_url($poder['url_poder']); ?>" class="read-more" target="_blank">VISITAR SITIO</a></center>
+                            <?php } ?>
+                        </div>    
                 <?php }
                 }
                 ?>
-                </table>
             <?php endwhile; // end of the loop. ?>
         </div>
+        <div class="border-solid"></div>
     </div>
 <?php get_footer(); ?>

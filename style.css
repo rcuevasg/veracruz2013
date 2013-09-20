@@ -1135,3 +1135,38 @@ footer .widget-footer ul a:hover{
 	background-repeat: no-repeat;
 	padding-bottom: 45px;
 }
+/*Fin estilos eventos*/
+/*Estilos poderes del estado*/
+.content-poderes img{
+	padding-top:55px;
+}
+.title-poder, .descripcion-poder{
+	width:70%;
+	margin:0 auto;
+	text-align:center;
+	font-family: "GandhiSans";
+	color:#606464;
+}
+.title-poder{
+	font-size:32px;
+	padding: 25px 0;
+}
+.descripcion-poder{
+	padding-bottom:25px;
+}
+.content-poderes .read-more{
+	text-align:center;
+	margin:0;
+}
+.item-poder{
+	background-image: url(images/shadow-eventos.png);
+	background-repeat:no-repeat;
+	background-position: center bottom;
+	padding-bottom:50px;
+}
+.item-poder:last-child{
+	background:none;
+}
+.border-solid{
+	border-bottom:solid 1px #CCC;
+}

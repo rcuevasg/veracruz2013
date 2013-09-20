@@ -231,5 +231,5 @@ add_image_size('img-gabinete', 204 , 223, true);
 
 
 include_once 'metaboxes/setup.php';
-include_once 'metaboxes/function-eventos.php';
+include_once 'metaboxes/functions-meta.php';
 ?>
