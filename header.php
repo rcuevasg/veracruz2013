@@ -191,6 +191,7 @@
 				
 				
 				<?php
+					if (is_front_page() || is_category()):
 					/* When we call the dynamic_sidebar() function, it'll spit out
 					* the widgets for that widget area. If it instead returns false,
 					* then the sidebar simply doesn't exist, so we'll hard-code in
@@ -202,7 +203,10 @@
 							<?php //print obtenFechaEspaniol(); ?>
 							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
 						</div>
-					<?php endif; ?>
+					<?php endif; 
+						
+					endif;
+					?>
 	
 			</header>
 			

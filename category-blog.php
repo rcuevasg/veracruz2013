@@ -10,6 +10,7 @@
 		<?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
 	
 		<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
+			<span class="responsive"><img src="<?php bloginfo('template_url') ?>/images/masleido.png" border="0"></span>
 			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=230"); ?>
 			
 			<!-- botones redes sociales -->
