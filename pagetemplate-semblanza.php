@@ -107,4 +107,5 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
  <?php endwhile; endif; ?>
 </div>
 </section>
+<div class="hr"></div>
 <?php get_footer(); ?>

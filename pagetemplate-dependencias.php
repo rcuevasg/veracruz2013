@@ -7,104 +7,49 @@ Template Name: Dependencias page
 <section class="container principalContent" id="content-list">
 <div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
-<div class="tituloSingleArea">
-<h2>
+<div class="col-md-12 col-lg-12">
+					<div class="imagen-dependencias">
+					<?php 
+						if ( has_post_thumbnail() ) { 
+	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
+						   echo "<img class='img-responsive' src='".$large_image_url[0]."' alt='' width='300' height='200'>";
+						}
+					?>
+                    </div>
+    <div class="text-dependencias">
+    <h3><?php echo get_the_title();//$post->post_parent	?></h3>
+   	<?php the_content(); ?>
+<div class="listado-categorias-comunicados">
+<table align="center">
 <?php
-echo get_the_title();//$post->post_parent
+$category_id = get_cat_ID('Comunicados');
+//$categories = get_categories('child_of=$category_id'); 	
+$args = array(
+  'show_option_all'    => '',
+  'order' => 'DESC',
+  'hide_empty'         => 0,
+  'hierarchical'       => 1,
+  'parent' => $category_id
+  );
+$categories = get_categories( $args );
+foreach ( $categories as $category ) {
+	echo '<div class="categorias-hover">';
+	echo '<tr class="categorias-hover-tr">';
+	echo '<td class="flecha-verde"></td>';
+	echo '<td class="link-hover"><br><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br><br></td>';
+	echo '<td><br>'.$category->description.'<br><br></td>';
+	echo '</tr>';
+	echo '</div>';
+	
+}
+				 
 ?>
-</h2>
+</table>
 </div>
-<?php
-  $nombre = get_post_meta($post->ID, 'nombre', true);
-  $secretaria = get_post_meta($post->ID, 'nombre-dependencia', true);
-  if($nombre || $secretaria){
-    ?>
-    <div class="single-nombre">
-    <?php
-	echo "$nombre"."<br>"."$secretaria"; 
-	?>
-    </div>
-   <?php }?>
-
-<?php 
-$facebook = get_post_meta($post->ID, 'url-facebook', true);
-$twitter = get_post_meta($post->ID, 'url-twitter', true);
-$youtube = get_post_meta($post->ID, 'url-youtube', true);
-$pinterest = get_post_meta($post->ID, 'url-pinterest', true);
-$plus = get_post_meta($post->ID, 'url-plus', true);
-  if($facebook || $twitter || $youtube || $pinterest || $plus){
-?>
-<div class="single-siguele">
-<span class="titulo-single-redes">Síguele en:</span>
-<ul id="single-redes" class="menu">
-<?php
-  
-	  if($facebook){
-			  ?>
-<li class="iconFacebook">
-<a target="_blank" href="<?php echo "$facebook"; ?>">
-<span>Facebook</span>
-</a>
-</li>
-		<?php
-		  }
-	 if($twitter){
-	?>
-<li class="iconTwitter">
-<a target="_blank" href="<?php echo "$twitter"; ?>">
-<span>Twitter</span>
-</a>
-</li>
-	<?php	 
-	 }
-	  if($youtube){
-	?>
-<li class="iconYoutube">
-<a target="_blank" href="<?php echo "$youtube"; ?>">
-<span>YouTube</span>
-</a>
-</li>
-	<?php	  	  
-		  }
-	if($pinterest){
-		?>
-<li class="iconPinterest">
-<a target="_blank" href="<?php echo "$pinterest"; ?>">
-<span>Pinterest</span>
-</a>
-</li>	
-		<?php
-		}
-	  if($plus){
-		  ?>
-<li class="iconPlus">
-<a target="_blank" href="<?php echo "$plus"; ?>">
-<span>Pinterest</span>
-</a>
-</li>		  
-		  <?php
-		  }
-    ?>
-</ul>
-</div>
-<?php }?>
-<div class="col-md-12 col-lg-12 post-home">
-    <div class='col-sm-5 col-md-4 col-lg-4 pull-left single-img'>
-    <?php 
-	$imagen = get_post_meta($post->ID, 'imagen', true);
-	if($imagen){
-	?>	
-		<span class='img img-responsive'>
-        <img class="img-responsive" src="<?php echo $imagen; ?>?w=250&h=300&a=cr" border=0 />
-        </span>
-		<?php }
-	?>
-    </div>
-  <div class="entrytext">
-   <?php the_content(); ?>
-  </div>
+  	</div>
 </div>
  <?php endwhile; endif; ?>
 </div>
 </section>
+<div class="hr"></div>
 <?php get_footer(); ?>
