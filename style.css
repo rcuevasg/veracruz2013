@@ -899,7 +899,6 @@ footer .widget-footer ul a:hover{
 	}
 .listado-categorias-comunicados	tr {
 	border-bottom: 1px dashed #c5c5c5;
-	cursor:pointer;
 }
 .listado-categorias-comunicados .categorias-hover{
 	margin-top:3%;
