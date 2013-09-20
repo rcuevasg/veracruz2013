@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Eventos especiales
+Template Name: Poderes del estado
 */
 ?>
 <?php get_header(); ?>
