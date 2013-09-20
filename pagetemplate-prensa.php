@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Principal page
+Template Name: Sala de Prensa page
 */
 ?>
 <?php get_header(); ?>
@@ -18,7 +18,9 @@ echo $padre=get_the_title($post->post_parent);
 $mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
 
 $contador = count($mypages);
-	foreach( $mypages as $page ) {
+$cont=0;
+	foreach( $mypages as $page) {
+		$cont++;
 		$nombreparent = get_the_title($page->post_parent);
 
 		$content = $page->post_content;
@@ -29,7 +31,7 @@ $contador = count($mypages);
 if(	$nombreparent==$padre){
 	?>
     
-    <div class="col-md-6 col-lg-4 contenedor-pages">
+    <div class="<?php if($contador==$cont){ ?> col-md-6 col-lg-8 <?php }else { ?> col-md-6 col-lg-4 <?php }?>contenedor-pages">
     <div class="contenedor-loop">
     <?php 
 	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'full'));
@@ -56,7 +58,7 @@ if(	$nombreparent==$padre){
     <br>
 	<h3><?php echo $page->post_title; ?></h3>
 		<div class="entry"><?php echo substr($content, 0, 100); ?></div>
-        <a href="<?php echo get_page_link( $page->ID ); ?>" class="btn btn-default read-more">Ver más</a>
+        <a href="<?php echo get_page_link( $page->ID ); ?>" class="btn btn-default read-more <?php if($contador==$cont){ ?> mover-centro <?php } ?>">Ver más</a>
     </div>
     </div>
     </div>

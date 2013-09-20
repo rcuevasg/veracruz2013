@@ -585,6 +585,14 @@ a.iconTwitter{
 	border-bottom:1px solid #c5c5c5;
 	margin-bottom:10%;
 	}
+
+.hr {
+  height: 15px;
+  background: #fff url(images/background-bottom.png) no-repeat scroll center;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+
 /* termina style para el side bar */
 
 
@@ -797,9 +805,11 @@ footer .widget-footer ul a:hover{
 }
 /* estilo page principal */
 .principalContent{
-	border-bottom:1px solid #c5c5c5;
 	margin-bottom:10%;
-	color:#333333;	
+	color:#333333;
+	padding:0 35px;
+	margin-top:-19px;
+	
 	}
 .post-page-child h3{
 	color: #5b5b5b !important;
@@ -823,6 +833,14 @@ footer .widget-footer ul a:hover{
 			z-index:0;
 	}
 }
+@media (max-width: 400px) {
+.tituloPrincipal{
+	text-align:center;
+	}
+}
+.tituloPrincipal h1{
+	font-size:30px;
+	}
 .tituloSingleArea{
 	background: none repeat scroll 0 0 #F3F3F3;
     border-bottom: 1px solid #D0D1D1;
@@ -851,7 +869,9 @@ footer .widget-footer ul a:hover{
 
 	}
 .entry{
-	text-align:center;}
+	text-align:center;
+	}
+
 .single-nombre{
 	margin-top:2%;
 	font: normal 28px "GandhiSans";
@@ -915,21 +935,27 @@ footer .widget-footer ul a:hover{
 	margin-top:3%;
 	}
 }
-.contenedor-paginas{
-	background-color:#F2F2F2;
+.contenedor-paginas{	
 	margin-top:-6%;
 	}
-.contenedor-imagen{
-	background-color:#F2F2F2;
-	}
+
 .contenedor-paginas .read-more{
 	margin-top:8%;
-	margin-left:40%;
+	margin-left:50%;
+	margin-bottom:5%;
+	}
+.mover-centro{
+	margin-left:50%;
 	}
 .contenedor-pages{
 	margin-bottom:5%;
 	}
-
+.contenedor-loop{
+	background-color:#F2F2F2;
+	}
+.contenedor-loop:hover{
+	background-color:#DDDDDD;	
+	}
 /* fin estilo page principal */
 /*Estilos page gabinete*/
 .divNotaGabinete{
