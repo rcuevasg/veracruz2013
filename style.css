@@ -1212,3 +1212,21 @@ footer .widget-footer ul a:hover{
 .border-solid{
 	border-bottom:solid 1px #CCC;
 }
+/*Estilos normativa vigente*/
+.item-normativa{
+	text-align:center;
+	width:50%;
+	margin:45px auto;
+}
+.item-normativa p{
+	font-family: "GandhiSans";
+	color:#606464;
+	font-size:16px;
+}
+.content-normativa img{
+	padding-bottom: 40px;
+	padding-top: 37px;
+}
+.content-normativa .read-more{
+	margin:0;
+}
