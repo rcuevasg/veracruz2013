@@ -287,6 +287,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     max-width: 100%;
 }
 
+#popular #ribonLoMasLeido {
+	display: inline-block;
+    position: absolute;
+    right: -0.5%;
+    top: -1%;
+}
+
 /** Fin de los estilos del header **/
 /* FONT FACE */
 .post-home{
