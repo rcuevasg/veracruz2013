@@ -153,7 +153,7 @@
 								if (!empty($thumbnailsrc)):
 								?>
 									<div class="">
-								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=1100&h=330' border=0 /></span>
+								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=1100&h=400' border=0 /></span>
 								 	</div>
 								 <?php
 								 endif;
