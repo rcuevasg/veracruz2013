@@ -49,9 +49,29 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
-
-<?php endwhile; ?>
+<div class="navposts">
+ <?php if (!get_adjacent_post('', '', true)) : ?>
+        <div class="pull-left col-md-4">
+        <p>NOTA ANTERIOR</p>
+        <?php previous_post_link('&laquo;  %link'); ?>
+        </div>
+        <div class="pull-right col-md-4">
+        <p>NOTA SIGUIENTE</p>
+        <?php next_post_link('%link &raquo;'); ?>
+        </div>
+    <?php else : ?>
+        <div class="pull-left col-md-4">
+        <p>NOTA ANTERIOR</p>
+        <?php previous_post_link('&laquo; %link'); ?>
+        </div> 
+        <div class="pull-right col-md-4">
+        <p>NOTA SIGUIENTE</p>
+        <?php next_post_link('%link &raquo;'); ?>
+        </div>
+</div>
+  <?php endif; ?>
 </div><!-- end .post-home -->
+<?php endwhile; ?>
 <?php get_sidebar(); ?>
 </section><!--#content-single -->
 <?php get_footer(); ?>
