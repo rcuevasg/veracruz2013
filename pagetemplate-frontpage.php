@@ -4,7 +4,7 @@ Template Name: Front page
 */
 ?>
 <?php get_header(); ?>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
 <script type="text/javascript">
 $(document).ready(function(){
