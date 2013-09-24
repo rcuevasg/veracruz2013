@@ -1,17 +1,14 @@
-<?php
-
-get_header(); ?>
-
+<?php get_header(); ?>
 <div class="breadcrumbs">
     <?php if(function_exists('bcn_display'))
     {
         bcn_display();
-    }?>
+    }
+	?>
 </div>
 
 <section id="principalContent"  class="container">
 <div class="col-md-8 col-lg-8 post-home single-container">
-
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) { ?>

@@ -25,7 +25,7 @@ function show_url_social(url){
 						 <?php
 						$categoriaBlog = get_category_by_slug('blog');
 						$categoriaBlog = $categoriaBlog->term_id;
-						$blog_query = new WP_Query('cat=' . $categoriaBlog . '&showposts=3&post_type=post');
+						$blog_query = new WP_Query('cat=' . $categoriaBlog . '&showposts=4&post_type=post');
 						
 						while ($blog_query->have_posts()) :
 						 	$blog_query->the_post();
