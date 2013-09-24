@@ -47,31 +47,18 @@ get_header(); ?>
 					</div><!-- .entry-content -->
                     <div class="col-md-10 col-lg-10">
 						<?php the_content(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-## -->
+					</div><!-- .entry-content -->				
+<?php endwhile; ?>                    
 <div class="navposts">
- <?php if (!get_adjacent_post('', '', true)) : ?>
-        <div class="pull-left col-md-4">
-        <p>NOTA ANTERIOR</p>
-        <?php previous_post_link('&laquo;  %link'); ?>
-        </div>
-        <div class="pull-right col-md-4">
-        <p>NOTA SIGUIENTE</p>
-        <?php next_post_link('%link &raquo;'); ?>
-        </div>
-    <?php else : ?>
-        <div class="pull-left col-md-4">
-        <p>NOTA ANTERIOR</p>
-        <?php previous_post_link('&laquo; %link'); ?>
+    	<div class="pull-left col-md-4 col-lg-4 col-sm-5 col-xs-6">        	
+            <?php previous_post_link('<p>NOTA ANTERIOR</p> &laquo; %link','%title',TRUE); ?>
         </div> 
-        <div class="pull-right col-md-4">
-        <p>NOTA SIGUIENTE</p>
-        <?php next_post_link('%link &raquo;'); ?>
+        <div class="pull-right col-md-4 col-lg-4 col-sm-5 col-xs-6">
+            <?php next_post_link('<p>NOTA SIGUIENTE</p> %link &raquo;','%title',TRUE); ?>
         </div>
-</div>
-  <?php endif; ?>
+  </div>
+</article><!-- #post-## -->
 </div><!-- end .post-home -->
-<?php endwhile; ?>
 <?php get_sidebar(); ?>
 </section><!--#content-single -->
 <?php get_footer(); ?>
