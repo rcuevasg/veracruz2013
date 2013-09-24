@@ -189,8 +189,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 185px !important;
 }
 
+#mainMenu ul ul li:last-child  {
+	border-bottom: none;
+}
+
+#mainMenu ul ul li:nth-last-child(2) {
+	border-bottom: none;
+}
+
 #mainMenu ul ul li a:hover {
 	background: #E4E4E4;
+	color: #333333;
 }
 
 #mainMenu  ul ul li a {
@@ -200,6 +209,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	width: 100%;
 	text-align: left;
 	text-transform: capitalize;
+	color: #666666;
 }
 
 #mainMenu  ul li:hover > ul {
@@ -519,6 +529,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	float:left;
 	margin-left:10px;
 	}
+
+.iconGobierno a {
+	background-image: url(images/palacioMenu.png)  ;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 120px 44px;
+	display: block;
+	height: 44px !important;
+	width: 120px;
+}	
+
+#mainMenu ul ul .iconGobierno a:hover {
+	background-image: url(images/palacioMenu.png)  ;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 120px 44px;
+	background-color: #EEE;
+	cursor: pointer;
+}
+
+.iconGobierno span {
+	visibility: hidden;
+}
+	
 .iconFacebook a{
 	background-image:url(images/facebook_tag.png);
 	background-size: 33px 33px;
