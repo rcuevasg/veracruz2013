@@ -41,13 +41,8 @@ echo get_the_title();//$post->post_parent
    <?php
    	$url = get_post_meta($post->ID, 'url', true);
    	?>
-   <center><iframe src="<?php print strip_tags($url); ?>" width="1000px" style="height:100%" frameborder="0" onload='javascript:resizeIframe(this);'></iframe></center>
+   <center><iframe src="<?php print strip_tags($url); ?>" width="1000px" style="height:800px" frameborder="0" ></iframe></center>
    
-   <script language="javascript" type="text/javascript">
-	   function resizeIframe(obj) {
-		   obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-		   }
-	</script>
   </div>
 </div>
  <?php endwhile; endif; ?>
