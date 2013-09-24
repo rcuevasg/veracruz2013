@@ -166,6 +166,55 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding-top: 7px;
 }
 
+/* Clases para el submenu de primer nivel */
+#mainMenu  ul ul {
+	display: none;
+	position: absolute;
+	top: 40px;
+	z-index: 99;
+	background: #EEEEEE;
+	padding: 4px 5px;
+}
+
+#mainMenu  ul ul li {
+	border-bottom: 1px solid;
+    border-right: medium none;
+    float: left;
+    height: auto;
+    list-style: none outside none;
+    margin-bottom: 0;
+    margin-top: 3px;
+    padding-bottom: 3px;
+    padding-top: 0;
+    width: 185px !important;
+}
+
+#mainMenu ul ul li a:hover {
+	background: #E4E4E4;
+}
+
+#mainMenu  ul ul li a {
+	padding: 5px 10px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+#mainMenu  ul li:hover > ul {
+	display: block;
+}
+
+/* Fin de la clases para el submenu de primer nivel */
+
+/* Clases para los submenus de segundo y tercer nivel */
+#mainMenu  ul ul li ul {
+	left: 200px;
+	top: 0px;
+}
+/* Fin de las clases para los submenus de segundo y tercer nivel */
+
 .navbar-collapse {
 	background: #DEDEDE;
 }

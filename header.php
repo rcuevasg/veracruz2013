@@ -133,7 +133,7 @@
 						$categoriaSlider = $categoriaSlider->term_id;
 						$counterActive = 1;
 						      
-						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=3&post_type=post');
+						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=4&post_type=post');
 						 while ($notasSlider->have_posts()) :
 						 	$notasSlider->the_post();
 						 	$wp_query->in_the_loop = true;
@@ -175,10 +175,10 @@
 					
 					<div class="carousel-indicators-wrapper">
 						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+							<li data-target="#carousel-destacados" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-destacados" data-slide-to="1"></li>
+							<li data-target="#carousel-destacados" data-slide-to="2"></li>
+							<li data-target="#carousel-destacados" data-slide-to="3"></li>
 						</ol>
 					</div><!-- end .carousel-indicators-wrapper -->
 					
