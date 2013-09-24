@@ -1313,3 +1313,6 @@ footer .widget-footer ul a:hover{
 .content-normativa .read-more{
 	margin:0;
 }
+.social-hidden{
+	display:none;
+}

@@ -1,6 +1,6 @@
 <?php global $wpalchemy_media_access; ?>
 <div class="my_meta_control">
-    <p>Agregar en los siguientes campos el logo del evento, Nombre y dirección web del sitio del evento.</p>   
+
     <div style="border:1px solid #CCC; padding:10px; margin-top:10px;">  
     <table>
         <tr>
@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <td>
-                <?php $mb->the_field('url_normativa'); ?>
+                <?php $mb->the_field('url_normativa_gaceta'); ?>
                 <label>Url de la página del enlace</label>
                 <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
             </td>

@@ -20,9 +20,9 @@ $custom_select_mb2 = new WPAlchemy_MetaBox(array
 
 $custom_select_mb3 = new WPAlchemy_MetaBox(array
 (
-	'id' => '_normativa',
-	'title' => 'Agregar descripción y link de normativa',
-	'template' => get_stylesheet_directory() . '/metaboxes/meta-normativa.php',
+	'id' => '_normativa_gaceta',
+	'title' => 'Agregar descripción y link',
+	'template' => get_stylesheet_directory() . '/metaboxes/meta-normativa-gaceta.php',
 	'hide_editor' => false,
-	'include_template' => array('pagetemplate-normativa.php'),
+	'include_template' => array('pagetemplate-normativa-gaceta.php'),
 ));
