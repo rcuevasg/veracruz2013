@@ -1316,3 +1316,23 @@ footer .widget-footer ul a:hover{
 .social-hidden{
 	display:none;
 }
+/* sinle estilo */
+.entry-title{
+	font: normal 40px "GandhiSerif";
+	color:#5b5b5b;
+	}
+
+.entry-content .listadoShareItem{
+	background:none;
+	border-top:none;
+	}
+.single-container{
+	padding:0 36px;
+	}
+.single-container .post-date{
+	margin-left:-2%;
+  	margin-top:30%;
+	padding-left:2%;
+	padding-top:1%;
+	}
+/* */

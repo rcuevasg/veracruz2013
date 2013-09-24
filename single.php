@@ -9,8 +9,8 @@ get_header(); ?>
     }?>
 </div>
 
-<section id="content-single" class="container">
-<div class="col-md-8 col-lg-8 post-home">
+<section id="principalContent"  class="container">
+<div class="col-md-8 col-lg-8 post-home single-container">
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -19,26 +19,39 @@ get_header(); ?>
 				<?php } else { ?>	
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php } ?>
-					<div class="entry-content">
-						<!-- extracto -->
-                    	<h2 class="excerpt"><?php $pbasExtracto = strip_tags(get_the_excerpt()); ?>
-                        <?php print substr($pbasExtracto, 0, strpos($pbasExtracto, "Leer m&aacute;s")); ?><span></span></h2>
-                        <!-- /extracto -->
-                        
+                <?php 
+				$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'full'));
+					    		$thumbnailsrc = "";
+					    		if (!empty($domsxe)) {
+						    		$thumbnailsrc = $domsxe->attributes()->src;
+						    		//$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
+						    	} else {
+							    	$urlTema = get_bloginfo('template_url');
+							    	$thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";
+							    }
+							   
+								if (!empty($thumbnailsrc)):
+								?>
+								 	<div class="arriba">    
+                                    <span class='img img-responsive'>
+                                   <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=700&h=300&a=cr' border=0 /></span>
+                                    </div>
+									
+								 <?php
+								 endif;
+								 ?>	
+                                 <div class="hr"></div>			
+					<div class="entry-content col-md-2 col-lg-2">
+					<?php include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 
+					</div><!-- .entry-content -->
+                    <div class="col-md-10 col-lg-10">
 						<?php the_content(); ?>
-						
-						<?php edit_post_link( __( 'Editar', 'rtvhome' ), '', '' ); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 
 <?php endwhile; ?>
-
 </div><!-- end .post-home -->
-
-
-
 <?php get_sidebar(); ?>
-
 </section><!--#content-single -->
-
 <?php get_footer(); ?>
