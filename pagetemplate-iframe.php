@@ -36,7 +36,9 @@ echo get_the_title();//$post->post_parent
 						 endif;
 						 ?>
   <div class="entrytext">
+  	<div class="item-normativa">
    <?php the_content(); ?>
+  	</div>
    
    <?php
    	$url = get_post_meta($post->ID, 'url', true);
