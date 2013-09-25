@@ -41,7 +41,7 @@ echo get_the_title();//$post->post_parent
    <?php
    	$url = get_post_meta($post->ID, 'url', true);
    	?>
-   <center><iframe src="<?php print strip_tags($url); ?>" width="1000px" style="height:800px" frameborder="0" ></iframe></center>
+   <center><iframe src="<?php print strip_tags($url); ?>" width="1000px" style="height:1300px" frameborder="0" ></iframe></center>
    
   </div>
 </div>

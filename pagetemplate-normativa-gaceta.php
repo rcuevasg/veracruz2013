@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Normativa vigente y gaceta oficial
+Template Name: Link Page
 */
 ?>
 
