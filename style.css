@@ -681,7 +681,7 @@ a.iconTwitter{
 	}
 #principalContent{
 	border-bottom:1px solid #c5c5c5;
-	margin-bottom:10%;
+	margin-bottom:20%;
 	}
 
 .hr {
@@ -851,8 +851,7 @@ footer .widget-footer ul a:hover{
 
 #content-list {
 	margin: 15px;
-	border-bottom:1px solid #c5c5c5;
-	margin-bottom:10%;
+	
 }
 
 #content-list .divNotaListado .contenedorNota div:first-child {
