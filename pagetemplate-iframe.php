@@ -14,7 +14,8 @@ echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
-<div class="col-md-12 col-lg-12 post-home">
+<br>
+<div class="col-md-12 col-lg-12">
     <?php //Obtenemos la url de la imagen destacada
 		$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
 		$thumbnailsrc = "";
@@ -29,10 +30,11 @@ echo get_the_title();//$post->post_parent
 						if (!empty($thumbnailsrc)):
 						?>
 							<div class="">
-						 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+						 	<span class='img img-responsive'><img class="img-responsive" src='<?php print $thumbnailsrc; ?>' border=0 />
 						 	</span>
 						 	</div>
 						 <?php
+						 // <?php bloginfo('template_url') ? >/timthumb.php?src=
 						 endif;
 						 ?>
   <div class="entrytext">
