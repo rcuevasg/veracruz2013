@@ -32,7 +32,7 @@ if(	$nombreparent==$padre){
     <div class="col-md-6 col-lg-4 contenedor-pages">
     <div class="contenedor-loop">
     <?php 
-	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'full'));
+	$domsxe = simplexml_load_string(get_the_post_thumbnail($page->ID, 'medium'));
 	$thumbnailsrc = "";
 					    		if (!empty($domsxe)) {
 						    		$thumbnailsrc = $domsxe->attributes()->src;
@@ -46,16 +46,17 @@ if(	$nombreparent==$padre){
 								?>
 								 	<div class="contenedor-imagen arriba">
                                     <span class="img img-responsive">    
-                                    <img class="img-responsive" src='<?php bloginfo('template_url'); ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>' border='0' /></span>
+                                    <img class="img-responsive" src='<?php print $thumbnailsrc; ?>' border='0' /></span>
                                     </div>
 
 								 <?php
+								 //<?php bloginfo('template_url'); ? >/timthumb.php?src=
 								 endif;
 								 ?>
     <div class="contenedor-paginas post-page-child">
     <br>
 	<h3><?php echo $page->post_title; ?></h3>
-		<div class="entry"><?php echo substr($content, 0, 100); ?></div>
+		<div class="entry"><?php //echo substr($content, 0, 100); ?></div>
         <a href="<?php echo get_page_link( $page->ID ); ?>" class="btn btn-default read-more">Ver más</a>
     </div>
     </div>

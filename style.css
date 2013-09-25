@@ -1088,6 +1088,7 @@ footer .widget-footer ul a:hover{
 	margin-bottom:5%;
 	}
 .contenedor-loop{
+	min-height:250px;
 	background-color:#F2F2F2;
 	}
 .contenedor-loop:hover{
