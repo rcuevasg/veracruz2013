@@ -7,6 +7,32 @@
 
 	<div id="content-list" class="container ">
 	
+	<div class="tituloSingleArea">
+		<h2>
+			<?php
+				printf( __( '%s', 'veracruz2013' ),  single_cat_title( '', false )  );
+			?>
+		</h2>
+	</div>
+	
+	<?php
+					
+					/* When we call the dynamic_sidebar() function, it'll spit out
+					* the widgets for that widget area. If it instead returns false,
+					* then the sidebar simply doesn't exist, so we'll hard-code in
+					* some default sidebar stuff just in case.
+					*/
+					if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
+
+						<div class="searchHeaderArea col-md-12 col-lg-12">
+							<?php //print obtenFechaEspaniol(); ?>
+							<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
+						</div>
+					<?php endif; 
+						
+				
+					?>
+	
 		<?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
 	
 		<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
