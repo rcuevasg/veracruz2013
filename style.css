@@ -234,15 +234,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding: 5px;
 }
 
+.carousel-inner {
+	background: #6D6D6C;
+}
+
 .carousel-caption {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    height: 35%;
+    background: none repeat scroll 0 0 #595959;
+    height: /*35%*/100px;
     left: 0;
     padding-bottom: 0;
     padding-top: 0;
     right: 70%;
     top: 65%;
     width: 100%;
+    position: static;
 }
 
 .carousel-caption h4 {
@@ -262,10 +267,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .carousel-caption .btn {
+	background: none repeat scroll 0 0 #007234;
+    border: 2px solid #367754;
 	bottom: 15px;
     display: inline-block;
-    margin-left: 45%;
-    margin-right: 45%;
+    /*margin-left: 45%;*/
+    margin-right: /*45*/5%;
     margin-top: 0;
     position: relative;
 }

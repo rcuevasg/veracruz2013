@@ -152,18 +152,18 @@
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-									<div class="">
+									<div style="display:inline-block;" class="">
 								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=1100&h=400' border=0 /></span>
 								 	</div>
 								 <?php
 								 endif;
 								 ?>
 				
-								<div class="carousel-caption">
+								<div style="display:inline-block;" class="carousel-caption">
 								<?php
 								print "<h4><a href='". get_permalink() ."' title='Ir a ". get_the_title() ."'>" . get_the_title() . "</a></h4>";
 								?>
-								<a class="btn btn-default read-more" href="<?php print get_permalink(); ?>" title="Leer m&aacute;s de <?php print get_the_title(); ?>">Leer m&aacute;s</a>
+								<a class="btn btn-default read-more pull-right" href="<?php print get_permalink(); ?>" title="Leer m&aacute;s de <?php print get_the_title(); ?>">Leer m&aacute;s</a>
 								</div>
 							</div>
 								<?php
