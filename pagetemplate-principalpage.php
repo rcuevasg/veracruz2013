@@ -56,7 +56,7 @@ if(	$nombreparent==$padre){
     <div class="contenedor-paginas post-page-child">
     <br>
 	<h3><?php echo $page->post_title; ?></h3>
-		<div class="entry"><?php //echo substr($content, 0, 100); ?></div>
+		<div class="entry"><?php echo substr($content, 0, 100); ?></div>
         <a href="<?php echo get_page_link( $page->ID ); ?>" class="btn btn-default read-more">Ver más</a>
     </div>
     </div>

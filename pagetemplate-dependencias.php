@@ -12,7 +12,7 @@ Template Name: Dependencias page
 					<?php 
 						if ( has_post_thumbnail() ) { 
 	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
-						   echo "<img class='img-responsive' src='".$large_image_url[0]."' alt='' width='300' height='200'>";
+						   echo "<img class='img-responsive' src='".$large_image_url[0]."' alt=''>";
 						}
 					?>
                     </div>
