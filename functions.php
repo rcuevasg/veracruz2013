@@ -230,8 +230,77 @@ add_action( 'widgets_init', 'veracruz2013_widgets_init' );
 /*Declarando tamaño de imagenes*/
 add_image_size('img-sidebar', 249 , 153, true);
 add_image_size('img-gabinete', 204 , 223, true);
+add_image_size('img-single-sidebar', 286 , 158, true);
 
 
 include_once 'metaboxes/setup.php';
 include_once 'metaboxes/functions-meta.php';
+
+    // Register Custom Taxonomy
+function cets_media_tags_init()  {
+    $labels = array(
+        'name'                       => _x( 'Media Tags', 'Taxonomy General Name', 'text_domain' ),
+        'singular_name'              => _x( 'Media Tag', 'Taxonomy Singular Name', 'text_domain' ),
+        'menu_name'                  => __( 'Media Tags', 'text_domain' ),
+        'all_items'                  => __( 'All Media Tags', 'text_domain' ),
+        'parent_item'                => __( 'Parent Media Tag', 'text_domain' ),
+        'parent_item_colon'          => __( 'Parent Media Tag:', 'text_domain' ),
+        'new_item_name'              => __( 'New Media Tag', 'text_domain' ),
+        'add_new_item'               => __( 'Add New Media Tag', 'text_domain' ),
+        'edit_item'                  => __( 'Edit Media Tag', 'text_domain' ),
+        'update_item'                => __( 'Update Media Tag', 'text_domain' ),
+        'separate_items_with_commas' => __( 'Separate Media Tags with commas', 'text_domain' ),
+        'search_items'               => __( 'Search Media Tags', 'text_domain' ),
+        'add_or_remove_items'        => __( 'Add or remove Media Tags', 'text_domain' ),
+        'choose_from_most_used'      => __( 'Choose from the most used Media Tags', 'text_domain' ),
+    );
+
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => false,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => false,
+        'show_tagcloud'              => false,
+        'update_count_callback'      => '_update_generic_term_count',
+        'query_var'                  => false,
+        'rewrite'                    => false,
+    );
+
+    register_taxonomy( 'media-tags', 'attachment', $args );
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'cets_media_tags_init', 0 );
+
+//next child page
+function siblings($link) {
+    global $post;
+    $siblings = get_pages('child_of='.$post->post_parent.'&parent='.$post->post_parent);
+    foreach ($siblings as $key=>$sibling){
+        if ($post->ID == $sibling->ID){
+            $ID = $key;
+        }
+    }
+    $closest = array('before'=>get_permalink($siblings[$ID-1]->ID),'after'=>get_permalink($siblings[$ID+1]->ID));
+	$title_after = get_the_title($siblings[$ID+1]->ID);
+	$title_before = get_the_title($siblings[$ID-1]->ID);
+    $data_link=array();
+	echo $post->ID ."=>". $siblings[$ID+1]->ID. "<br>";
+	
+	if ($link == 'after' && $siblings[$ID+1]->ID != '') { 
+		$data_link['after'] = $closest[$link];
+		$data_link['title_after'] = $title_after;
+		$data_link['text_aft'] = "<= Anterior  ";
+		return $data_link;
+	} elseif($link == 'before' && $siblings[$ID-1]->ID != '') { 
+		$data_link['before'] = " ".$closest[$link];
+		$data_link['title_before'] = $title_before;
+		$data_link['text_bef'] = "Siguiente =>";
+		return $data_link;
+	}else{
+		return $closest;
+	}
+}
 ?>

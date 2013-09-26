@@ -1,4 +1,5 @@
 <?php
+
 get_header(); ?>
 
 <div class="breadcrumbs">
@@ -7,7 +8,10 @@ get_header(); ?>
         bcn_display();
     }?>
 </div>
+
 <div id="content">
+
+
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) { ?>
@@ -27,8 +31,10 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-## -->
 
-<?php endwhile; 
-?>
+<?php endwhile; ?>
+
+</div><!--#content-->
+
 <?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>
