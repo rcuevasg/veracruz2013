@@ -957,8 +957,13 @@ footer .widget-footer ul a:hover{
 	font-family:"GandhiSerif";
 	color: #5b5b5b !important;
 	text-align:center;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	}
+	
+.tituloSingleArea h2 {
+	margin:5px auto;
+}
+
 .single-img{
 	border: 3px solid #fff;
 	margin-top:3%;
