@@ -750,6 +750,7 @@ footer .widget-footer ul a:hover{
 	font-weight:bold;
 	font-size:14px;
 	color:#727272;
+	text-transform: uppercase;
 }
 .widget-footer{
 	font-family: GandhiSans, Helvetica, sans-serif;
