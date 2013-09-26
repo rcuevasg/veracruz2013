@@ -166,6 +166,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding-top: 7px;
 }
 
+
+
 /* Clases para el submenu de primer nivel */
 #mainMenu  ul ul {
 	display: none;
@@ -258,11 +260,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 90%;}
 
 .carousel-caption h4 a {
-	color: #8B857C;
+	color: #DEDEDE;
     display: block;
+    font-family: "Trajan Pro";
     height: 100%;
     padding: 10px;
     text-align: center;
+    text-transform: uppercase;
     width: 100%;
 }
 

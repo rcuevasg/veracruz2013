@@ -53,7 +53,9 @@ if( !is_admin()){
 	
 	/**
 	* My code for jquery*/
-	
+	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/typeface-0.15.js');
+	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/trajan_pro_bold.typeface.js');
+	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/gandhi_serif_regular.typeface.js');
 	wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 	
 }
