@@ -913,7 +913,7 @@ footer .widget-footer ul a:hover{
 	color:#333333;
 	padding:0 36px;
 	margin-top:-39px;
-	
+	border-bottom:1px solid #c5c5c5;
 	}
 .post-page-child h3{
 	color: #5b5b5b !important;
@@ -968,6 +968,13 @@ footer .widget-footer ul a:hover{
 	border: 3px solid #fff;
 	margin-top:3%;
 	z-index:100;
+	}
+.single-img .link-img{
+	text-decoration:none;
+	padding-left:25%;
+	font: normal 16px "GandhiSans";
+	color:#333333;
+	margin-top:3%;
 	}
 .principalContent .post-home{
 	border-right:0px;
@@ -1366,6 +1373,19 @@ footer .widget-footer ul a:hover{
 	font: normal 20px "GandhiSerif";
 }
 .navposts a{
+	text-decoration:none;
+	color:#333333;
+	}
+.mover-derecha{
+	padding-left:10%;
+	}
+.navposts-semblanza{
+	clear:both;
+	margin-bottom:5%;
+	color: #5b5b5b !important;
+	font: normal 16px "GandhiSerif";
+	}
+.navposts-semblanza a{
 	text-decoration:none;
 	color:#333333;
 	}

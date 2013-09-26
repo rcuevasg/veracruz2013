@@ -97,6 +97,7 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
 		<span class='img img-responsive'>
         <img class="img-responsive" src="<?php echo $imagen; ?>?w=250&h=300&a=cr" border=0 />
         </span>
+        <a class="link-img" href="<?php echo $imagen; ?>" target="_blank">Descargar Foto Oficial</a>
 		<?php }
 	?>
     </div>
@@ -107,5 +108,5 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
  <?php endwhile; endif; ?>
 </div>
 </section>
-<div class="hr"></div>
+</div>
 <?php get_footer(); ?>
