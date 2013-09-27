@@ -4,6 +4,7 @@
     <div style="border:1px solid #CCC; padding:10px; margin-top:10px;">  
     <table>
         <tr>
+        	<td>Icono descriptivo</td>
             <td>
                 <div class="slide_preview wide">
                     <div class="preview_wrap">
@@ -24,9 +25,20 @@
             </td>
         </tr>
         <tr>
+        	<td>
+            	<?php $mb->the_field('descripcion_normativa_gaceta'); ?>
+                <label>Descripción corta</label>
+            </td>
             <td>
-                <?php $mb->the_field('url_normativa_gaceta'); ?>
+                <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<?php $mb->the_field('url_normativa_gaceta'); ?>
                 <label>Url de la página del enlace</label>
+            </td>
+            <td>
                 <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
             </td>
         </tr>

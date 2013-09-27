@@ -32,9 +32,8 @@ $( document ).ready(function() {
 			    while ( $the_query->have_posts() ) {
                     $the_query->the_post(); 
 					$siglas_dependencia=get_post_meta($the_query->post->ID, 'siglas-dependencia', true);
-					$logo_dependencia=get_post_meta($the_query->post->ID, 'logo-dependecia', true);
-					$url_twitter=get_post_meta($the_query->post->ID, 'url-twitter', true);
-					$url_facebook=get_post_meta($the_query->post->ID, 'url-facebook', true);
+					$logo_dependencia=get_post_meta($the_query->post->ID, 'logo-dependencia', true);
+					$link_dependencia=get_post_meta($the_query->post->ID, 'link-dependencia', true);
                     ?>
 					<div class="divNotaGabinete col-md-3 col-lg-3">
                     	<?php if($cont%4!=0){ ?>
@@ -63,7 +62,7 @@ $( document ).ready(function() {
                                         </div>
                                     <?php } ?>
                                     <div class="link-dependecia">
-                                     	Visitar sitio >>
+                                     	<a href="<?php echo $link_dependencia; ?>">Visitar sitio >></a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>

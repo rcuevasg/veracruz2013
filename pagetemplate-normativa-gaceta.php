@@ -21,6 +21,10 @@ Template Name: Link Page
                             <img src="<?php echo esc_url($my_meta['image_src']) ?>" class="img-responsive">
                         <?php } ?>
                         <div class="clear"></div>
+                        <?php if($my_meta['descripcion_normativa_gaceta']!=""){ ?>
+                            <center><?php echo esc_html($my_meta['descripcion_normativa_gaceta']); ?></center>
+                        <?php } ?>
+                        <div class="clear"></div>
                         <?php if($my_meta['url_normativa_gaceta']!=""){ ?>
                             <center><a href="<?php echo esc_url($my_meta['url_normativa_gaceta']); ?>" class="read-more" target="_blank">VISITAR SITIO</a></center>
                         <?php } ?>

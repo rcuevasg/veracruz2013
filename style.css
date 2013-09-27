@@ -1218,12 +1218,13 @@ footer .widget-footer ul a:hover{
 	font-family: "GandhiSans";
 	font-weight: bold;
 }
-.link-dependecia{
+.link-dependecia a{
 	font-size: 16px;
 	font-family: "GandhiSans";
 	padding: 16px 0;
 	color:#007336;
 	font-style:italic;
+	text-decoration:none;
 }
 .redes-gabinete{
 	padding: 35px 0 40px;
@@ -1323,12 +1324,17 @@ footer .widget-footer ul a:hover{
 	width:70%;
 	margin:0 auto;
 	text-align:center;
-	font-family: "GandhiSans";
+	font-family:GandhiSerif;
+	font-style:italic;
 	color:#606464;
 }
 .title-poder{
 	font-size:32px;
-	padding: 25px 0;
+	padding: 25px 0 9px;
+	background-image: url(images/shadow-red.png);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	font-family:GandhiSerif;
 }
 .descripcion-poder{
 	padding-bottom:25px;
@@ -1361,8 +1367,10 @@ footer .widget-footer ul a:hover{
 	font-size:16px;
 }
 .content-normativa img{
-	padding-bottom: 40px;
-	padding-top: 37px;
+	padding: 37px 37px 26px 37px;
+	background-image: url(images/shadow-red.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
 .content-normativa .read-more{
 	margin:0;
