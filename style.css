@@ -1139,9 +1139,9 @@ footer .widget-footer ul a:hover{
 	background-color: #fff;
 }
 .item-gabinete h3{
-	font-size:17px;
-	font-family:"GandhiSans";
-	text-align:center;
+	font-size: 1.643em;
+	font-family: "GandhiSerif";
+	text-align: center;
 	margin: 29px 0 15px;
 }
 .siglas-depencia{
@@ -1151,7 +1151,7 @@ footer .widget-footer ul a:hover{
 	height:39px;
 	padding-top: 5px;
 	position:relative;
-	font-family:"GandhiSans";
+	font-family:"GandhiSerif";
 	font-size:21px;
 	font-weight:bold;
 	margin-bottom: 16px;

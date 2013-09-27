@@ -11,13 +11,13 @@ $( document ).ready(function() {
 		$(this).children().find('img').addClass('z_index-2');
 		$(this).children().find('.siglas-depencia').addClass('z_index-2-top');
 		$(this).find('.gabinete-over').show().animate({height: "325px", width: "506px", opacity: 1 }, 900);
-		$(this).children('.read-more').hide();
+		$(this).children().find('.read-more').hide();
 		$(this).children().find('h3').hide();
 	}, function(e) {
 		e.preventDefault();
 		$(this).children().find('.siglas-depencia').removeClass('z_index-2-top');
 		$(this).find('.gabinete-over').hide()/*.animate({height: "0px", width: "0px", opacity: 0}, 800)*/;
-		$(this).children('.read-more').show();
+		$(this).children().find('.read-more').show();
 		$(this).children().find('h3').show();
 		$(this).children().find('img').removeClass('z_index-2');
 	})
@@ -64,16 +64,6 @@ $( document ).ready(function() {
                                     <?php } ?>
                                     <div class="miembro-gabinete">
                                      	<?php the_title(); ?>
-                                    </div>
-                                    <div class="redes-gabinete">
-                                        <center>
-                                            <?php if(isset($url_twitter) && !empty($url_twitter)){ ?>
-                                                    <a class="iconTwitter" href="<?php echo $url_twitter; ?>" target="_blank"></a>
-                                            <?php } ?>
-                                            <?php if(isset($url_facebook) && !empty($url_facebook)){ ?>
-                                                    <a class="iconFacebook" href="<?php echo $url_facebook; ?>" target="_blank"></a>
-                                            <?php } ?>
-                                        </center>
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a>
                                 </div>
