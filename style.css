@@ -452,7 +452,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 .read-more{
 	background:#007234;
-  	border: 2px solid #fff;
+  	/*border: 2px solid #fff; */
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   	color: #fff;
   	text-transform: uppercase;
@@ -461,7 +461,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	-webkit-border-radius: 0;
   	-moz-border-radius: 0;
   	border-radius: 0;
-  	padding: 4px;
+  	padding: 4px 9px;/*padding: 4px; */
   	margin-top: 10%;
 	margin-left:30%;
 	}
@@ -1142,12 +1142,12 @@ footer .widget-footer ul a:hover{
 	font-size: 1.643em;
 	font-family: "GandhiSerif";
 	text-align: center;
-	margin: 29px 0 15px;
+	margin: 26px 0 15px; /*29px 0 15px*/
 }
 .siglas-depencia{
 	background-image:url(images/bg-dependencias.png);
 	background-repeat:no-repeat;
-	background-position:center;
+	background-position:top center;
 	height:39px;
 	padding-top: 5px;
 	position:relative;
@@ -1184,26 +1184,44 @@ footer .widget-footer ul a:hover{
 	margin:0 !important;
 }
 .gabinete-over{
-	background: #E3E3E3 url(images/bg-item-gabinete.png);
+	background-color: #E3E3E3;
 	background-repeat:no-repeat;
 	background-position:center;
 }
 .data-card{
-	width:40%;
+	width:50%;
 	float:right;
 }
+.gabinete-over .read-more{
+	margin-top: 11px !important;
+	float: right;
+	margin-right: 15% !important;
+}
+.mirror .read-more{
+	margin-top: 11px !important;
+	float: left;
+	margin-left: 16% !important;
+}
+.bg-card-gabinete{
+	background-image:url(images/bg-card-gabinete.png);
+	height:12px;
+	display:block;
+	margin-top: 8px;
+	background-repeat: no-repeat;
+}
 .title-secretaria{
-	border-bottom: solid 1px #CCC;
-	padding: 20px 0 10px;
+	padding: 15px 0 0;
 	text-transform: uppercase;
 	font-size: 14px;
 	font-family: "GandhiSans";
 	font-weight: bold;
 }
-.miembro-gabinete{
+.link-dependecia{
 	font-size: 16px;
 	font-family: "GandhiSans";
-	padding-top: 25px;
+	padding: 16px 0;
+	color:#007336;
+	font-style:italic;
 }
 .redes-gabinete{
 	padding: 35px 0 40px;

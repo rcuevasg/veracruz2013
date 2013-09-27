@@ -9,30 +9,30 @@ $( document ).ready(function() {
 	$('.item-gabinete').hover(function(e) {
 		e.preventDefault();
 		$(this).children().find('img').addClass('z_index-2');
-		$(this).children().find('.siglas-depencia').addClass('z_index-2-top');
+		$(this).children().find('h3').addClass('z_index-2-top');
 		$(this).find('.gabinete-over').show().animate({height: "325px", width: "506px", opacity: 1 }, 900);
-		$(this).children().find('.read-more').hide();
-		$(this).children().find('h3').hide();
+		$(this).siblings().find('.read-more').hide();
+		$(this).children().find('.siglas-depencia').hide();
 	}, function(e) {
 		e.preventDefault();
-		$(this).children().find('.siglas-depencia').removeClass('z_index-2-top');
+		$(this).children().find('h3').removeClass('z_index-2-top');
 		$(this).find('.gabinete-over').hide()/*.animate({height: "0px", width: "0px", opacity: 0}, 800)*/;
-		$(this).children().find('.read-more').show();
-		$(this).children().find('h3').show();
+		$(this).siblings().find('.read-more').show();
+		$(this).children().find('.siglas-depencia').show();
 		$(this).children().find('img').removeClass('z_index-2');
 	})
 });
 </script>
     <div id="content-list" class="container ">
 		<?php
-			$args = array('post_type' => 'page', 'post_parent' => $post->ID);
+			$args = array('post_type' => 'page', 'post_parent' => $post->ID, 'order' => 'ASC');
             $the_query = new WP_Query($args);
             if ( $the_query->have_posts() ) {
                 $cont=1;
 			    while ( $the_query->have_posts() ) {
                     $the_query->the_post(); 
 					$siglas_dependencia=get_post_meta($the_query->post->ID, 'siglas-dependencia', true);
-					$nombre_dependencia=get_post_meta($the_query->post->ID, 'nombre-dependencia', true);
+					$logo_dependencia=get_post_meta($the_query->post->ID, 'logo-dependecia', true);
 					$url_twitter=get_post_meta($the_query->post->ID, 'url-twitter', true);
 					$url_facebook=get_post_meta($the_query->post->ID, 'url-facebook', true);
                     ?>
@@ -57,19 +57,21 @@ $( document ).ready(function() {
                             </div>
                             <div class="gabinete-over">
                                 <div class="data-card">
-                                	<?php if(isset($nombre_dependencia) && !empty($nombre_dependencia)){ ?>
+                                	<?php if(isset($logo_dependencia) && !empty($logo_dependencia)){ ?>
                                         <div class="title-secretaria">
-                                            <?php echo $nombre_dependencia; ?>
+                                            <center><?php echo "<img src='$logo_dependencia'>"; ?></center>
                                         </div>
                                     <?php } ?>
-                                    <div class="miembro-gabinete">
-                                     	<?php the_title(); ?>
+                                    <div class="link-dependecia">
+                                     	Visitar sitio >>
                                     </div>
-                                    <a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a>
                                 </div>
+                                <div class="clear"></div>
+                                <div class="bg-card-gabinete"></div>
+                                <a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a>
                             </div>
                         </div>
-                       <center><a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a></center>
+                       <!--<center><a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a></center>-->
                         <?php if($cont%4==0){ ?>
                         	</div><div class="clear">
 						<?php } ?>
