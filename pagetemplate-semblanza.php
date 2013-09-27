@@ -33,6 +33,7 @@ $twitter = get_post_meta($post->ID, 'url-twitter', true);
 $youtube = get_post_meta($post->ID, 'url-youtube', true);
 $pinterest = get_post_meta($post->ID, 'url-pinterest', true);
 $plus = get_post_meta($post->ID, 'url-plus', true);
+$siglas = get_post_meta($post->ID, 'siglas-dependencia', true);
   if($facebook || $twitter || $youtube || $pinterest || $plus){
 ?>
 <div class="single-siguele">
