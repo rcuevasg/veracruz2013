@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 
-	<div id="content-list" class="container ">
+	<div id="content-list" class="container blog-contenedor">
 	
 	<div class="tituloSingleArea">
 		<h2>
@@ -14,7 +14,7 @@
 			?>
 		</h2>
 	</div>
-	
+	<div class="back-img"></div>
 	<?php
 					
 					/* When we call the dynamic_sidebar() function, it'll spit out

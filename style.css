@@ -687,7 +687,9 @@ a.iconTwitter{
 	border-bottom:1px solid #c5c5c5;
 	margin-bottom:5%;
 	}
-
+.border-bottom{
+	margin-bottom:5%;
+	}
 .hr {
   height: 15px;
   background: #fff url(images/shadow-eventos.png) no-repeat scroll center;
@@ -1414,5 +1416,8 @@ footer .widget-footer ul a:hover{
 .navposts-semblanza a{
 	text-decoration:none;
 	color:#333333;
+	}
+.contenedor-imagen{
+	min-height:110px;
 	}
 /* */

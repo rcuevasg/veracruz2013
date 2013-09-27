@@ -5,7 +5,7 @@ Template Name: Link Page
 ?>
 
 <?php get_header(); ?>
-    <div id="content-list" class="container ">
+    <div id="content-list" class="container blog-contenedor">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php $my_meta = get_post_meta($post->ID,'_normativa_gaceta',true);?>
         <div class="tituloSingleArea">
@@ -31,4 +31,5 @@ Template Name: Link Page
         </div>
         <div class="border-solid"></div>
     </div>
+    <div class="border-bottom"></div>
 <?php get_footer(); ?>

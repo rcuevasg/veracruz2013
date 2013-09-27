@@ -70,5 +70,4 @@ if(	$nombreparent==$padre){
 
 ?>
 </section>	
-<div class="hr"></div>
 <?php get_footer(); ?>

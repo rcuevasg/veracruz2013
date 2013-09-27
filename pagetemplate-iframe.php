@@ -53,4 +53,5 @@ echo get_the_title();//$post->post_parent
  <?php endwhile; endif; ?>
 </div>
 </section>
+<div class="border-bottom"></div>
 <?php get_footer(); ?>

@@ -19,7 +19,7 @@ Template Name: Dependencias page
     <div class="text-dependencias">
     <h3><?php echo get_the_title();//$post->post_parent	?></h3>
    	<?php the_content(); ?>
-<div class="listado-categorias-comunicados">
+<div class="listado-categorias-comunicados col-md-12 col-lg-12">
 <table align="center">
 <?php
 $category_id = get_cat_ID('Comunicados');
@@ -51,5 +51,5 @@ foreach ( $categories as $category ) {
  <?php endwhile; endif; ?>
 </div>
 </section>
-<div class="hr"></div>
+    <div class="border-bottom"></div>
 <?php get_footer(); ?>

@@ -4,13 +4,14 @@ Template Name: Poderes del estado
 */
 ?>
 <?php get_header(); ?>
-    <div id="content-list" class="container ">
+    <div id="content-list" class="container blog-contenedor">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php $my_meta = get_post_meta($post->ID,'_poderes',true); ?>
         
         <div class="tituloSingleArea">
             <h2><?php the_title(); ?></h2>
         </div>
+        <div class="back-img"></div>
         <div class="content-poderes">
 				<?php 
                 if($my_meta!=''){ 
@@ -41,4 +42,5 @@ Template Name: Poderes del estado
         </div>
         <div class="border-solid"></div>
     </div>
+<div class="border-bottom"></div>
 <?php get_footer(); ?>

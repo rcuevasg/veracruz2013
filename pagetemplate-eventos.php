@@ -4,7 +4,7 @@ Template Name: Eventos especiales
 */
 ?>
 <?php get_header(); ?>
-    <div id="content-list" class="container ">
+    <div id="content-list" class="container principalContent blog-contenedor">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php $my_meta = get_post_meta($post->ID,'_eventos',true); ?>
         <div class="tituloSingleArea">
@@ -48,4 +48,5 @@ Template Name: Eventos especiales
             <?php endwhile; // end of the loop. ?>
         </div>
     </div>
+    <div class="border-bottom"></div>
 <?php get_footer(); ?>

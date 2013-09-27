@@ -23,7 +23,7 @@ $( document ).ready(function() {
 	})
 });
 </script>
-    <div id="content-list" class="container ">
+    <div id="content-list" class="container principalContent">
 		<?php
 			$args = array('post_type' => 'page', 'post_parent' => $post->ID, 'order' => 'ASC');
             $the_query = new WP_Query($args);
@@ -81,4 +81,5 @@ $( document ).ready(function() {
             wp_reset_postdata();
         ?>
     </div>
+    <div class="border-bottom"></div>
 <?php get_footer(); ?>

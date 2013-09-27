@@ -95,10 +95,26 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
 	$imagen = get_post_meta($post->ID, 'imagen', true);
 	if($imagen){
 	?>	
+    <?php 
+        $args = array( 
+            'numberposts'     => -1, 
+            'post_type'       => 'attachment', 
+            'post_parent'     => $post->ID, 
+            'post_mime_type' => 'image' 
+        ); 
+        $image = get_posts($args); 
+        if($image) { 
+            foreach($image as $key => $data) : ?> 
+
+
+<?php $nombreIMG=$data->post_title; ?> 
+<?php endforeach; 
+ } 
+?>
 		<span class='img img-responsive'>
         <img class="img-responsive" src="<?php echo $imagen; ?>?w=250&h=300&a=cr" border=0 />
         </span>
-        <a class="link-img" href="<?php echo $imagen; ?>" target="_blank">Descargar Foto Oficial</a>
+        <a class="link-img" href="<?php echo $imagen; ?>" download="<?php echo $nombreIMG;?>">Descargar Foto Oficial</a>
 		<?php }
 	?>
     </div>
@@ -126,6 +142,8 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
         </a>
 	</div>
 </div>
+<?php }else{ ?> 
+<div class="border-bottom"></div>
 <?php }?>
 </div>
 <?php get_footer(); ?>

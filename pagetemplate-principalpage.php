@@ -45,7 +45,8 @@ if(	$nombreparent==$padre){
 								if (!empty($thumbnailsrc)):
 								?>
 								 	<div class="contenedor-imagen arriba">
-                                    <span class="img img-responsive">    
+                                    <span class="img img-responsive">
+                                    <br>    
                                     <img class="img-responsive" src='<?php print $thumbnailsrc; ?>' border='0' /></span>
                                     </div>
 
