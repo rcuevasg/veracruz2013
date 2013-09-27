@@ -1225,6 +1225,7 @@ footer .widget-footer ul a:hover{
 	color:#007336;
 	font-style:italic;
 	text-decoration:none;
+	display: block;
 }
 .redes-gabinete{
 	padding: 35px 0 40px;
