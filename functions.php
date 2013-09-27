@@ -292,12 +292,12 @@ function siblings($link) {
 	if ($link == 'after' && $siblings[$ID+1]->ID != '') { 
 		$data_link['after'] = $closest[$link];
 		$data_link['title_after'] = $title_after;
-		$data_link['text_aft'] = "<= Anterior  ";
+		$data_link['text_aft'] = "<img src='".get_bloginfo('template_url')."/images/flecha-left.png'>";
 		return $data_link;
 	} elseif($link == 'before' && $siblings[$ID-1]->ID != '') { 
 		$data_link['before'] = " ".$closest[$link];
 		$data_link['title_before'] = $title_before;
-		$data_link['text_bef'] = "Siguiente =>";
+		$data_link['text_bef'] = "<img src='".get_bloginfo('template_url')."/images/flecha-right.png'>";
 		return $data_link;
 	}else{
 		return $closest;

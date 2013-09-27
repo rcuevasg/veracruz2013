@@ -946,24 +946,32 @@ footer .widget-footer ul a:hover{
 	font-size:30px;
 	}
 .tituloSingleArea{
-	background: none repeat scroll 0 0 #F2F2F2;
-    border-bottom: 1px solid #D0D1D1;
-	box-shadow: 0px 1px 2px #999;
-    margin-left: 2%;
-    padding: 10px 0;
-    width: 96%;
-	height:5%;
 	alignment-adjust:middle;
 	font-family:"GandhiSerif";
 	color: #5b5b5b !important;
 	text-align:center;
-	margin: 0 auto 20px;
+	height:50%;
+	background:#f2f2f2 url('images/degradado.png') repeat-x;
+	background-position:top center;	
 	}
 	
 .tituloSingleArea h2 {
 	margin:5px auto;
+	padding:2%;
 }
 
+.back-img{
+	background:url('images/degradado.png');
+	height:20px;
+	background-repeat:no-repeat no-repeat;
+	background-position:top center;
+	}
+.blog-contenedor .tituloSingleArea{
+	margin:0 20px;
+	}
+.blog-contenedor .searchHeaderArea{
+	top:-15px;
+	}
 .single-img{
 	border: 3px solid #fff;
 	margin-top:3%;
@@ -1380,10 +1388,10 @@ footer .widget-footer ul a:hover{
 	padding-left:10%;
 	}
 .navposts-semblanza{
-	clear:both;
-	margin-bottom:5%;
 	color: #5b5b5b !important;
 	font: normal 16px "GandhiSerif";
+	margin:0 7%; 
+	margin-bottom:10%;
 	}
 .navposts-semblanza a{
 	text-decoration:none;

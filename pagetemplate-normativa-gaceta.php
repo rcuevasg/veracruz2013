@@ -11,6 +11,7 @@ Template Name: Link Page
         <div class="tituloSingleArea">
             <h2><?php the_title(); ?></h2>
         </div>
+        <div class="back-img"></div>
         <div class="content-normativa">
                 <div class="item-normativa">
                 	<?php the_content(); ?>

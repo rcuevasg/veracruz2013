@@ -10,6 +10,7 @@ Template Name: Eventos especiales
         <div class="tituloSingleArea">
             <h2><?php the_title(); ?></h2>
         </div>
+        <div class="back-img"></div>
         <div class="content-eventos">
 				<div class="img-tumb">
 					<?php 

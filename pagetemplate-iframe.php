@@ -14,6 +14,7 @@ echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
+<div class="back-img"></div>
 <br>
 <div class="col-md-12 col-lg-12">
     <?php //Obtenemos la url de la imagen destacada

@@ -8,12 +8,13 @@ Template Name: Semblanza page
 <div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="tituloSingleArea">
-<h2>
+<h2> 
 <?php
 echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
+<div class="back-img"></div>
 <?php
   $nombre = get_post_meta($post->ID, 'nombre', true);
   $secretaria = get_post_meta($post->ID, 'nombre-dependencia', true);
@@ -108,5 +109,23 @@ $plus = get_post_meta($post->ID, 'url-plus', true);
  <?php endwhile; endif; ?>
 </div>
 </section>
+<?php if($secretaria){ ?>
+<div style="display:none;">
+	<?php $link_before =siblings('before'); ?>
+    <?php $link_after =siblings('after'); ?>
+</div>
+<div class="navposts-semblanza">
+	<div class="pull-left">
+        <a href="<?php echo $link_after['after']; ?>">
+        <?php echo $link_after['text_aft'].$link_after['title_after']; ?>
+        </a>
+	</div>
+   	<div class="pull-right">
+        <a href="<?php echo $link_before['before']; ?>">
+        <?php echo $link_before['title_before'].$link_before['text_bef']; ?>
+        </a>
+	</div>
+</div>
+<?php }?>
 </div>
 <?php get_footer(); ?>
