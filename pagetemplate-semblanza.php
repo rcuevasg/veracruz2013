@@ -34,9 +34,21 @@ $youtube = get_post_meta($post->ID, 'url-youtube', true);
 $pinterest = get_post_meta($post->ID, 'url-pinterest', true);
 $plus = get_post_meta($post->ID, 'url-plus', true);
 $siglas = get_post_meta($post->ID, 'siglas-dependencia', true);
-  if($facebook || $twitter || $youtube || $pinterest || $plus){
+
+  if($facebook || $twitter || $youtube || $pinterest || $plus || $siglas){
 ?>
 <div class="single-siguele">
+<?php 
+if($siglas){
+	// Get the ID of a given category
+    $category_id = get_cat_ID( $siglas );
+
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+	?>
+	<span class="titulo-single-siglas">Ir a: <a href="<?php echo esc_url( $category_link ); ?>"><i><?php echo $siglas;?></i><img src='<?php bloginfo('template_url') ?>/images/logo-dependencias-single.png'></a></span>
+	<?php }
+?>
 <span class="titulo-single-redes">Síguele en:</span>
 <ul id="single-redes" class="menu">
 <?php

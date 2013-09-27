@@ -1042,7 +1042,7 @@ footer .widget-footer ul a:hover{
 	font: normal 28px "GandhiSans";
   	text-align:center;
 	color: #5b5b5b !important;
-	background-image:url("images/background-bottom.png");
+	background-image:url("images/degradado.png");
   	background-position:50% 100%;
   	background-repeat:no-repeat no-repeat;
   	padding:0 0 3%;
@@ -1051,7 +1051,7 @@ footer .widget-footer ul a:hover{
 	margin-top:-3%;
 	padding:0 3% 3%;
 	}
-.titulo-single-redes{
+.titulo-single-redes, .titulo-single-siglas{
  	margin-left:-10%;
  	padding:0 0 3%;
 	margin-right:3%;
@@ -1068,26 +1068,30 @@ footer .widget-footer ul a:hover{
 	font: normal 28px "GandhiSans";
   	text-align:center;
 	color: #5b5b5b !important;
-	background-image:url("images/background-bottom.png");
+	background-image:url("images/degradado.png");
   	background-position:50% 100%;
   	background-repeat:no-repeat no-repeat;
-  	padding:0 0 3%;
+  	padding:0 0 2%;
 	}
+.titulo-single-siglas{
+	margin-left:-3%;
+	}
+.single-siguele .titulo-single-redes{
+	margin-left:0;
+	border-left:2px solid #E2E2E2;
+	padding-left: 40px;
+	}
+.single-siguele .titulo-single-siglas a{
+		text-decoration:none;
+		color: #5b5b5b !important;
+		}
+.single-siguele .titulo-single-siglas img{
+		margin-left:1%;
+		}
 .single-siguele #single-redes{
-	 	margin-left:50%;
+	margin-left:64%;
+	padding-left:5%;
  	}
-@media (max-width: 991px) {
-#single-redes{
-	padding:0 8% 8%;
-	margin-top:-5%;
-		}
-}
-@media (max-width: 768px) {
-	#single-redes{
-		padding:0 5% 5%;
-		margin-top:-5%;
-		}
-}
 @media (max-width: 400px) {
 	#single-redes{
 	padding:-25% 30% 30%;
@@ -1098,6 +1102,9 @@ footer .widget-footer ul a:hover{
 .single-siguele #single-redes{
 	margin-left:25%;
 	margin-top:3%;
+	}
+.single-siguele .titulo-single-redes{
+	border-left:none;
 	}
 }
 .contenedor-paginas{	
