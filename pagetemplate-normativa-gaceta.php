@@ -22,7 +22,7 @@ Template Name: Link Page
                         <?php } ?>
                         <div class="clear"></div>
                         <?php if($my_meta['descripcion_normativa_gaceta']!=""){ ?>
-                            <center><?php echo esc_html($my_meta['descripcion_normativa_gaceta']); ?></center>
+                            <p class="bottom-23"><?php echo esc_html($my_meta['descripcion_normativa_gaceta']); ?></p>
                         <?php } ?>
                         <div class="clear"></div>
                         <?php if($my_meta['url_normativa_gaceta']!=""){ ?>

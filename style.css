@@ -1367,13 +1367,17 @@ footer .widget-footer ul a:hover{
 	font-size:16px;
 }
 .content-normativa img{
-	padding: 37px 37px 26px 37px;
+	padding: 37px 80px 26px;
 	background-image: url(images/shadow-red.png);
 	background-repeat: no-repeat;
 	background-position: bottom;
+	margin-bottom: 8px;
 }
 .content-normativa .read-more{
 	margin:0;
+}
+.bottom-23{
+	margin-bottom:23px;
 }
 .social-hidden{
 	display:none;
