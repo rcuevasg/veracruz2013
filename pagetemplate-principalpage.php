@@ -4,6 +4,7 @@ Template Name: Principal page
 */
 ?>
 <?php get_header(); ?>
+<div class="contine-principales">
 <section class="container principalContent">
 <div class="tituloPrincipal">
 <h1>
@@ -69,4 +70,6 @@ if(	$nombreparent==$padre){
 
 ?>
 </section>	
+</div>
+<div class="hr"></div>
 <?php get_footer(); ?>

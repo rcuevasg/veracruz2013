@@ -49,7 +49,7 @@ if($siglas){
 	<span class="titulo-single-siglas">Ir a: <a href="<?php echo esc_url( $category_link ); ?>"><i><?php echo $siglas;?></i><img src='<?php bloginfo('template_url') ?>/images/logo-dependencias-single.png'></a></span>
 	<?php }
 ?>
-<span class="titulo-single-redes">Síguele en:</span>
+<span class="titulo-single-redes ">Síguele en:</span>
 <ul id="single-redes" class="menu">
 <?php
   

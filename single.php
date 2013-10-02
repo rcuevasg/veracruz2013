@@ -8,7 +8,7 @@
 </div>
 
 <section id="principalContent"  class="container">
-<div class="col-md-8 col-lg-8 post-home single-container">
+<div class="col-md-8 col-lg-8 post-home single-container tamaño-sinlge">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if ( is_front_page() ) { ?>

@@ -1,11 +1,8 @@
 <?php
 /* Template para la categoria Blog */
 ?>
-
 <?php get_header(); ?>
-
-
-	<div id="content-list" class="container blog-contenedor">
+	<div id="content-list" class="container blog-contenedor content-blog posts">
 	
 	<div class="tituloSingleArea">
 		<h2>
@@ -37,17 +34,31 @@
 	
 		<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
 			<span id="ribonLoMasLeido" class="responsive"><img src="<?php bloginfo('template_url') ?>/images/masleido.png" border="0"></span>
-			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=230"); ?>
-			
+			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=330"); ?>
+<div class="time-blog">-<?php the_time( 'j M' ); ?>-</div>
 			<!-- botones redes sociales -->
-			<?php include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 	
+			<?php //include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 	
+            <div class="listadoShareItem">
+                    <!-- AddThis Button BEGIN -->
+                    <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-center">
+                        <a class="addthis_button_facebook iconFacebook"></a>
+                        <a class="addthis_button_twitter iconTwitter"></a>
+                        <a class="addthis_button_linkedin iconLinkedIn"></a>
+                        <a class="addthis_button_pinterest_share iconPinterestBlog"></a>
+                        <a class="addthis_button_google_plusone_share iconPlusBlog"></a>
+                        </div>
+                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
+                        <!-- AddThis Button END -->
+                    </div>
 			<!-- Fin botones redes sociales -->
 		</div><!-- end #popular -->
 		<?php
 			
 			
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$notas = new WP_Query($query_string . '&posts_per_page=9');
+			$notas = new WP_Query($query_string . '&posts_per_page=3');
 			if ($notas->have_posts()) :
 			//$step = 1; //Variable para llevar el conteo y separar listados grandes de los pequeños
 			//$cierraPrimerDiv = false;
@@ -81,7 +92,21 @@
 						<h5><a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a></h5>
 						
 						<!-- botones redes sociales -->
-								<?php include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 	
+								<?php //include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 	
+                    <div class="listadoShareItem">
+                    <!-- AddThis Button BEGIN -->
+                    <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-left">
+                        <a class="addthis_button_facebook iconFacebook"></a>
+                        <a class="addthis_button_twitter iconTwitter"></a>
+                        <a class="addthis_button_linkedin iconLinkedIn"></a>
+                        <a class="addthis_button_pinterest_share iconPinterestBlog"></a>
+                        <a class="addthis_button_google_plusone_share iconPlusBlog"></a>
+                        </div>
+                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
+                        <!-- AddThis Button END -->
+                    </div>
 							  <!-- Fin botones redes sociales -->
 						<!-- <p><?php //print substr(strip_tags(get_the_content()), 0, 300); ?></p> -->
 						
@@ -95,16 +120,17 @@
 						</div><!-- end .contenedorNota -->
 						
 					</div><!-- Fin del div featured clearfix -->
-					
+	
 					<?php
 			
 			endwhile; //Fin while principal
 		
 		?>
-			
-		</div>
-		
-		
+	</div>
+        <div class="categoria-blog">
+		<div class="link-style btn btn-default">
+		<a href="#">CARGAR MÁS</a>	
+        </div>
 		<?php /* Display navigation to next/previous pages when applicable */ 
 		if(function_exists('wp_pagenavi')) { 
 			wp_pagenavi( array('query' =>$notas)); 
@@ -112,6 +138,4 @@
 		
 		endif; //Fin de if notas->have_posts
 		?>
-
-
 <?php get_footer(); ?>

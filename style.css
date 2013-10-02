@@ -563,17 +563,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .iconGobierno span {
 	visibility: hidden;
-}
-	
+}	
 .iconFacebook a{
-	background-image:url(images/facebook_tag.png);
+	background-image:url(images/facebook_tag.png) !important;
 	background-size: 33px 33px;
 	display:block;
 	height:33px;
 	width:33px;	
 	} 
 a.iconFacebook{
-	background-image:url(images/facebook_tag.png);
+	background-image:url(images/facebook_tag.png) !important;
 	background-size: 33px 33px;
 	display:block;
 	height:33px;
@@ -631,6 +630,46 @@ a.iconTwitter{
 .iconPinterest a:hover{
 	background-image:url(images/pinterest_tag_hover.png);
 }
+a.iconPinterestBlog{
+	background-image:url(images/pinterest_tag.png);
+	background-size: 31px 31px;
+	display:block;
+	height:31px;
+	width:31px;	
+}
+.iconPinterestBlog span{
+	visibility:hidden;
+	}
+a.iconPinterestBlog:hover{
+	background-image:url(images/pinterest_tag_hover.png);
+}
+a.iconLinkedIn{
+	background-image:url(images/LinkedIn_tag.png);
+	background-size: 31px 31px;
+	display:block;
+	height:31px;
+	width:31px;	
+}
+.iconLinkedIn span{
+	visibility:hidden;
+	}
+a.iconLinkedIn:hover{
+	background-image:url(images/LinkedIn_tag_hover.png);
+}
+
+a.iconPlusBlog{
+	background-image:url(images/plus_tag.png);
+	background-size: 31px 31px;
+	display:block;
+	height:31px;
+	width:31px;	
+}
+.iconPlusBlog span{
+	visibility:hidden;
+	}
+a.iconPlusBlog:hover{
+	background-image:url(images/plus_tag_hover.png);
+}
 .iconPlus a{
 	background-image:url(images/plus_tag.png);
 	background-size: 31px 31px;
@@ -641,9 +680,10 @@ a.iconTwitter{
 .iconPlus span{
 	visibility:hidden;
 	}
-.iconPlus a:hover{
+.iconPlus a:hover {
 	background-image:url(images/plus_tag_hover.png);
 }
+
 #sidebar .widget-container h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
@@ -733,7 +773,6 @@ footer .widget-footer ul a:hover{
 #redesSocialesFooter .menu-redes-sociales-menu-container {
 	float: right
 }
-
 .buscadorBottom .widget_search{
 	width: 55.5%;
 	float: left;
@@ -917,6 +956,9 @@ footer .widget-footer ul a:hover{
 	margin-top:-39px;
 	border-bottom:1px solid #c5c5c5;
 	}
+.contine-principales .principalContent{
+	border-bottom:none;
+}
 .post-page-child h3{
 	color: #5b5b5b !important;
 	line-height:30px; 
@@ -960,6 +1002,7 @@ footer .widget-footer ul a:hover{
 .tituloSingleArea h2 {
 	margin:5px auto;
 	padding:2%;
+	text-transform:uppercase;
 }
 
 .back-img{
@@ -971,8 +1014,16 @@ footer .widget-footer ul a:hover{
 .blog-contenedor .tituloSingleArea{
 	margin:0 20px;
 	}
-.blog-contenedor .searchHeaderArea{
-	top:-15px;
+.blog-contenedor #popular a, .blog-contenedor{
+	font: normal 18px "GandhiSans";
+	color:#5b5b5b;
+	}
+.blog-contenedor .time-blog{
+	margin-top:-3%;
+	}
+.blog-contenedor a{
+	font: normal 14px "GandhiSans";
+	color:#5b5b5b;
 	}
 .single-img{
 	border: 3px solid #fff;
@@ -1014,7 +1065,8 @@ footer .widget-footer ul a:hover{
 	text-decoration:none;
 	}
 .listado-categorias-comunicados table{
-	width:30%;
+	width:35%;
+	font-size:18px;
 	}
 .listado-categorias-comunicados	tr {
 	border-bottom: 1px dashed #c5c5c5;
@@ -1024,8 +1076,14 @@ footer .widget-footer ul a:hover{
 	}
 .categorias-hover-tr:hover, .categorias-hover-tr:hover a{
 	color:#333333;
-	font-size:15px;
 	}
+.categorias-hover-tr	.flecha-verde{
+	background-image:url(images/fecha-blanco.png);
+	background-repeat:no-repeat no-repeat;
+	width:13px;
+	height:19px;
+	background-position:center;
+}
 .categorias-hover-tr:hover	.flecha-verde{
 	background-image:url(images/fecha-verde.png);
 	background-repeat:no-repeat no-repeat;
@@ -1033,6 +1091,10 @@ footer .widget-footer ul a:hover{
 	height:19px;
 	background-position:center;
 		}
+.categorias-hover-tr{
+	cursor:pointer;
+	text-transform:uppercase;
+	}
 .entry{
 	text-align:center;
 	}
@@ -1075,11 +1137,11 @@ footer .widget-footer ul a:hover{
 	}
 .titulo-single-siglas{
 	margin-left:-3%;
+	border-right:2px solid #E2E2E2;
+	padding-right: 40px;
 	}
 .single-siguele .titulo-single-redes{
 	margin-left:0;
-	border-left:2px solid #E2E2E2;
-	padding-left: 40px;
 	}
 .single-siguele .titulo-single-siglas a{
 		text-decoration:none;
@@ -1107,6 +1169,10 @@ footer .widget-footer ul a:hover{
 	border-left:none;
 	}
 }
+.move-izquierda-titulo{
+	margin-left:-45%;
+	padding-left:-10%;	
+	}
 .contenedor-paginas{	
 	margin-top:-6%;
 	}
@@ -1381,6 +1447,14 @@ footer .widget-footer ul a:hover{
 	background-position: bottom;
 	margin-bottom: 8px;
 }
+.content-dependencia h3{
+	padding: 37px 80px 26px;
+	background-image: url(images/shadow-red.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin-bottom: 8px;
+	margin-top:0px;
+	}
 .content-normativa .read-more{
 	margin:0;
 }
@@ -1439,5 +1513,20 @@ footer .widget-footer ul a:hover{
 	}
 .contenedor-imagen{
 	min-height:110px;
+	}
+.tamaño-sinlge{
+	min-height:1200px;
+	}
+.categoria-blog .link-style{
+	margin:0 auto 0 auto; 
+	width:300px;
+	margin-bottom:5%;
+	margin-top:5%;
+	}
+.move-left{
+	margin-left:20%;
+	}
+.move-center{
+margin-left:42%;
 	}
 /* */

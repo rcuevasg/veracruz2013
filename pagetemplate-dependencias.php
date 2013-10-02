@@ -4,20 +4,34 @@ Template Name: Dependencias page
 */
 ?>
 <?php get_header(); ?>
+<script language="javascript" type="text/javascript">
+function doclick(linkea){
+	location.href=linkea;
+	}
+</script>
 <section class="container principalContent" id="content-list">
 <div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
+<div class="tituloSingleArea">
+<h2>
+<?php
+echo get_the_title();//$post->post_parent
+?>
+</h2>
+</div>
+<div class="back-img"></div>
 <div class="col-md-12 col-lg-12">
+
 					<div class="imagen-dependencias">
 					<?php 
 						if ( has_post_thumbnail() ) { 
 	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
 						   echo "<img class='img-responsive' src='".$large_image_url[0]."' alt=''>";
 						}
-					?>
+					?>    
                     </div>
     <div class="text-dependencias">
-    <h3><?php echo get_the_title();//$post->post_parent	?></h3>
+<div class="content-dependencia"> <h3><?php echo get_the_title();//$post->post_parent	?></h3></div>
    	<?php the_content(); ?>
 <div class="listado-categorias-comunicados col-md-12 col-lg-12">
 <table align="center">
@@ -33,13 +47,15 @@ $args = array(
   );
 $categories = get_categories( $args );
 foreach ( $categories as $category ) {
-	echo '<div class="categorias-hover">';
-	echo '<tr class="categorias-hover-tr">';
-	echo '<td class="flecha-verde"></td>';
-	echo '<td class="link-hover"><br><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a><br><br></td>';
-	echo '<td><br>'.$category->description.'<br><br></td>';
-	echo '</tr>';
-	echo '</div>';
+	?>
+	<div class="categorias-hover">
+	<tr class="categorias-hover-tr" onclick="doclick('<?php echo get_category_link( $category->term_id ); ?>')">
+	<td class="flecha-verde">&nbsp;</td>
+	<td class="link-hover"><br><?php echo $category->name; ?><br><br></td>
+	<td><br><?php echo $category->description; ?><br><br></td>
+	</tr>
+	</div>
+    <?php
 	
 }
 				 
