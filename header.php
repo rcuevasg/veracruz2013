@@ -196,6 +196,14 @@
 						</ol>
 					</div><!-- end .carousel-indicators-wrapper -->
 					
+					<!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-destacados" data-slide="prev">
+					    <span class="icon-prev"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-destacados" data-slide="next">
+					    <span class="icon-next"></span>
+					  </a>
+					
 					</div><!-- end #carousel-destacados -->
 
 				</div><!-- end #divCarrusel -->

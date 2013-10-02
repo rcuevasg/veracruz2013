@@ -236,6 +236,28 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	padding: 5px;
 }
 
+.carousel-control.left, .carousel-control.right {
+	background: none;
+}
+
+.carousel-control .icon-prev:before, .carousel-control .icon-next:before {
+	content: '';
+}
+
+.icon-prev {
+	background: url('images/sliderLeft.png') no-repeat ;
+	left: 5% !important;
+}
+
+.icon-next {
+	background: url('images/sliderRight.png') no-repeat ;
+	left: 115% !important;
+}
+
+.carousel-control {
+	width: 5%;
+}
+
 .carousel-inner {
 	background: #6D6D6C;
 }
