@@ -1616,4 +1616,104 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 #container{
 	margin-bottom:5%;
 	}
-/* */
+/* estilos category-multimedia */
+.ui-tabs-nav{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	border-bottom:1px solid #CCC;
+}
+.ui-tabs-nav li{
+	width: 165px;
+	display: inline-block;
+}
+.ui-tabs-nav li a{
+	font: normal 18px "GandhiSerif";
+	color:#535352;
+	text-decoration:none;
+	border:0;
+	outline: 0;
+}
+.ui-tabs-nav .bg-bottom{
+	height: 5px;
+	background-color: #C4C4C4;
+	display: block;
+}
+.ui-state-hover .bg-bottom, .ui-state-active .bg-bottom{
+	background-color: #535352 !important;
+}
+.video-holder{
+	background-color:#262626;
+	width: 96%;
+	overflow:hidden;
+	margin: 15px auto 0;
+	border-bottom: 4px solid #6D6D6C;
+}
+.video-holder #contenido p{
+	color:#E6E6E6;
+	font-family: 'GandhiSans';
+	font-size:14px;
+}
+.video-holder #contenido .read-more{
+	display:none;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 31.25%;
+	padding-top: 44px;
+	height: 0;
+	overflow: hidden;
+}
+.video-holder h3{
+	color:#E6E6E6;
+	font-family: 'GandhiSerif';
+	font-size:18px;
+	visibility: visible;
+}
+.video-holder h6{
+	text-align:center;
+	visibility: visible;
+}
+.video-holder  #fecha-variable{
+	position: relative;
+	background-color:#262626;
+	font-size: 18px;
+	font-family: 'GandhiSans';
+	color: #ccc;
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	z-index: 1;
+	width: 38%;
+	text-transform: uppercase;
+}
+.video-holder .border{
+	z-index: 0;
+	position: relative;
+	margin-top: -7px;
+	display: block;
+	border-bottom: solid 1px #E6E6E6;
+}
+.video-holder  .padding-30{
+	padding:10px 2.83%;
+}
+.loader-ajax{
+	background-image:url(images/loadinfo.net.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+	display:block;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sin-top{
+	top:0 !important;
+}
