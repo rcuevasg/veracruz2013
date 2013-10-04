@@ -7,18 +7,36 @@ Template Name: Eventos especiales
     <div id="content-list" class="container principalContent blog-contenedor">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<?php $my_meta = get_post_meta($post->ID,'_eventos',true); ?>
+        <?php 
+		$nombre = get_post_meta($post->ID, 'nombre', true);
+		$descripcion = get_post_meta($post->ID, 'descripcion', true);
+		?>
         <div class="tituloSingleArea">
             <h2><?php the_title(); ?></h2>
         </div>
         <div class="back-img"></div>
         <div class="content-eventos">
-				<div class="img-tumb">
+				<div class="img-tumb <?php if(!$nombre){ ?> content-normativa <?php } ?>">
 					<?php 
 						if ( has_post_thumbnail() ) { 
 						   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
 						   echo "<img class='img-evento img-responsive' src='".$large_image_url[0]."' alt=''>";
+						   if($nombre){
+							   ?><div class="titulo-tranparencia"><h3><?php echo $nombre; ?></h3></div><?php
+							   }
 						}
 					?>
+                    <?php
+                    if($descripcion){
+						?>
+                        <div class="item-normativa">
+                            <p>
+                            <?php echo $descripcion; ?>
+                            </p>
+                        </div>
+						<?php
+						}
+						?>
                 </div>
                 <table>
 				<?php 

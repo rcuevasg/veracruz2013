@@ -587,14 +587,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	visibility: hidden;
 }	
 .iconFacebook a{
-	background-image:url(images/facebook_tag.png) !important;
+	background-image:url(images/facebook_tag.png);
 	background-size: 33px 33px;
 	display:block;
 	height:33px;
 	width:33px;	
 	} 
 a.iconFacebook{
-	background-image:url(images/facebook_tag.png) !important;
+	background-image:url(images/facebook_tag.png);
 	background-size: 33px 33px;
 	display:block;
 	height:33px;
@@ -959,14 +959,30 @@ footer .widget-footer ul a:hover{
 	height: 45px;
     margin: 5px 10px;
 }
-
+.tituloShare{
+	font-size:1em;
+	}
+.claseDecente .listadoShareItem{
+	min-height:80px;
+	}
+.claseDecente .listadoShareItem .addthis_toolbox a{
+	display: inline-block;
+	float:left;
+	}
 #content-list .divNotaListado .contenedorNota span .post-date {
-	margin-left: -6.5%;
+	margin-left: -4%;
     margin-top: -15%;
     padding-left: 0;
     padding-top: 2%;
     position: absolute;
 }
+#content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
+	min-height:60px;
+	}
+#content-list .divNotaListado .contenedorNota .tituloShare .listadoShareItem .addthis_toolbox{
+	margin-left: 20%;
+	min-height:30px;
+	}
 .searchHeaderArea .widget_search{
 	width: 30.5%;
 }
@@ -1400,6 +1416,8 @@ footer .widget-footer ul a:hover{
 .content-eventos .read-more{
 	margin:0;
 	float: right;
+	color:#FFF;
+	text-decoration:none;
 }
 .content-eventos td{
 	padding-bottom: 55px;
@@ -1411,6 +1429,15 @@ footer .widget-footer ul a:hover{
 	background-repeat: no-repeat;
 	padding-bottom: 45px;
 }
+.titulo-tranparencia{
+	padding: 37px 70px 26px;
+	background-image: url(images/shadow-red.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin-bottom: 8px;
+	margin-top:0px;
+	text-align:center;
+	}
 /*Fin estilos eventos*/
 /*Estilos poderes del estado*/
 .content-poderes img{
@@ -1438,6 +1465,8 @@ footer .widget-footer ul a:hover{
 .content-poderes .read-more{
 	text-align:center;
 	margin:0;
+	color:#FFF;
+	text-decoration:none;
 }
 .item-poder{
 	background-image: url(images/shadow-eventos.png);
@@ -1462,6 +1491,10 @@ footer .widget-footer ul a:hover{
 	color:#606464;
 	font-size:16px;
 }
+.content-eventos .item-normativa{
+	width:70%;
+	margin:0 auto;
+	} 
 .content-normativa img{
 	padding: 37px 80px 26px;
 	background-image: url(images/shadow-red.png);
@@ -1479,6 +1512,8 @@ footer .widget-footer ul a:hover{
 	}
 .content-normativa .read-more{
 	margin:0;
+	color:#FFF;
+	text-decoration:none;
 }
 .bottom-23{
 	margin-bottom:23px;
@@ -1550,5 +1585,35 @@ footer .widget-footer ul a:hover{
 	}
 .move-center{
 margin-left:42%;
+	}
+.container .loading-blog{
+	display:block;
+	c
+	left:50%;
+	clear:both;
+	text-align:center;
+	}
+#IrArriba {
+position: fixed;
+bottom: 30px; /* Distancia desde abajo */
+right: 30px; /* Distancia desde la derecha */
+z-index:10000;
+}
+#IrArriba span {
+width: 60px; /* Ancho del botón */
+height: 60px; /* Alto del botón */
+display: block;
+background: url(images/flecha-arriba.png) no-repeat center center;
+}
+#infscr-loading{
+	text-align:center;
+	clear:both;
+	margin-top:15%;
+	}
+#infscr-loading img{
+	margin:0 auto;
+	}
+#container{
+	margin-bottom:5%;
 	}
 /* */

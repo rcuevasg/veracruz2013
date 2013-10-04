@@ -30,7 +30,7 @@ echo get_the_title();//$post->post_parent
 					   
 						if (!empty($thumbnailsrc)):
 						?>
-							<div class="">
+							<div class="content-normativa">
 						 	<span class='img img-responsive'><img class="img-responsive" src='<?php print $thumbnailsrc; ?>' border=0 />
 						 	</span>
 						 	</div>
