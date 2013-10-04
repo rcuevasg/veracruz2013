@@ -173,7 +173,7 @@
                                  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
                                  <!-- AddThis Button END -->
         					 </div>
-	                     </div><!-- end col-lg-6 -->
+	                     </div>
                 	</div><!-- end .contenedorNota -->
 				</div><!-- Fin del div featured clearfix -->
             <?php endwhile; //Fin while principal
