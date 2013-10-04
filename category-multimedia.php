@@ -34,7 +34,7 @@
 			var ID = $(this).data('id');
 			$.ajax({
 			    type: "POST",
-				url: "/veracruz/wp-admin/admin-ajax.php", 
+				url: "/GEV/wp-admin/admin-ajax.php", 
 				data: {'action':'get_video_ajax', post_id: ID },
 				beforeSend:function(data){
                     $('.video-holder').addClass("loader-ajax");

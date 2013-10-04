@@ -34,7 +34,6 @@ if( !is_admin()){
    wp_deregister_script('jquery');
    wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '');
    wp_enqueue_script('jquery');
-   
    /**
 	* jQuery Cycle*/
 	//wp_enqueue_script('cycle', get_bloginfo('template_directory').'/js/jquery.cycle.all.js'); 
