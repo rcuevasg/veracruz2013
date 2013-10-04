@@ -61,6 +61,7 @@ if(	$nombreparent==$padre){
 	<h3><?php echo $page->post_title; ?></h3>
 		<div class="entry"><?php echo substr($content, 0, 100); ?></div>
         <?php 
+		
 		$nombreCategory=get_the_title($page->ID);
 		$categoriaBlog = get_category_by_slug($nombreCategory);
 		$categoriaBlog = $categoriaBlog->term_id;
