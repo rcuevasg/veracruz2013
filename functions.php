@@ -231,6 +231,7 @@ add_action( 'widgets_init', 'veracruz2013_widgets_init' );
 add_image_size('img-sidebar', 249 , 153, true);
 add_image_size('img-gabinete', 204 , 223, true);
 add_image_size('img-single-sidebar', 286 , 158, true);
+add_image_size('img-medios-detacado', 256 , 256, true);
 
 
 include_once 'metaboxes/setup.php';
@@ -304,19 +305,65 @@ function siblings($link) {
 	}
 }
 
-function twentytwelve_content_nav( $html_id ) {
-	global $wp_query;
-
-	$html_id = esc_attr( $html_id );
-
-	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
-		</nav><!-- #<?php echo $html_id; ?> .navigation -->
-	<?php endif;
+function guias(){
+	$img_custom=wp_get_attachment_image_src( $_POST['id_attachment'], 'img-sidebar' );
+	$img_full=wp_get_attachment_image_src( $_POST['id_attachment'], 'full' );
+	echo $img_custom[0];
+	die(); 
 }
+add_action('wp_ajax_guias', 'guias');
+add_action('wp_ajax_nopriv_guias', 'guias');  
 
+function get_video_ajax(){
+	$query = new WP_Query( 'p='.$_POST['post_id'] );
+	if ( $query->have_posts() ) :
+		while ($query->have_posts()):$query->the_post(); 
+				$link = get_post_meta($query->post->ID, 'Video_youtube' , true); 
+				echo "<div class='col-md-8 video-container'>";
+					$pieces=explode('=',$link);
+					echo "<iframe width='598' height='330' src='http://www.youtube.com/embed/".end($pieces)."?rel=0&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe>";
+				echo "</div>";
+				echo "<div class='col-md-4 padding-30'>";
+					echo "<h6 class='date'>";
+						echo "<span id='fecha-variable' class='text'>". get_the_time( 'j M' ) ."</span>";
+						echo "<span class='border'></span>";
+					echo "</h6>";
+					echo "<h3 class='titulo'>". get_the_title() ."</h3>";
+					echo "<div id='contenido'>";
+						 the_excerpt();
+					echo "</div>";
+				echo "</div>";
+	endwhile; endif; 
+	wp_reset_query(); 
+	die(); 
+}
+add_action('wp_ajax_get_video_ajax', 'get_video_ajax');
+add_action('wp_ajax_nopriv_get_video_ajax', 'get_video_ajax');
 
+function get_more_post(){
+	$query = new WP_Query( 'p='.$_POST['post_id'] );
+	if ( $query->have_posts() ) :
+		while ($query->have_posts()):$query->the_post(); 
+				/*$link = get_post_meta($query->post->ID, 'Video_youtube' , true); 
+				echo "<div class='col-md-8 video-container'>";
+					$pieces=explode('=',$link);
+					echo "<iframe width='598' height='330' src='http://www.youtube.com/embed/".end($pieces)."?rel=0&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe>";
+				echo "</div>";
+				echo "<div class='col-md-4 padding-30'>";
+					echo "<h6 class='date'>";
+						echo "<span id='fecha-variable' class='text'>". get_the_time( 'j M' ) ."</span>";
+						echo "<span class='border'></span>";
+					echo "</h6>";
+					echo "<h3 class='titulo'>". get_the_title() ."</h3>";
+					echo "<div id='contenido'>";
+						 the_excerpt();
+					echo "</div>";
+				echo "</div>";*/
+				the_title();
+	endwhile; endif; 
+	wp_reset_query(); 
+	die(); 
+}
+add_action('wp_ajax_get_more_post', 'get_more_post');
+add_action('wp_ajax_nopriv_get_more_post', 'get_more_post');
 ?>

@@ -131,11 +131,8 @@ jQuery(document).ready(function() {
 		?>
 	</div>
  </div>
-		<?php /* Display navigation to next/previous pages when applicable */ 
-		if(function_exists('wp_pagenavi')) { 
-			//wp_pagenavi( array('query' =>$notas)); 
-		}
-		
+		<?php 
+		/* Display navigation to next/previous pages when applicable */ 
 		endif; //Fin de if notas->have_posts
 		?>
         <?php if (  $wp_query->max_num_pages > 1 ) : ?>

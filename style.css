@@ -72,7 +72,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .home{
 	color:#869292 !important;
 	font-family:'GandhiSerif';
-	}
+}
+body{
+	font-family:'GandhiSerif';
+}
 /** Estilos del header **/
 .menuHeaderArea ul {
 	list-style: none;
@@ -234,28 +237,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 #mainCarousel, #divCarrusel {
 	padding: 5px;
-}
-
-.carousel-control.left, .carousel-control.right {
-	background: none;
-}
-
-.carousel-control .icon-prev:before, .carousel-control .icon-next:before {
-	content: '';
-}
-
-.icon-prev {
-	background: url('images/sliderLeft.png') no-repeat ;
-	left: 5% !important;
-}
-
-.icon-next {
-	background: url('images/sliderRight.png') no-repeat ;
-	left: 115% !important;
-}
-
-.carousel-control {
-	width: 5%;
 }
 
 .carousel-inner {
@@ -532,7 +513,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     color: #555555;
     display: block;
-    font-size: 14px;
+    font-size: 1.000em;
     height: 24px;
     line-height: 1.42857;
     padding: 6px 12px;
@@ -585,7 +566,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .iconGobierno span {
 	visibility: hidden;
-}	
+}
+	
 .iconFacebook a{
 	background-image:url(images/facebook_tag.png);
 	background-size: 33px 33px;
@@ -646,51 +628,18 @@ a.iconTwitter{
 	height:31px;
 	width:31px;	
 }
-.iconPinterest span{
-	visibility:hidden;
-	}
-.iconPinterest a:hover{
-	background-image:url(images/pinterest_tag_hover.png);
-}
-a.iconPinterestBlog{
+a.iconPinterest{
 	background-image:url(images/pinterest_tag.png);
 	background-size: 31px 31px;
 	display:block;
 	height:31px;
 	width:31px;	
 }
-.iconPinterestBlog span{
+.iconPinterest span{
 	visibility:hidden;
 	}
-a.iconPinterestBlog:hover{
+.iconPinterest a:hover{
 	background-image:url(images/pinterest_tag_hover.png);
-}
-a.iconLinkedIn{
-	background-image:url(images/LinkedIn_tag.png);
-	background-size: 31px 31px;
-	display:block;
-	height:31px;
-	width:31px;	
-}
-.iconLinkedIn span{
-	visibility:hidden;
-	}
-a.iconLinkedIn:hover{
-	background-image:url(images/LinkedIn_tag_hover.png);
-}
-
-a.iconPlusBlog{
-	background-image:url(images/plus_tag.png);
-	background-size: 31px 31px;
-	display:block;
-	height:31px;
-	width:31px;	
-}
-.iconPlusBlog span{
-	visibility:hidden;
-	}
-a.iconPlusBlog:hover{
-	background-image:url(images/plus_tag_hover.png);
 }
 .iconPlus a{
 	background-image:url(images/plus_tag.png);
@@ -702,10 +651,9 @@ a.iconPlusBlog:hover{
 .iconPlus span{
 	visibility:hidden;
 	}
-.iconPlus a:hover {
+.iconPlus a:hover{
 	background-image:url(images/plus_tag_hover.png);
 }
-
 #sidebar .widget-container h4{
   font: normal 21px/28px "GandhiSans";
   text-align: left;
@@ -795,6 +743,7 @@ footer .widget-footer ul a:hover{
 #redesSocialesFooter .menu-redes-sociales-menu-container {
 	float: right
 }
+
 .buscadorBottom .widget_search{
 	width: 55.5%;
 	float: left;
@@ -811,7 +760,7 @@ footer .widget-footer ul a:hover{
 #footer-content .widget-title{
 	font-family: GandhiSans, Helvetica, sans-serif;
 	font-weight:bold;
-	font-size:14px;
+	font-size:1.000em;
 	color:#727272;
 	text-transform: uppercase;
 }
@@ -835,7 +784,7 @@ footer .widget-footer ul a:hover{
 }
 .widget-container-copyright{
 	text-align:center;
-	font-size: 13px;
+	font-size: 0.929em;
 	color: #727272;
 }
 .search-form{
@@ -875,7 +824,7 @@ footer .widget-footer ul a:hover{
 .link-style a{
 	font-family: GandhiSans, Helvetica, sans-serif;
 	color:#5B5B5B;
-	font-size:19px;
+	font-size:1.357em;
 }
 .link-style a:hover{
 	text-decoration:none;
@@ -890,12 +839,12 @@ footer .widget-footer ul a:hover{
 	width: 100%;
 }
 .newsletter-email{
-	font-size:13px;
+	font-size:0.929em;
 	color:#848585;
 	font-family: GandhiSans, Helvetica, sans-serif;
 }
 .widget_newsletterwidget h4{
-	font-size:14px !important;
+	font-size:1.000em !important;
 	margin-top: 9px !important;
 	margin-bottom: 0px !important;
 }
@@ -959,30 +908,14 @@ footer .widget-footer ul a:hover{
 	height: 45px;
     margin: 5px 10px;
 }
-.tituloShare{
-	font-size:1em;
-	}
-.claseDecente .listadoShareItem{
-	min-height:80px;
-	}
-.claseDecente .listadoShareItem .addthis_toolbox a{
-	display: inline-block;
-	float:left;
-	}
+
 #content-list .divNotaListado .contenedorNota span .post-date {
-	margin-left: -4%;
+	margin-left: -6.5%;
     margin-top: -15%;
     padding-left: 0;
     padding-top: 2%;
     position: absolute;
 }
-#content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
-	min-height:60px;
-	}
-#content-list .divNotaListado .contenedorNota .tituloShare .listadoShareItem .addthis_toolbox{
-	margin-left: 20%;
-	min-height:30px;
-	}
 .searchHeaderArea .widget_search{
 	width: 30.5%;
 }
@@ -994,9 +927,6 @@ footer .widget-footer ul a:hover{
 	margin-top:-39px;
 	border-bottom:1px solid #c5c5c5;
 	}
-.contine-principales .principalContent{
-	border-bottom:none;
-}
 .post-page-child h3{
 	color: #5b5b5b !important;
 	line-height:30px; 
@@ -1025,7 +955,7 @@ footer .widget-footer ul a:hover{
 	}
 }
 .tituloPrincipal h1{
-	font-size:30px;
+	font-size:2.143em;
 	}
 .tituloSingleArea{
 	alignment-adjust:middle;
@@ -1040,7 +970,6 @@ footer .widget-footer ul a:hover{
 .tituloSingleArea h2 {
 	margin:5px auto;
 	padding:2%;
-	text-transform:uppercase;
 }
 
 .back-img{
@@ -1052,16 +981,8 @@ footer .widget-footer ul a:hover{
 .blog-contenedor .tituloSingleArea{
 	margin:0 20px;
 	}
-.blog-contenedor #popular a, .blog-contenedor{
-	font: normal 18px "GandhiSans";
-	color:#5b5b5b;
-	}
-.blog-contenedor .time-blog{
-	margin-top:-3%;
-	}
-.blog-contenedor a{
-	font: normal 14px "GandhiSans";
-	color:#5b5b5b;
+.blog-contenedor .searchHeaderArea{
+	top:-15px;
 	}
 .single-img{
 	border: 3px solid #fff;
@@ -1103,8 +1024,7 @@ footer .widget-footer ul a:hover{
 	text-decoration:none;
 	}
 .listado-categorias-comunicados table{
-	width:35%;
-	font-size:18px;
+	width:30%;
 	}
 .listado-categorias-comunicados	tr {
 	border-bottom: 1px dashed #c5c5c5;
@@ -1114,14 +1034,8 @@ footer .widget-footer ul a:hover{
 	}
 .categorias-hover-tr:hover, .categorias-hover-tr:hover a{
 	color:#333333;
+	font-size:1.071em;
 	}
-.categorias-hover-tr	.flecha-verde{
-	background-image:url(images/fecha-blanco.png);
-	background-repeat:no-repeat no-repeat;
-	width:13px;
-	height:19px;
-	background-position:center;
-}
 .categorias-hover-tr:hover	.flecha-verde{
 	background-image:url(images/fecha-verde.png);
 	background-repeat:no-repeat no-repeat;
@@ -1129,10 +1043,6 @@ footer .widget-footer ul a:hover{
 	height:19px;
 	background-position:center;
 		}
-.categorias-hover-tr{
-	cursor:pointer;
-	text-transform:uppercase;
-	}
 .entry{
 	text-align:center;
 	}
@@ -1142,7 +1052,7 @@ footer .widget-footer ul a:hover{
 	font: normal 28px "GandhiSans";
   	text-align:center;
 	color: #5b5b5b !important;
-	background-image:url("images/degradado.png");
+	background-image:url("images/background-bottom.png");
   	background-position:50% 100%;
   	background-repeat:no-repeat no-repeat;
   	padding:0 0 3%;
@@ -1151,7 +1061,7 @@ footer .widget-footer ul a:hover{
 	margin-top:-3%;
 	padding:0 3% 3%;
 	}
-.titulo-single-redes, .titulo-single-siglas{
+.titulo-single-redes{
  	margin-left:-10%;
  	padding:0 0 3%;
 	margin-right:3%;
@@ -1168,30 +1078,26 @@ footer .widget-footer ul a:hover{
 	font: normal 28px "GandhiSans";
   	text-align:center;
 	color: #5b5b5b !important;
-	background-image:url("images/degradado.png");
+	background-image:url("images/background-bottom.png");
   	background-position:50% 100%;
   	background-repeat:no-repeat no-repeat;
-  	padding:0 0 2%;
+  	padding:0 0 3%;
 	}
-.titulo-single-siglas{
-	margin-left:-3%;
-	border-right:2px solid #E2E2E2;
-	padding-right: 40px;
-	}
-.single-siguele .titulo-single-redes{
-	margin-left:0;
-	}
-.single-siguele .titulo-single-siglas a{
-		text-decoration:none;
-		color: #5b5b5b !important;
-		}
-.single-siguele .titulo-single-siglas img{
-		margin-left:1%;
-		}
 .single-siguele #single-redes{
-	margin-left:64%;
-	padding-left:5%;
+	 	margin-left:50%;
  	}
+@media (max-width: 991px) {
+#single-redes{
+	padding:0 8% 8%;
+	margin-top:-5%;
+		}
+}
+@media (max-width: 768px) {
+	#single-redes{
+		padding:0 5% 5%;
+		margin-top:-5%;
+		}
+}
 @media (max-width: 400px) {
 	#single-redes{
 	padding:-25% 30% 30%;
@@ -1203,14 +1109,7 @@ footer .widget-footer ul a:hover{
 	margin-left:25%;
 	margin-top:3%;
 	}
-.single-siguele .titulo-single-redes{
-	border-left:none;
-	}
 }
-.move-izquierda-titulo{
-	margin-left:-45%;
-	padding-left:-10%;	
-	}
 .contenedor-paginas{	
 	margin-top:-6%;
 	}
@@ -1265,7 +1164,7 @@ footer .widget-footer ul a:hover{
 	padding-top: 5px;
 	position:relative;
 	font-family:"GandhiSerif";
-	font-size:21px;
+	font-size:1.500em;
 	font-weight:bold;
 	margin-bottom: 16px;
 }
@@ -1325,12 +1224,12 @@ footer .widget-footer ul a:hover{
 .title-secretaria{
 	padding: 15px 0 0;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 1.000em;
 	font-family: "GandhiSans";
 	font-weight: bold;
 }
 .link-dependecia a{
-	font-size: 16px;
+	font-size: 1.143em;
 	font-family: "GandhiSans";
 	padding: 16px 0;
 	color:#007336;
@@ -1360,7 +1259,7 @@ footer .widget-footer ul a:hover{
 .item-search h3{
 	margin: 0;
 	font-family: "GandhiSans";
-	font-size: 20px;
+	font-size: 1.429em;
 	font-weight: bold;
 }
 .item-search span{
@@ -1380,7 +1279,7 @@ footer .widget-footer ul a:hover{
 .total-search{
 	margin-top: 10px;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 1.786em;
 	font-family: "GandhiSans";
 	padding: 15px;
 }
@@ -1408,7 +1307,7 @@ footer .widget-footer ul a:hover{
 }
 .content-eventos .title-evento{
 	font-family: "GandhiSans";
-	font-size:24px;
+	font-size:1.714em;
 	color:#606464;
 	padding-bottom: 14px;
 	border-bottom:1px dotted #6C6C6B;
@@ -1416,8 +1315,6 @@ footer .widget-footer ul a:hover{
 .content-eventos .read-more{
 	margin:0;
 	float: right;
-	color:#FFF;
-	text-decoration:none;
 }
 .content-eventos td{
 	padding-bottom: 55px;
@@ -1429,15 +1326,6 @@ footer .widget-footer ul a:hover{
 	background-repeat: no-repeat;
 	padding-bottom: 45px;
 }
-.titulo-tranparencia{
-	padding: 37px 70px 26px;
-	background-image: url(images/shadow-red.png);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	margin-bottom: 8px;
-	margin-top:0px;
-	text-align:center;
-	}
 /*Fin estilos eventos*/
 /*Estilos poderes del estado*/
 .content-poderes img{
@@ -1452,7 +1340,7 @@ footer .widget-footer ul a:hover{
 	color:#606464;
 }
 .title-poder{
-	font-size:32px;
+	font-size:2.286em;
 	padding: 25px 0 9px;
 	background-image: url(images/shadow-red.png);
 	background-repeat:no-repeat;
@@ -1465,8 +1353,6 @@ footer .widget-footer ul a:hover{
 .content-poderes .read-more{
 	text-align:center;
 	margin:0;
-	color:#FFF;
-	text-decoration:none;
 }
 .item-poder{
 	background-image: url(images/shadow-eventos.png);
@@ -1489,12 +1375,8 @@ footer .widget-footer ul a:hover{
 .item-normativa p{
 	font-family: "GandhiSans";
 	color:#606464;
-	font-size:16px;
+	font-size:1.143em;
 }
-.content-eventos .item-normativa{
-	width:70%;
-	margin:0 auto;
-	} 
 .content-normativa img{
 	padding: 37px 80px 26px;
 	background-image: url(images/shadow-red.png);
@@ -1502,18 +1384,8 @@ footer .widget-footer ul a:hover{
 	background-position: bottom;
 	margin-bottom: 8px;
 }
-.content-dependencia h3{
-	padding: 37px 80px 26px;
-	background-image: url(images/shadow-red.png);
-	background-repeat: no-repeat;
-	background-position: bottom;
-	margin-bottom: 8px;
-	margin-top:0px;
-	}
 .content-normativa .read-more{
 	margin:0;
-	color:#FFF;
-	text-decoration:none;
 }
 .bottom-23{
 	margin-bottom:23px;
@@ -1571,49 +1443,105 @@ footer .widget-footer ul a:hover{
 .contenedor-imagen{
 	min-height:110px;
 	}
-.tamaño-sinlge{
-	min-height:1200px;
-	}
-.categoria-blog .link-style{
-	margin:0 auto 0 auto; 
-	width:300px;
-	margin-bottom:5%;
-	margin-top:5%;
-	}
-.move-left{
-	margin-left:20%;
-	}
-.move-center{
-margin-left:42%;
-	}
-.container .loading-blog{
+
+/* estilos category-multimedia */
+.ui-tabs-nav{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	border-bottom:1px solid #CCC;
+}
+.ui-tabs-nav li{
+	width: 165px;
+	display: inline-block;
+}
+.ui-tabs-nav li a{
+	font: normal 18px "GandhiSerif";
+	color:#535352;
+	text-decoration:none;
+	border:0;
+	outline: 0;
+}
+.ui-tabs-nav .bg-bottom{
+	height: 5px;
+	background-color: #C4C4C4;
+	display: block;
+}
+.ui-state-hover .bg-bottom, .ui-state-active .bg-bottom{
+	background-color: #535352 !important;
+}
+.video-holder{
+	background-color:#262626;
+	width: 96%;
+	overflow:hidden;
+	margin: 15px auto 0;
+	border-bottom: 4px solid #6D6D6C;
+}
+.video-holder #contenido p{
+	color:#E6E6E6;
+	font-family: 'GandhiSans';
+	font-size:14px;
+}
+.video-holder #contenido .read-more{
+	display:none;
+}
+.video-container {
+	position: relative;
+	padding-bottom: 31.25%;
+	padding-top: 44px;
+	height: 0;
+	overflow: hidden;
+}
+.video-holder h3{
+	color:#E6E6E6;
+	font-family: 'GandhiSerif';
+	font-size:18px;
+	visibility: visible;
+}
+.video-holder h6{
+	text-align:center;
+	visibility: visible;
+}
+.video-holder  #fecha-variable{
+	position: relative;
+	background-color:#262626;
+	font-size: 18px;
+	font-family: 'GandhiSans';
+	color: #ccc;
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	z-index: 1;
+	width: 38%;
+	text-transform: uppercase;
+}
+.video-holder .border{
+	z-index: 0;
+	position: relative;
+	margin-top: -7px;
+	display: block;
+	border-bottom: solid 1px #E6E6E6;
+}
+.video-holder  .padding-30{
+	padding:10px 2.83%;
+}
+.loader-ajax{
+	background-image:url(images/loadinfo.net.gif);
+	background-repeat:no-repeat;
+	background-position:center;
 	display:block;
-	c
-	left:50%;
-	clear:both;
-	text-align:center;
-	}
-#IrArriba {
-position: fixed;
-bottom: 30px; /* Distancia desde abajo */
-right: 30px; /* Distancia desde la derecha */
-z-index:10000;
 }
-#IrArriba span {
-width: 60px; /* Ancho del botón */
-height: 60px; /* Alto del botón */
-display: block;
-background: url(images/flecha-arriba.png) no-repeat center center;
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-#infscr-loading{
-	text-align:center;
-	clear:both;
-	margin-top:15%;
-	}
-#infscr-loading img{
-	margin:0 auto;
-	}
-#container{
-	margin-bottom:5%;
-	}
-/* */
+.sin-top{
+	top:0 !important;
+}
