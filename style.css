@@ -1717,3 +1717,9 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 .sin-top{
 	top:0 !important;
 }
+.border-dotted-grey{
+	width: 96%;
+	display: block;
+	margin: 12px auto 2px;
+	border-bottom: dotted #CCC 1px;
+}

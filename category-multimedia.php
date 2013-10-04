@@ -22,7 +22,6 @@
 				rows : 1,
 				columns : 2
 			},
-			onhover : true,
 			preventClick : true
 		} );
 	
@@ -91,6 +90,7 @@
         <li><a href="#infografias" rel="infografias">INFOGRAFIAS <span class="bg-bottom"></span></a></li>
       </ul>
       <div class="clear"></div>
+      <div class="border-dotted-grey"></div>
       <div id="fotos">
           <div id="ri-grid" class="ri-grid ri-grid-size-1 ri-shadow">
             <ul>
@@ -110,8 +110,13 @@
                     if($attachments){
                         foreach($attachments as $attachment){
                             $img_custom=wp_get_attachment_image_src( $attachment->ID, 'img-medios-detacado' );
-                            $img_full=wp_get_attachment_image_src( $attachment->ID, 'full' );
-                            echo "<li><a href='".$img_full[0]."' rel='prettyPhoto[pp_gal]' title='".$attachment->post_content."'><img src='".$img_custom[0]."' alt='".$attachment->post_excerpt."' /></a></li>";
+                            $img_full=wp_get_attachment_image_src( $attachment->ID, 'full' ); ?>
+                            <li>
+                            	<a href='<?php echo $img_full[0] ?>' rel='prettyPhoto[pp_gal]' title='<?php $attachment->post_content; ?>'>
+                                	<img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $img_custom[0]; ?>&w=256&h=256' alt='<?php echo $attachment->post_excerpt; ?>' />
+                                </a>
+                            </li>
+                       <?php
                         }
                     }wp_reset_query(); 
                 }
@@ -125,6 +130,7 @@
                 <?php dynamic_sidebar( 'buscador-widget-area' ); ?>
             </div>
         <?php endif; ?>
+        <div class="border-dotted-grey"></div>
         <?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
         <?php
             $args = array(

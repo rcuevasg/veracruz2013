@@ -50,7 +50,7 @@
 				dispatch() :
 				resizeTimeout = setTimeout( dispatch, $special.threshold );
 		},
-		threshold: 100
+		threshold: 300
 	};
 
 	// http://www.hardcode.nl/subcategory_1/article_317-array-shuffle-function
