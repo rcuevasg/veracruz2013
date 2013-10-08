@@ -255,10 +255,7 @@
 			echo "</div>";
             endif; //Fin de if notas->have_posts
             ?>
-            <?php $next_post = get_next_post(true); ?>
-            <div id="more<?php echo $next_post->ID; ?>" class="morebox">
-                <a href="#" class="more" id="<?php echo $next_post->ID; ?>">more</a>
-            </div>
+            
       </div>
       <div id="infografias">
       </div>

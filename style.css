@@ -385,6 +385,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     position: absolute;
     right: -0.5%;
     top: -1%;
+	z-index:1000000;
 }
 
 /** Fin de los estilos del header **/
@@ -977,7 +978,7 @@ footer .widget-footer ul a:hover{
     position: absolute;
 }
 #content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
-	min-height:60px;
+	min-height:90px;
 	}
 #content-list .divNotaListado .contenedorNota .tituloShare .listadoShareItem .addthis_toolbox{
 	margin-left: 20%;
@@ -1569,7 +1570,7 @@ footer .widget-footer ul a:hover{
 	color:#333333;
 	}
 .contenedor-imagen{
-	min-height:110px;
+	min-height:130px;
 	}
 .tamaño-sinlge{
 	min-height:1200px;
@@ -1596,7 +1597,7 @@ margin-left:42%;
 #IrArriba {
 position: fixed;
 bottom: 30px; /* Distancia desde abajo */
-right: 30px; /* Distancia desde la derecha */
+right: 20px; /* Distancia desde la derecha */
 z-index:10000;
 }
 #IrArriba span {
@@ -1717,9 +1718,18 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 .sin-top{
 	top:0 !important;
 }
-.border-dotted-grey{
-	width: 96%;
-	display: block;
-	margin: 12px auto 2px;
-	border-bottom: dotted #CCC 1px;
+.blog-contenedor a.iconFacebook{
+	background-image:url(images/facebook.png);
+}
+.blog-contenedor a.iconTwitter{
+	background-image:url(images/twitter.png);
+}
+.blog-contenedor a.iconPinterestBlog{
+	background-image:url(images/pinterest.png);
+}
+.blog-contenedor a.iconLinkedIn{
+	background-image:url(images/link.png);
+}
+.blog-contenedor a.iconPlusBlog{
+	background-image:url(images/gplus.png);
 }

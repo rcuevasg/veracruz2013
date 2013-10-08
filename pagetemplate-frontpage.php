@@ -4,6 +4,11 @@ Template Name: Front page
 */
 ?>
 <?php get_header(); ?>
+<script language="javascript" type="text/javascript">
+function doclick(linkea){
+	location.href=linkea;
+	}
+</script>
 				<section id="principalContent" class="container">
 				<div class="col-md-8 col-lg-8 post-home">
 						 <?php
@@ -46,7 +51,7 @@ Template Name: Front page
 					endwhile;  //Terminar while de post dentro de BLOG
 					wp_reset_query();
 					?>
-                    <div class="link-style blog-noticias btn btn-default">
+                    <div class="link-style blog-noticias btn btn-default" onClick="doclick('<?php print esc_url(get_category_link($categoriaBlog)) ?>')">
                     <?php
                     	$categoriaBlog = get_category_by_slug('blog');
 						$categoriaBlog = $categoriaBlog->term_id;
