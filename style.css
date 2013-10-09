@@ -1733,3 +1733,20 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 .blog-contenedor a.iconPlusBlog{
 	background-image:url(images/gplus.png);
 }
+.border-dotted-grey{
+	width: 96%;
+	display: block;
+	margin: 12px auto 2px;
+	border-bottom: dotted #CCC 1px;
+}
+.overlay-gallery{
+	opacity: 0.5;
+	z-index: 100;
+	background: black url(images/loadinfo.net.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+	display: none;
+	height: 532px;
+	width: 100%;
+	position: absolute;
+}

@@ -8,6 +8,8 @@
 </noscript>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/modernizr.custom.26633.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.gridrotator.js"></script>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script type="text/javascript">	
 	$(function() {
@@ -22,7 +24,8 @@
 				rows : 1,
 				columns : 2
 			},
-			preventClick : true
+			preventClick : false,
+			onhover: false
 		} );
 	
 	});
@@ -30,11 +33,11 @@
     	$( "#tabs" ).tabs();
   	});
 	$(document).ready(function(){
-		$(".item-video").click(function(){
+		$(document).on('click','.item-video',function(){
 			var ID = $(this).data('id');
 			$.ajax({
 			    type: "POST",
-				url: "/GEV/wp-admin/admin-ajax.php", 
+				url: "/veracruz/wp-admin/admin-ajax.php", 
 				data: {'action':'get_video_ajax', post_id: ID },
 				beforeSend:function(data){
                     $('.video-holder').addClass("loader-ajax");
@@ -50,28 +53,55 @@
 				}
 			});
 		});
+		$(document).on('click','li.item-gallery',function(event){
+			event.preventDefault();
+			var ID  = $(this).children().data('id');
+			$.ajax({
+			    type: "POST",
+				url: "/veracruz/wp-admin/admin-ajax.php", 
+				data: {'action':'get_images_gallery', post_id: ID },
+				dataType: 'json',
+				beforeSend:function(data){
+                   $('.overlay-gallery').css("display","block");
+            	},
+				success: function(data, textStatus, XMLHttpRequest){
+					var api_images =new Array();
+					var api_images = data.images;
+					$.prettyPhoto.open(api_images);
+				},
+				complete: function(){
+					$('.overlay-gallery').css("display","none");
+				},
+				error: function(data){
+					console.log(data.statusText);
+				}
+			});
+		});	
 		
-		//Loading more
-		$(".more").click(function(){
-			var ID = $(this).attr("id");
-			if(ID) {
-				$("#more"+ID).html('<img src="moreajax.gif" />');
-				$.ajax({
-					type: "POST",
-					url: "/veracruz/wp-admin/admin-ajax.php",
-					data: {'action':'get_more_post', post_id: ID },
-					cache: false,
-					success: function(html){
-						$("div#update").append(html);
-						$("#more"+ID).remove(); // removing old more button
-					}
-				});
-			} else {
-				$(".morebox").html('The End');// no results
-			}
-			return false;
+		$(document).on('click','.pretty-img',function(event){
+			event.preventDefault();
+			var ID  = $(this).find('a').data('id');
+			$.ajax({
+			    type: "POST",
+				url: "/veracruz/wp-admin/admin-ajax.php", 
+				data: {'action':'get_images_gallery', post_id: ID },
+				dataType: 'json',
+				beforeSend:function(data){
+                   //$('.overlay-gallery').css("display","block");
+            	},
+				success: function(data, textStatus, XMLHttpRequest){
+					var api_images =new Array();
+					var api_images = data.images;
+					$.prettyPhoto.open(api_images);
+				},
+				complete: function(){
+					//$('.overlay-gallery').css("display","none");
+				},
+				error: function(data){
+					console.log(data.statusText);
+				}
+			});
 		});
-		
 	});
 </script>
 <div id="content-list" class="container blog-contenedor">
@@ -93,32 +123,30 @@
       <div class="border-dotted-grey"></div>
       <div id="fotos">
           <div id="ri-grid" class="ri-grid ri-grid-size-1 ri-shadow">
+            <div class="overlay-gallery"></div>
             <ul>
             <?php
                 $args = array(
                 'post_type' => 'post',
                 'category_name' => 'fotos',
-                'posts_per_page'=> 5,
+                'posts_per_page'=> 12,
                 );
                 $id_attachment=array();
                 wp_reset_query(); 
                 $query = new WP_Query( $args );
                 while ( $query->have_posts() ) {
                     $query->the_post();
-                    $args=array('post_type'=>'attachment','post_parent'=>get_the_ID(),'order' => 'ASC', 'orderby' => 'menu_order ID', 'posts_per_page'=>99);
-                    $attachments=get_posts($args);
-                    if($attachments){
-                        foreach($attachments as $attachment){
-                            $img_custom=wp_get_attachment_image_src( $attachment->ID, 'img-medios-detacado' );
-                            $img_full=wp_get_attachment_image_src( $attachment->ID, 'full' ); ?>
-                            <li>
-                            	<a href='<?php echo $img_full[0] ?>' rel='prettyPhoto[pp_gal]' title='<?php $attachment->post_content; ?>'>
-                                	<img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $img_custom[0]; ?>&w=256&h=256' alt='<?php echo $attachment->post_excerpt; ?>' />
-                                </a>
-                            </li>
-                       <?php
-                        }
-                    }wp_reset_query(); 
+					if ( has_post_thumbnail() ) { 
+					   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($query->post->ID), 'full'); 
+					?>
+					<li class="item-gallery">
+                        <a data-id="<?=$query->post->ID ?>">
+                            <img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $large_image_url[0]; ?>&w=533&h=266' alt='<?php echo $attachment->post_excerpt; ?>' />
+                        </a>
+					</li> 
+                    <?php
+					}
+					wp_reset_query(); 
                 }
             ?>
             </ul>
@@ -133,36 +161,41 @@
         <div class="border-dotted-grey"></div>
         <?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
         <?php
+			$paged2 = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = array(
                 'post_type' => 'post',
                 'category_name' => 'fotos',
-                'posts_per_page'=> -1,
+                'posts_per_page'=> 3,
+				'paged' => $paged2
             );
             $notas = new WP_Query($args);
             if ($notas->have_posts()) :
+			echo "<div id='content-fotos'>";
             while ($notas->have_posts()): $notas->the_post(); ?>
-                <div class="claseDecente divNotaListado col-md-4 col-lg-4" style="margin-bottom:3%;">
+                <div class="divNotaListado col-md-4 col-lg-4 item-foto" style="margin-bottom:3%;">
                 	<div class="contenedorNota">
-						<?php //Obtenemos la url de la imagen destacada
+						<?php
                         $domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
                         $thumbnailsrc = "";
                         if (!empty($domsxe)) {
                             $thumbnailsrc = $domsxe->attributes()->src;
-                            //$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
                         } else {
                             $urlTema = get_bloginfo('template_url');
                             $thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";
                         }
-                       
                         if (!empty($thumbnailsrc)): ?>
                             <span class='img img-responsive'>
-                                <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
-                                <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                <div class="pretty-img">
+                                    <a data-id="<?=$notas->post->ID ?>">
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+                                    </a>
+                                    <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                </div>
                             </span>
 						 <?php endif; ?>
                          <div class="tituloShare">
                              <div class="link-noticia">
-                                 <a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>">
+                                 <a class="title">
                                     <?php the_title() ?>
                                  </a>
                              </div>
@@ -183,6 +216,7 @@
                 	</div><!-- end .contenedorNota -->
 				</div><!-- Fin del div featured clearfix -->
             <?php endwhile; //Fin while principal
+			echo "</div>";
             endif; //Fin de if notas->have_posts
             ?>
       </div>
@@ -220,34 +254,54 @@
             <?php endif; ?>
             <?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
             <?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
                     'post_type' => 'post',
                     'category_name' => 'videos',
                     'posts_per_page'=> 3,
+					'paged' => $paged
             );
             $notas = new WP_Query($args);
             if ($notas->have_posts()) :
-            echo "<div id='update'>";
+            echo "<div id='content-videos'>";
 			while ($notas->have_posts()): $notas->the_post(); ?>
-                <div class="divNotaListado col-md-4 col-lg-4 item-video" data-id="<?= $notas->post->ID; ?>">
+                <div class="divNotaListado col-md-4 col-lg-4 item-video" data-id="<?= $notas->post->ID; ?>" style="margin-bottom:3%;">
                     <div class="contenedorNota">
-                        <?php 
-                        if ( has_post_thumbnail() ): 
-						   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'img-single-sidebar'); 
-                        endif; ?>
-							<div class="item-info">
-                                <span class='img img-responsive'>
-                                    <img class='img-responsive' src='<?php echo $large_image_url[0] ?>' alt=''>
-                                    <div class="post-date">
-                                        <?php the_time( 'j M' ); ?>
-                                    </div>
-                                </span>
-                            </div>
-                         
+						 <?php //Obtenemos la url de la imagen destacada
+                         $domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+                         $thumbnailsrc = "";
+                         if (!empty($domsxe)) {
+                            $thumbnailsrc = $domsxe->attributes()->src;
+                            //$thumbnailsrc = substr($thumbnailsrc, strrpos($thumbnailsrc, "/wp-"), strlen($thumbnailsrc));
+                         } else {
+                            $urlTema = get_bloginfo('template_url');
+                            $thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";
+                         }
+                       
+                         if (!empty($thumbnailsrc)): ?>
+                            <span class='img img-responsive'>
+                                <a href='<?= $thumbnailsrc ?>' rel='prettyPhoto[pp_gal]' title='<?= $attachment->post_content; ?>'>
+                                <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+                                </a>
+                                <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                            </span>
+                         <?php endif; ?>
                          <div class="tituloShare">
                             <h5>
-                                <a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>"><?php the_title() ?></a>
+                                <?php the_title() ?>
                             </h5>
+                            <div class="listadoShareItem">
+                                 <!-- AddThis Button BEGIN -->
+                                 <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-left">
+                                     <span><a class="addthis_button_facebook iconFacebook" fb:like:href="<?=get_permalink(); ?>"></a></span>
+                                     <span><a class="addthis_button_twitter iconTwitter" tw:url="<?=get_permalink(); ?>"></a></span>
+                                     <span><a class="addthis_button_linkedin iconLinkedIn" addthis:url=" <?=get_permalink(); ?>"></a></span>
+                                     <span><a class="addthis_button_pinterest_share iconPinterestBlog" addthis:url=" <?=get_permalink(); ?>"></a></span>
+                                     <span><a class="addthis_button_google_plusone_share iconPlusBlog" addthis:url=" <?=get_permalink(); ?>"></a></span>
+                                 </div>
+                                
+                                 <!-- AddThis Button END -->
+        					 </div>
                          </div>
                     </div>
                 </div>
@@ -255,7 +309,6 @@
 			echo "</div>";
             endif; //Fin de if notas->have_posts
             ?>
-            
       </div>
       <div id="infografias">
       </div>

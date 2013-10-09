@@ -339,30 +339,31 @@ function get_video_ajax(){
 add_action('wp_ajax_get_video_ajax', 'get_video_ajax');
 add_action('wp_ajax_nopriv_get_video_ajax', 'get_video_ajax');
 
-function get_more_post(){
+function get_images_gallery(){
 	$query = new WP_Query( 'p='.$_POST['post_id'] );
+	$cont=0;
 	if ( $query->have_posts() ) :
 		while ($query->have_posts()):$query->the_post(); 
-				/*$link = get_post_meta($query->post->ID, 'Video_youtube' , true); 
-				echo "<div class='col-md-8 video-container'>";
-					$pieces=explode('=',$link);
-					echo "<iframe width='598' height='330' src='http://www.youtube.com/embed/".end($pieces)."?rel=0&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe>";
-				echo "</div>";
-				echo "<div class='col-md-4 padding-30'>";
-					echo "<h6 class='date'>";
-						echo "<span id='fecha-variable' class='text'>". get_the_time( 'j M' ) ."</span>";
-						echo "<span class='border'></span>";
-					echo "</h6>";
-					echo "<h3 class='titulo'>". get_the_title() ."</h3>";
-					echo "<div id='contenido'>";
-						 the_excerpt();
-					echo "</div>";
-				echo "</div>";*/
-				the_title();
+			$args=array('post_type'=>'attachment','post_parent'=>get_the_ID(),'order' => 'ASC', 'orderby' => 'menu_order ID', 'posts_per_page'=>99);
+			$attachments=get_posts($args);
+			$data_images=array();
+			$data_title=array();
+			if($attachments){
+				foreach($attachments as $attachment){
+					$img_full=wp_get_attachment_image_src( $attachment->ID, 'full' );
+					$data_images[$cont] = "$img_full[0]";
+					$data_title[$cont] = "'".get_the_title()."'";
+				$cont++;}
+			}
 	endwhile; endif; 
+	$arr_return = array(
+	  'images'=> $data_images,
+	  'title'=> $data_title
+	);
+	echo json_encode($arr_return);
 	wp_reset_query(); 
 	die(); 
 }
-add_action('wp_ajax_get_more_post', 'get_more_post');
-add_action('wp_ajax_nopriv_get_more_post', 'get_more_post');
+add_action('wp_ajax_get_images_gallery', 'get_images_gallery');
+add_action('wp_ajax_nopriv_get_images_gallery', 'get_images_gallery');
 ?>

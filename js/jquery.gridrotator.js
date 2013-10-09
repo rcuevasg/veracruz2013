@@ -116,7 +116,7 @@
 		// number of rows
 		rows : 2,
 		// number of columns 
-		columns : 4,
+		columns : 2,
 		w1024 : { rows : 3, columns : 8 },
 		w768 : {rows : 3,columns : 7 },
 		w480 : {rows : 3,columns : 5 },
@@ -146,7 +146,7 @@
 		animEasingIn: 'linear',
 		// the item(s) will be replaced every 3 seconds
 		// note: for performance issues, the time "can't" be < 300 ms
-		interval : 3000,
+		interval : 5000,
 		// if false the animations will not start
 		// use false if onhover is true for example
 		slideshow : true,
@@ -296,7 +296,7 @@
 
 					$item.css( {
 						width : j < Math.floor( gapWidth ) ? itemWidth + 1 : itemWidth,
-						height : itemWidth
+						height : itemWidth-(itemWidth/2) ///itemWidth*/
 					} );
 
 					if( $.inArray( idx, this.options.nochange ) !== -1 ) {
@@ -307,11 +307,11 @@
 
 			}
 
-			if( this.options.preventClick ) {
+			/*if( this.options.preventClick ) {
 
-				this.$items.children().css( 'cursor', 'default','display' ).on( 'click.gridrotator', false );
+				this.$items.children().css( 'cursor', 'default','display' ).on( 'click.gridrotator', false ); ///<-is_false
 
-			}
+			}*/
 
 			if( callback ) {
 				callback.call();
