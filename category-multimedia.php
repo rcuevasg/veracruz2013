@@ -47,6 +47,14 @@
 				},
 				complete:function(){
 					setTimeout(function () { $('.video-holder').removeClass("loader-ajax"); }, 2000);
+					var div=$(".video-holder").offset().top;
+					var masheader=div-75+'px';
+					var top = $('.video-holder');
+					$('html, body').animate({
+						scrollTop: masheader
+					},1000);
+				
+					return false;
 				},
 				error: function(data){
 					console.log(data.statusText);
@@ -77,17 +85,20 @@
 				}
 			});
 		});	
-		
 		$(document).on('click','.pretty-img',function(event){
 			event.preventDefault();
 			var ID  = $(this).find('a').data('id');
+			if (!$(this).hasClass("active")){
+				$(".active").removeClass("active");
+				$(this).addClass("active");
+			}
 			$.ajax({
 			    type: "POST",
 				url: "/veracruz/wp-admin/admin-ajax.php", 
 				data: {'action':'get_images_gallery', post_id: ID },
 				dataType: 'json',
 				beforeSend:function(data){
-                   //$('.overlay-gallery').css("display","block");
+                   $('.active').children('.overlay-gallery-nota').css("display","block");
             	},
 				success: function(data, textStatus, XMLHttpRequest){
 					var api_images =new Array();
@@ -95,13 +106,29 @@
 					$.prettyPhoto.open(api_images);
 				},
 				complete: function(){
-					//$('.overlay-gallery').css("display","none");
+					$('.active').children('.overlay-gallery-nota').css("display","none");
 				},
 				error: function(data){
-					console.log(data.statusText);
+					console.log(data.images);
 				}
 			});
 		});
+		/*$(document).on({
+			mouseenter: function () {
+				if (!$(this).hasClass("active")){
+					$(".active").removeClass("active");
+					$(this).addClass("active");
+				}
+				$('.active').children('.overlay-foto').css("display","block");
+			},
+			mouseleave: function () {
+				if (!$(this).hasClass("active")){
+					$(".active").removeClass("active");
+					$(this).addClass("active");
+				}
+				$('.active').children('.overlay-foto').css("display","none");	
+			}
+		}, ".pretty-img");*/
 	});
 </script>
 <div id="content-list" class="container blog-contenedor">
@@ -115,9 +142,9 @@
     <div class="back-img"></div>
     <div id="tabs">
       <ul>
-        <li><a href="#fotos" rel="fotos">FOTOS <span class="bg-bottom"></span></a></li>
-        <li><a href="#videos" rel="videos">VIDEOS <span class="bg-bottom"></span></a></li>
-        <li><a href="#infografias" rel="infografias">INFOGRAFIAS <span class="bg-bottom"></span></a></li>
+        <li><a href="#fotos">FOTOS <span class="bg-bottom"></span></a></li>
+        <li><a href="#videos">VIDEOS <span class="bg-bottom"></span></a></li>
+        <li><a href="#infografias">INFOGRAFIAS <span class="bg-bottom"></span></a></li>
       </ul>
       <div class="clear"></div>
       <div class="border-dotted-grey"></div>
@@ -140,7 +167,7 @@
 					   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($query->post->ID), 'full'); 
 					?>
 					<li class="item-gallery">
-                        <a data-id="<?=$query->post->ID ?>">
+                        <a data-id="<?=$query->post->ID ?>" class="over-infografia">
                             <img src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $large_image_url[0]; ?>&w=533&h=266' alt='<?php echo $attachment->post_excerpt; ?>' />
                         </a>
 					</li> 
@@ -186,10 +213,14 @@
                         if (!empty($thumbnailsrc)): ?>
                             <span class='img img-responsive'>
                                 <div class="pretty-img">
-                                    <a data-id="<?=$notas->post->ID ?>">
-                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+                                	<div class="overlay-gallery-nota"></div>
+                                    <a  class="over-foto" data-id="<?=$notas->post->ID ?>">
+                                    	<div class="overlay-foto"></div>
+                                        <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
                                     </a>
-                                    <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                    <div class="post-date">
+                                        <?php the_time( 'j M' ); ?>
+                                    </div>
                                 </div>
                             </span>
 						 <?php endif; ?>
@@ -216,6 +247,7 @@
                 	</div><!-- end .contenedorNota -->
 				</div><!-- Fin del div featured clearfix -->
             <?php endwhile; //Fin while principal
+			wp_reset_query();
 			echo "</div>";
             endif; //Fin de if notas->have_posts
             ?>
@@ -252,15 +284,14 @@
                     <?php dynamic_sidebar( 'buscador-widget-area' ); ?>
                 </div>
             <?php endif; ?>
-            <?php  $idCategoria = get_cat_ID(single_cat_title( '', false )); ?>
             <?php
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array(
-                    'post_type' => 'post',
-                    'category_name' => 'videos',
-                    'posts_per_page'=> 3,
-					'paged' => $paged
-            );
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array(
+				'post_type' => 'post',
+				'category_name' => 'videos',
+				'posts_per_page'=> 3,
+				'paged' => $paged
+			);
             $notas = new WP_Query($args);
             if ($notas->have_posts()) :
             echo "<div id='content-videos'>";
@@ -268,7 +299,7 @@
                 <div class="divNotaListado col-md-4 col-lg-4 item-video" data-id="<?= $notas->post->ID; ?>" style="margin-bottom:3%;">
                     <div class="contenedorNota">
 						 <?php //Obtenemos la url de la imagen destacada
-                         $domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+                         $domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'full'));
                          $thumbnailsrc = "";
                          if (!empty($domsxe)) {
                             $thumbnailsrc = $domsxe->attributes()->src;
@@ -280,16 +311,19 @@
                        
                          if (!empty($thumbnailsrc)): ?>
                             <span class='img img-responsive'>
-                                <a href='<?= $thumbnailsrc ?>' rel='prettyPhoto[pp_gal]' title='<?= $attachment->post_content; ?>'>
-                                <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+                                <a class="over-video">
+                                <div class="overlay-video"></div>
+                                    <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
                                 </a>
                                 <div class="post-date"><?php the_time( 'j M' ); ?></div>
                             </span>
                          <?php endif; ?>
                          <div class="tituloShare">
-                            <h5>
-                                <?php the_title() ?>
-                            </h5>
+                            <div class="link-noticia">
+                                 <a class="title">
+                                    <?php the_title() ?>
+                                 </a>
+                             </div>
                             <div class="listadoShareItem">
                                  <!-- AddThis Button BEGIN -->
                                  <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-left">
@@ -306,11 +340,116 @@
                     </div>
                 </div>
             <?php endwhile; //Fin while principal
+			wp_reset_query();
 			echo "</div>";
             endif; //Fin de if notas->have_posts
             ?>
       </div>
       <div id="infografias">
+        	<?php  //$idCategoria = get_cat_ID(single_cat_title( '', false ));  print_r($idCategoria);?>
+            <div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
+               <!-- <span id="ribonLoMasLeido" class="responsive">
+                  <span style="display:none;"><?php $url=get_bloginfo('template_url')."/images/masleido.png"; ?></span>
+                  <img src="<?php echo $url; ?>" border="0">
+                </span> -->
+                <?php 
+				$args = array(
+					'post_type' => 'post',
+					'category_name' => 'infografias',
+					'posts_per_page'=> 1
+				);
+				$notas = new WP_Query($args);	
+                if ($notas->have_posts()) : 
+					while($notas->have_posts()){ $notas->the_post(); 
+						if ( has_post_thumbnail() ) { 
+						   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full'); 
+						   echo "<img class='img-responsive' src='".$large_image_url[0]."' alt=''>";
+						}
+					} 
+                endif; wp_reset_query(); ?>
+                <div class="clear"></div>
+                <!-- botones redes sociales -->
+                <div class="listadoShareItem">
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-center">
+                        <a class="addthis_button_facebook iconFacebook"></a>
+                        <a class="addthis_button_twitter iconTwitter"></a>
+                        <a class="addthis_button_linkedin iconLinkedIn"></a>
+                        <a class="addthis_button_pinterest_share iconPinterestBlog"></a>
+                        <a class="addthis_button_google_plusone_share iconPlusBlog"></a>
+                    </div>
+                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
+                    <!-- AddThis Button END -->
+              	</div><!-- Fin botones redes sociales -->
+                <?php
+				if ( is_active_sidebar( 'buscador-widget-area' ) ) : ?>
+					<div class="searchHeaderArea col-md-12 col-lg-12 sin-top">
+						<?php dynamic_sidebar( 'buscador-widget-area' ); ?>
+					</div>
+				<?php endif; ?>
+            </div><!-- end #popular -->
+			<?php
+				$paged3 = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array(
+					'post_type' => 'post',
+					'category_name' => 'infografias',
+					'posts_per_page'=> 3,
+					'paged' => $paged3,
+				);
+				$notas = new WP_Query($args);	
+                if ($notas->have_posts()) : 
+				echo "<div id='content-infografias'>";
+					while($notas->have_posts()){ $notas->the_post(); ?>
+                        <div class="divNotaListado col-md-4 col-lg-4 item-infografia" style="margin-bottom:3%;">
+                            <div class="contenedorNota">
+								<?php //Obtenemos la url de la imagen destacada
+                                $domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));
+                                $thumbnailsrc = "";
+                                if (!empty($domsxe)) {
+                                    $thumbnailsrc = $domsxe->attributes()->src;
+                                } else {
+                                    $urlTema = get_bloginfo('template_url');
+                                    $thumbnailsrc = substr($urlTema, strrpos($urlTema, "/wp-") , strlen($urlTema)) . "/images/imgDefault.png";
+                                }
+                               
+                                if (!empty($thumbnailsrc)): ?>
+                                    <span class='img img-responsive'>
+                                        <a class="over-infografia">
+                                        	<div class="overlay-infografia"></div>
+                                            <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
+                                        </a>
+                                        <div class="post-date"><?php the_time( 'j M' ); ?></div>
+                                    </span>
+								 <?php endif; ?>
+                                 <div class="tituloShare">
+                                     <div class="link-noticia">
+                                     	<a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="title over-infografia">
+											<?php the_title() ?>
+                                        </a>
+                                     </div>
+                                    <!-- botones redes sociales -->
+                                    <div class="listadoShareItem">
+                                    <!-- AddThis Button BEGIN -->
+                                       <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-left">
+                                        <span><a class="addthis_button_facebook iconFacebook"></a></span>
+                                        <span><a class="addthis_button_twitter iconTwitter"></a></span>
+                                        <span><a class="addthis_button_linkedin iconLinkedIn"></a></span>
+                                        <span><a class="addthis_button_pinterest_share iconPinterestBlog"></a></span>
+                                        <span><a class="addthis_button_google_plusone_share iconPlusBlog"></a></span>
+                                        </div>
+                                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+                                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
+                                        <!-- AddThis Button END -->
+                         		 	</div>
+                                 </div><!-- end col-lg-6 -->
+                            </div><!-- end .contenedorNota -->
+                        </div><!-- Fin del div featured clearfix -->
+                    <?php
+                    } 
+					echo "</div>";	
+                endif; //Fin de if notas->have_posts
+                ?>
       </div>
     </div>
 </div>

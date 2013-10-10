@@ -377,7 +377,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: block;
     height: auto;
     margin: 0 auto;
-    max-width: 100%;
+    /*max-width: 100%; */
+	width: 100%;
 }
 
 #popular #ribonLoMasLeido {
@@ -924,7 +925,7 @@ footer .widget-footer ul a:hover{
 }
 
 #content-list .divNotaListado .contenedorNota div:first-child {
-    padding:10px 10px 10px 10px;
+  /*  padding:10px 10px 10px 10px; */
 }
 .listadoShareItem {
 	background: none repeat scroll 0 0 #E3E1E1;
@@ -950,7 +951,7 @@ footer .widget-footer ul a:hover{
 }
 
 #content-list .divNotaListado .contenedorNota{
-	background: none repeat scroll 0 0 #E8E7E7;
+	background: none repeat scroll 0 0 #000; /*E8E7E7*/
 	/*padding: 10px 10px 0;*/
 	text-align: center;
 	-moz-box-shadow: 5px 5px 5px #DFDFDF;
@@ -964,6 +965,7 @@ footer .widget-footer ul a:hover{
 }
 .tituloShare{
 	font-size:1em;
+	background-color:#E8E7E7;
 	}
 .claseDecente .listadoShareItem .addthis_toolbox a{
 	display: inline-block;
@@ -971,7 +973,7 @@ footer .widget-footer ul a:hover{
 	margin-right:5%;
 	}
 #popular .listadoShareItem .addthis_toolbox a{
-	margin-right:2%;
+	/*margin-right:2%; */
 	}
 #content-list .divNotaListado .contenedorNota span .post-date {
 	margin-left: -4%;
@@ -984,9 +986,13 @@ footer .widget-footer ul a:hover{
 	min-height:90px;
 	}
 #content-list .divNotaListado .contenedorNota .tituloShare .addthis_toolbox{
-	margin-left: 20%;
+	/*margin-left: 20%;*/
 	min-height:30px;
+	display: inline-block !important;
 	}
+.addthis_toolbox.addthis_32x32_style span {
+display: inline-block;
+}
 .searchHeaderArea .widget_search{
 	width: 30.5%;
 }
@@ -1585,14 +1591,17 @@ footer .widget-footer ul a:hover{
 	margin-top:5%;
 	}
 .move-left{
-	margin-left:20%;
+	/*margin-left:20%; */
+	margin-top: 12px;
+	display: inline-block;
 	}
 .move-center{
-margin-left:42%;
+	/*margin-left:42%; */
+	display: inline-block;
+	margin-top: 12px;
 	}
 .container .loading-blog{
 	display:block;
-	c
 	left:50%;
 	clear:both;
 	text-align:center;
@@ -1759,10 +1768,74 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 	background-repeat:no-repeat;
 	background-position:center;
 	display: none;
-	height: 532px;
+	height: 100%;
 	width: 100%;
 	position: absolute;
 }
+/*
+
 .border-top{
 	padding-top:1%;
 	}
+*/
+.overlay-gallery-nota,
+	.overlay-foto,
+		.overlay-video,
+			.overlay-infografia{
+	display: none;
+	height: 54.5%;
+	width: 92%;
+	position: absolute;
+	z-index: 100;
+}
+
+.overlay-gallery-nota{
+	opacity: 0.5;
+	background: black url(images/loadinfo.net.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.overlay-foto{
+	background: url(images/icono-foto.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.overlay-video{
+	background: url(images/icono-video.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	opacity:0.8;
+}
+.overlay-infografia{
+	background: url(images/icono-infografias.png);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+#infografias #popular{
+	padding:0;
+}
+#popular .searchHeaderArea{
+	margin-left: 0;
+	background:none;
+	width:100%;
+} 
+a.over-foto:hover img{
+	opacity:0.8;
+}
+a.over-foto:hover  .overlay-foto {
+	display:block !important;
+}
+
+a.over-video:hover img{
+	opacity:0.8;
+}
+a.over-video:hover  .overlay-video {
+	display:block !important;
+}
+
+a.over-infografia:hover img{
+	opacity:0.8;
+}
+a.over-infografia:hover  .overlay-infografia {
+	display:block !important;
+}
