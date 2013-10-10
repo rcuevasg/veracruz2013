@@ -929,9 +929,11 @@ footer .widget-footer ul a:hover{
 .listadoShareItem {
 	background: none repeat scroll 0 0 #E3E1E1;
     border-top: 1px solid #C4C2C2;
+    width: 100%;
+	/* 
     padding-bottom: 15px;
     padding-top: 10px;
-    width: 100%;
+	*/
 }
 
 .stButton .stFb, .stButton .stTwbutton, .stButton .stMainServices {
@@ -963,12 +965,13 @@ footer .widget-footer ul a:hover{
 .tituloShare{
 	font-size:1em;
 	}
-.claseDecente .listadoShareItem{
-	min-height:80px;
-	}
 .claseDecente .listadoShareItem .addthis_toolbox a{
 	display: inline-block;
 	float:left;
+	margin-right:5%;
+	}
+#popular .listadoShareItem .addthis_toolbox a{
+	margin-right:2%;
 	}
 #content-list .divNotaListado .contenedorNota span .post-date {
 	margin-left: -4%;
@@ -980,7 +983,7 @@ footer .widget-footer ul a:hover{
 #content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
 	min-height:90px;
 	}
-#content-list .divNotaListado .contenedorNota .tituloShare .listadoShareItem .addthis_toolbox{
+#content-list .divNotaListado .contenedorNota .tituloShare .addthis_toolbox{
 	margin-left: 20%;
 	min-height:30px;
 	}
@@ -1720,18 +1723,28 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 }
 .blog-contenedor a.iconFacebook{
 	background-image:url(images/facebook.png);
+	background-repeat:no-repeat;
+	background-size:auto;
 }
 .blog-contenedor a.iconTwitter{
 	background-image:url(images/twitter.png);
+	background-repeat:no-repeat;
+	background-size:auto;
 }
 .blog-contenedor a.iconPinterestBlog{
 	background-image:url(images/pinterest.png);
+	background-repeat:no-repeat;
+	background-size:auto;
 }
 .blog-contenedor a.iconLinkedIn{
 	background-image:url(images/link.png);
+	background-repeat:no-repeat;
+	background-size:auto;
 }
 .blog-contenedor a.iconPlusBlog{
 	background-image:url(images/gplus.png);
+	background-repeat:no-repeat;
+	background-size:auto;
 }
 .border-dotted-grey{
 	width: 96%;
@@ -1750,3 +1763,6 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 	width: 100%;
 	position: absolute;
 }
+.border-top{
+	padding-top:1%;
+	}
