@@ -1839,3 +1839,8 @@ a.over-infografia:hover img{
 a.over-infografia:hover  .overlay-infografia {
 	display:block !important;
 }
+.load-more-ajax{
+	background: url(images/ajax-loader.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+}

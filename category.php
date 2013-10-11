@@ -79,7 +79,8 @@ jQuery(document).ready(function() {
 			while(have_posts()){ the_post();
 
 					?>
-		<div class="claseDecente item-nota divNotaListado col-md-4 col-lg-4" style="margin-bottom:3%;">
+
+		<div class="claseDecente divNotaListado col-md-4 col-lg-4 item-nota" style="margin-bottom:3%; ">
 						<div class="contenedorNota">
 						<?php //Obtenemos la url de la imagen destacada
 			    		$domsxe = simplexml_load_string(get_the_post_thumbnail($post->ID, 'big'));

@@ -432,12 +432,12 @@
                                     <div class="listadoShareItem">
                                     <!-- AddThis Button BEGIN -->
                                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style move-left">
-                                        <span><a class="addthis_button_facebook iconFacebook"></a></span>
-                                        <span><a class="addthis_button_twitter iconTwitter"></a></span>
-                                        <span><a class="addthis_button_linkedin iconLinkedIn"></a></span>
-                                        <span><a class="addthis_button_pinterest_share iconPinterestBlog"></a></span>
-                                        <span><a class="addthis_button_google_plusone_share iconPlusBlog"></a></span>
-                                        </div>
+                                           <a class="addthis_button_facebook iconFacebook"></a>
+                                           <a class="addthis_button_twitter iconTwitter"></a>
+                                           <a class="addthis_button_linkedin iconLinkedIn"></a>
+                                           <a class="addthis_button_pinterest_share iconPinterestBlog"></a>
+                                           <a class="addthis_button_google_plusone_share iconPlusBlog"></a>
+                                       </div>
                                         <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
                                         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
                                         <!-- AddThis Button END -->
