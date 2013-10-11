@@ -75,6 +75,7 @@ jQuery(document).ready(function() {
 			if (have_posts()) :
 			//$step = 1; //Variable para llevar el conteo y separar listados grandes de los pequeños
 			//$cierraPrimerDiv = false;
+			echo "<div id='content-nota'>";
 			while(have_posts()){ the_post();
 
 					?>
@@ -126,7 +127,7 @@ jQuery(document).ready(function() {
 					<?php
 			
 			} //Fin while principal
-		
+		echo "</div>";
 		?>
 	</div>
  </div>
