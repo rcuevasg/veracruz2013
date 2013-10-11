@@ -19,24 +19,21 @@ Template Name: Eventos especiales
 				<div class="img-tumb <?php if(!$nombre){ ?> content-normativa <?php } ?>">
 					<?php 
 						if ( has_post_thumbnail() ) { 
-						   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
-						   echo "<img class='img-evento img-responsive' src='".$large_image_url[0]."' alt=''>";
-						   if($nombre){
+						    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($the_query->post->ID), 'full'); 
+						    echo "<img class='img-evento img-responsive' src='".$large_image_url[0]."' alt=''>";
+						    if($nombre){
 							   ?><div class="titulo-tranparencia"><h3><?php echo $nombre; ?></h3></div><?php
-							   }
+							}
 						}
 					?>
                     <?php
-                    if($descripcion){
-						?>
+                    if($descripcion){?>
                         <div class="item-normativa">
                             <p>
-                            <?php echo $descripcion; ?>
+                            	<?php echo $descripcion; ?>
                             </p>
                         </div>
-						<?php
-						}
-						?>
+					<?php } ?>
                 </div>
                 <table>
 				<?php 
@@ -56,6 +53,9 @@ Template Name: Eventos especiales
                                 <?php if($evento['url_evento']!=""){ ?>
                                     <a href="<?php echo esc_url($evento['url_evento']); ?>" class="read-more" target="_blank">VISITAR SITIO</a>
                                 <?php } ?>
+                                </div>
+                                <div class="descripcion-evento">
+                                	<?php echo $evento['desc_evento']; ?>
                                 </div>
                             </td>
                         </tr>

@@ -32,13 +32,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="width-23">
-                        <?php $mb->the_field('name_evento'); ?>
-                        <label>Nombre del evento</label>
-                    </td>
-                    <td>
-                        <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
-                    </td>
+                  <td class="width-23">
+				  	<?php $mb->the_field('name_evento'); ?>
+                    <label>Nombre del evento</label>
+                  </td>
+                  <td><input type="text" name="<?php $mb->the_name(); ?>2" value="<?php $mb->the_value(); ?>"/></td>
+                </tr>
+                <tr>
+                  <td class="width-23">
+					  <?php $mb->the_field('desc_evento'); ?>
+                      <label>Descripción del evento</label>
+                  </td>
+                  <td><?php wp_editor($mb->get_the_value(), "editor_" . rand(1, 200), array("textarea_rows" => 10, "textarea_name" => $mb->get_the_name(), "editor_class" => "custom_editor")); ?></td>
                 </tr>
                 <tr>
                     <td class="width-23">
@@ -55,7 +60,7 @@
             		</td>
                 </tr>
             </table>
-       </div>
+</div>
 	<?php $mb->the_group_close(); ?>
 	<?php endwhile; ?>
     <p style="margin-bottom:15px; padding-top:5px;"><a href="#" class="docopy-eventos button button-primary">Agregar evento</a></p>
