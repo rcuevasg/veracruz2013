@@ -1844,3 +1844,28 @@ a.over-infografia:hover  .overlay-infografia {
 	background-repeat:no-repeat;
 	background-position:center;
 }
+.eventos-caption{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	background-color:#3B3B3B;
+	height: 24.864%;
+	opacity:0.8;
+}
+.eventos-caption h4{
+	color:#FFF;
+	text-align:center;
+	font-family: 'GandhiSans';
+	font-size:25px;
+	padding-top: 10px;
+}
+.slider-eventos{
+	margin-bottom: 47px;
+	background-image: url(images/shadow-eventos.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 12px !important;
+}
+.descripcion-evento{
+	margin-top: 11px;
+}
