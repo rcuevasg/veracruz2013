@@ -351,14 +351,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: none repeat scroll 0 0 #E8E7E7;
     box-shadow: 5px 5px 5px #DFDFDF;
     margin-bottom: 15px;
-    margin-left: 15px;
+    margin-left: 21px;
     padding-left: 0;
     padding-top: 15px;
     padding-right: 0;
     text-align: center;
-    width: 97%;
-}
+    width: 96%;
+	color:#3C3C3B;
+	font-size:0.929em;
+    font-family:"GandhiSans";
 
+}
 #popular ul {
 	padding: 0;
 }
@@ -371,6 +374,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	display: inline-block;
     height: 45px;
     margin: 15px 10px;
+	color:#3C3C3B;
+	font-size:1.286em;
+    font-family:"GandhiSans";
 }
 
 #popular img {
@@ -379,6 +385,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin: 0 auto;
     /*max-width: 100%; */
 	width: 100%;
+	margin-top:-3px;
 }
 
 #popular #ribonLoMasLeido {
@@ -387,7 +394,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     right: -0.5%;
     top: -1%;
 	z-index:1000000;
-}
+	}
 
 /** Fin de los estilos del header **/
 /* FONT FACE */
@@ -408,7 +415,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 .post-home h3{
 	border-bottom: 1px solid #6D6D6C;
-  	font: normal 20px "GandhiSerif";
+  	font-family:"GandhiSerif";
   }
 @media (max-width: 768px) {
 		.post-home h3{
@@ -417,27 +424,33 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .lista-post-home{
-	font: normal 16px "GandhiSans";
-	color:#333333;
+	font-family:"GandhiSans";
+	color:#3c3c3b;
+	font-size:1.143em;
+	text-align:justify;
 	/* padding-bottom: 250px;
 	margin: 20px 0;
   	border-bottom: 1px solid #c5c5c5; */
 	}
 .lista-post-home h3{    
-	color: #5b5b5b !important;
-	line-height:30px; 
+	color: #4d4d4d !important;
+	line-height:30px;
+	font-size:1.714em;
+	font-family:"GandhiSerif";
+	text-align:left !important;
 	}	
 .img .post-date {
   display: block;
-  width: 74px;
-  height: 32px;
+  width: 85px;
+  height: 33px;
   position:absolute;
   color:#999;
   text-transform: uppercase;
   background: transparent url(images/date_ribbon.png) no-repeat;
-  font: normal 16px "GandhiSans";
-  font-style:italic;
+  font-family:"GandhiSans";
+  font-size:1.000em;
   z-index:100;
+  font-style:italic;
   padding-left:3%;
   padding-top:3%;
   margin-left:-5%;
@@ -480,7 +493,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   	color: #fff;
   	text-transform: uppercase;
-  	font: bold 14px/18px "GandhiSans";
+  	font: bold 1.000em "GandhiSans";
   	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   	-webkit-border-radius: 0;
   	-moz-border-radius: 0;
@@ -875,9 +888,9 @@ footer .widget-footer ul a:hover{
 
 }
 .link-style a{
-	font-family: GandhiSans, Helvetica, sans-serif;
+	font-family: "GandhiSans";
 	color:#5B5B5B;
-	font-size:19px;
+	font-size:1.357em;
 }
 .link-style a:hover{
 	text-decoration:none;
@@ -978,12 +991,16 @@ footer .widget-footer ul a:hover{
 #content-list .divNotaListado .contenedorNota span .post-date {
 	margin-left: -4%;
     margin-top: -15%;
-    padding-left: 0;
+    padding-left: 1%;
     padding-top: 2%;
     position: absolute;
+	text-align:left;
+  	font-size:0.929em;
+    font-family:"GandhiSans";
 }
 #content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
 	min-height:90px;
+	padding:1%;
 	}
 #content-list .divNotaListado .contenedorNota .tituloShare .addthis_toolbox{
 	/*margin-left: 20%;*/
@@ -1008,7 +1025,7 @@ display: inline-block;
 	border-bottom:none;
 }
 .post-page-child h3{
-	color: #5b5b5b !important;
+	color: #4d4d4d !important;
 	line-height:30px; 
 	/*border-bottom: 1px solid #6D6D6C;*/
 	font-family:"GandhiSerif";
@@ -1035,7 +1052,7 @@ display: inline-block;
 	}
 }
 .tituloPrincipal h1{
-	font-size:30px;
+	font-size:2.143em;
 	}
 .tituloSingleArea{
 	alignment-adjust:middle;
@@ -1051,6 +1068,7 @@ display: inline-block;
 	margin:5px auto;
 	padding:2%;
 	text-transform:uppercase;
+	color: #6a6a69 !important;
 }
 
 .back-img{
@@ -1070,8 +1088,10 @@ display: inline-block;
 	margin-top:-3%;
 	}
 .blog-contenedor a{
-	font: normal 14px "GandhiSans";
-	color:#5b5b5b;
+	font-family:"GandhiSans";
+	color:#3c3c3b;
+	font-size:1.000em;
+	text-align:center;
 	}
 .single-img{
 	border: 3px solid #fff;
@@ -1145,6 +1165,10 @@ display: inline-block;
 	}
 .entry{
 	text-align:center;
+	font-family: "GandhiSans";
+	color: #3c3c3b;
+	font-size: 1.143em;
+	padding:1%;
 	}
 
 .single-nombre{
@@ -1533,10 +1557,15 @@ display: inline-block;
 }
 /* sinle estilo */
 .entry-title{
-	font: normal 40px "GandhiSerif";
-	color:#5b5b5b;
+	font: normal 2.857em "GandhiSerif";
+	color: #4d4d4d;
 	}
-
+.nota-contenido{
+	font-family: "GandhiSans";
+	color: #3c3c3b;
+	font-size: 1.143em;
+	text-align: justify;
+	}
 .entry-content .listadoShareItem{
 	background:none;
 	border-top:none;
@@ -1558,12 +1587,14 @@ display: inline-block;
 	}
 .navposts p{
 	margin-top:5%;
-	color: #5b5b5b !important;
-	font: normal 20px "GandhiSerif";
+	color: #4d4d4d !important;
+	font-size:1.429em;
+	font-family: "GandhiSerif";
 }
 .navposts a{
 	text-decoration:none;
-	color:#333333;
+	font-family: "GandhiSans";
+	color: #3c3c3b;
 	}
 .mover-derecha{
 	padding-left:10%;

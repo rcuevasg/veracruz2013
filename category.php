@@ -52,8 +52,8 @@ jQuery(document).ready(function() {
 	<div id="popular" class="col-sm-12 col-md-12 col-lg-12 img-responsive">
           <span id="ribonLoMasLeido" class="responsive">
           <img src="<?php echo bloginfo('template_url')."/images/masleido.png"; ?>" border="0">
-          </span>
-			<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=330"); ?>
+          </span>        
+				<?php wpp_get_mostpopular("range=all&limit=1&post-type=post&cat=".$idCategoria."&thumbnail_width=1080&thumbnail_height=330"); ?>
         	<div class="time-blog">-<?php the_time( 'j M' ); ?>-</div>
                     <!-- botones redes sociales -->
         	<div class="listadoShareItem border-top">

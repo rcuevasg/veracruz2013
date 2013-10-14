@@ -42,7 +42,7 @@
 					<div class="entry-content col-md-2 col-lg-2">
 					<?php include(TEMPLATEPATH . "/includes/shareItemList.php");  ?> 
 					</div><!-- .entry-content -->
-                    <div class="col-md-10 col-lg-10">
+                    <div class="col-md-10 col-lg-10 nota-contenido">
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->				
 <?php endwhile; ?>                    
