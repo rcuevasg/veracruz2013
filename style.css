@@ -263,7 +263,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .carousel-caption {
-    background: none repeat scroll 0 0 #595959;
+    background: none repeat scroll 0 0 #5D5D5D;
     height: /*35%*/100px;
     left: 0;
     padding-bottom: 0;
@@ -557,7 +557,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 #sidebar .widget-container input[type="submit"]{
 	background: #5D5D5D;
-  	border: 2px solid #fff;
+  	border:none;
   	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   	color: #fff;
   	text-transform: uppercase;
@@ -1814,8 +1814,8 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 		.overlay-video,
 			.overlay-infografia{
 	display: none;
-	height: 54.5%;
-	width: 92%;
+	height: 100%;
+	width: 100%;
 	position: absolute;
 	z-index: 100;
 }
@@ -1899,4 +1899,11 @@ a.over-infografia:hover  .overlay-infografia {
 }
 .descripcion-evento{
 	margin-top: 11px;
+}
+.pretty-img{
+	position:relative;
+}
+.overlay-responsive{
+	position:relative;
+	display:block;
 }

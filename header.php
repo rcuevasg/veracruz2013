@@ -189,10 +189,13 @@
 					
 					<div class="carousel-indicators-wrapper">
 						<ol class="carousel-indicators">
-							<li data-target="#carousel-destacados" data-slide-to="0" class="active"></li>
-							<li data-target="#carousel-destacados" data-slide-to="1"></li>
-							<li data-target="#carousel-destacados" data-slide-to="2"></li>
-							<li data-target="#carousel-destacados" data-slide-to="3"></li>
+							<?php $cont_item=0;  while($notasSlider->post_count > $cont_item){ ?>
+								<?php if($cont_item == 0){ ?>
+                                    <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>" class="active"></li>
+                                <?php } else{ ?>
+                                    <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>"></li>
+                                <?php } ?>
+							<?php $cont_item++; }?>
 						</ol>
 					</div><!-- end .carousel-indicators-wrapper -->
 					

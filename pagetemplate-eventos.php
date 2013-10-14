@@ -20,6 +20,7 @@ Template Name: Eventos especiales
                 <div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="4000">
                     <div class="carousel-inner">
                         <?php
+							
 							$counterActive = 1;
 							$args=array('post_type'=>'attachment','post_parent'=>get_the_ID(),'order' => 'ASC', 'orderby' => 'menu_order ID', 'posts_per_page'=>99);
 							$attachments=get_posts($args);
@@ -54,11 +55,14 @@ Template Name: Eventos especiales
                     </div>
                     <div class="carousel-indicators-wrapper">
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-destacados" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-destacados" data-slide-to="1"></li>
-                            <li data-target="#carousel-destacados" data-slide-to="2"></li>
-                            <li data-target="#carousel-destacados" data-slide-to="3"></li>
-                        </ol>
+                        <?php $cont_item=0;  while(count($attachments)> $cont_item){ ?>
+                            <?php if($cont_item == 0){ ?>
+                            <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>" class="active"></li>
+                        	<?php } else{ ?>
+							<li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>"></li>
+							<?php } ?>
+						<?php $cont_item++; }?>
+						</ol>
                     </div><!-- end .carousel-indicators-wrapper -->
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-destacados" data-slide="prev">

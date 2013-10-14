@@ -310,7 +310,7 @@
                          }
                        
                          if (!empty($thumbnailsrc)): ?>
-                            <span class='img img-responsive'>
+                            <span class='img img-responsive overlay-responsive'>
                                 <a class="over-video">
                                 <div class="overlay-video"></div>
                                     <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
@@ -414,7 +414,7 @@
                                 }
                                
                                 if (!empty($thumbnailsrc)): ?>
-                                    <span class='img img-responsive'>
+                                    <span class='img img-responsive overlay-responsive'>
                                         <a class="over-infografia">
                                         	<div class="overlay-infografia"></div>
                                             <img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $urlTb; ?><?php print $thumbnailsrc; ?>&w=380&h=200' border=0 />
