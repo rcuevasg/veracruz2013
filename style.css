@@ -1039,7 +1039,6 @@ display: inline-block;
 	font-family:"GandhiSerif";
 	color: #5b5b5b !important;
 	text-transform:uppercase;
-	top:0px;
 	}
 @media (max-width: 768px) {
 		.tituloPrincipal{
@@ -1052,12 +1051,10 @@ display: inline-block;
 	}
 }
 .tituloPrincipal h1{
-	font-size:2.143em;
+	font-size:30px;
 	}
 .tituloSingleArea{
 	alignment-adjust:middle;
-	font-family:"GandhiSerif";
-	color: #5b5b5b !important;
 	text-align:center;
 	height:50%;
 	background:#f2f2f2 url('images/degradado.png') repeat-x;
@@ -1065,10 +1062,11 @@ display: inline-block;
 	}
 	
 .tituloSingleArea h2 {
-	margin:5px auto;
-	padding:2%;
 	text-transform:uppercase;
 	color: #6a6a69 !important;
+	font-family:"GandhiSerif" !important;
+	font-size:3.000em;
+	padding-top:1%;
 }
 
 .back-img{
@@ -1079,10 +1077,6 @@ display: inline-block;
 	}
 .blog-contenedor .tituloSingleArea{
 	margin:0 20px;
-	}
-.blog-contenedor #popular a, .blog-contenedor{
-	font: normal 18px "GandhiSans";
-	color:#5b5b5b;
 	}
 .blog-contenedor .time-blog{
 	margin-top:-3%;
@@ -1452,6 +1446,7 @@ display: inline-block;
 	float: right;
 	color:#FFF;
 	text-decoration:none;
+	font-size: 0.583em;
 }
 .content-eventos td{
 	padding-bottom: 55px;
