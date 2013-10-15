@@ -226,8 +226,8 @@
 						 <?php endif; ?>
                          <div class="tituloShare">
                              <div class="link-noticia">
-                                 <a class="title">
-                                    <?php the_title() ?>
+                                 <a class="title" title="<?php the_title() ?>">
+                                    <?php cutString(get_the_title(),65,''); ?>
                                  </a>
                              </div>
                              <div class="listadoShareItem">
@@ -320,8 +320,8 @@
                          <?php endif; ?>
                          <div class="tituloShare">
                             <div class="link-noticia">
-                                 <a class="title">
-                                    <?php the_title() ?>
+                                 <a class="title" title="<?php the_title() ?>">
+                                    <?php cutString(get_the_title(),65,''); ?>
                                  </a>
                              </div>
                             <div class="listadoShareItem">
@@ -425,7 +425,7 @@
                                  <div class="tituloShare">
                                      <div class="link-noticia">
                                      	<a href="<?php the_permalink() ?>" title="<?php the_title() ?>" class="title over-infografia">
-											<?php the_title() ?>
+											<?php cutString(get_the_title(),65,''); ?>
                                         </a>
                                      </div>
                                     <!-- botones redes sociales -->

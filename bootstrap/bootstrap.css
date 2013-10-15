@@ -1717,7 +1717,8 @@ input[type="number"]::-webkit-inner-spin-button {
   vertical-align: middle;
   background-color: transparent;
   border:none;
-  font-size: 19px;
+ /* font-size: 19px;*/
+ font-size:17px; 
   text-align:center;
   /*border: 1px solid #cccccc;
   border-radius: 4px;

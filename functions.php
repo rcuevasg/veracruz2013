@@ -366,4 +366,29 @@ function get_images_gallery(){
 }
 add_action('wp_ajax_get_images_gallery', 'get_images_gallery');
 add_action('wp_ajax_nopriv_get_images_gallery', 'get_images_gallery');
+
+//-----Función para limitar caracteres-----//
+function cutString($string,$charlength,$key) {
+	switch($string){
+		case 'title':
+			$string=wpautop(get_the_title(), 1 );
+		break;
+		case 'excerpt':
+			$string=get_the_excerpt();
+		break;
+		case 'content':
+			$string=wpautop(get_the_content(), 1 );
+		break;
+		case 'meta':
+			$string=wpautop(get_option(''.$key.''), 1 );
+		break;
+	}
+    if(strlen($string)>$charlength) {
+		$subex=substr($string,0,$charlength);
+        echo $subex.'...';
+    }else{
+		echo $string;
+    }
+}
+//------fin limitar caracteres----//
 ?>

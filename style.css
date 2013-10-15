@@ -109,9 +109,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	background: none repeat scroll 0 0 #F8F8F8;
     border-bottom: 1px solid #D0D1D1;
     border-top: 1px solid #D0D1D1;
-    margin-left: 2%;
-    padding: 10px 0;
-    width: 96%;
+   /* margin-left: 2%; */
+    padding: 7px 0 8px; /*padding: 10px 0;*/
+    width: 95.7%; /*width: 96%*/
+	margin: 0 auto;
 }
 
 .searchHeaderArea .input-group {
@@ -763,6 +764,7 @@ a.iconPlusBlog:hover{
 #principalContent{
 	border-bottom:1px solid #c5c5c5;
 	margin-bottom:5%;
+	width: 97%;
 	}
 .border-bottom{
 	margin-bottom:5%;
@@ -999,7 +1001,7 @@ footer .widget-footer ul a:hover{
     font-family:"GandhiSans";
 }
 #content-list .divNotaListado .contenedorNota .tituloShare .link-noticia{
-	min-height:90px;
+	min-height:50px;
 	padding:1%;
 	}
 #content-list .divNotaListado .contenedorNota .tituloShare .addthis_toolbox{
