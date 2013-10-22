@@ -5,7 +5,7 @@ Template Name: Principal page
 ?>
 <?php get_header(); ?>
 <div class="contine-principales">
-<section class="container principalContent">
+<section class="container principalContent contenedorTituloPrincipal">
 <div class="tituloPrincipal">
 <h1>
 <?php the_post_thumbnail(array(250,150)); ?> 

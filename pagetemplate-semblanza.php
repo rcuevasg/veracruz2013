@@ -5,7 +5,7 @@ Template Name: Semblanza page
 ?>
 <?php get_header(); ?>
 <section class="container principalContent" id="content-list">
-<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
+<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages contieneTituloSemblanza">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="tituloSingleArea">
 <h2> 

@@ -1041,7 +1041,7 @@ display: inline-block;
 }
 /* estilo page principal */
 .principalContent{
-	margin-bottom:10%;
+	margin-bottom:3%;
 	color:#333333;
 	padding:0 36px;
 	margin-top:-39px;
@@ -1937,3 +1937,6 @@ a.over-infografia:hover  .overlay-infografia {
 .lista-post-home h3{
 	padding-bottom:9px;
 }
+.contenedorTituloPrincipal .tituloPrincipal h1{
+	margin-top:3.5%;
+	}
