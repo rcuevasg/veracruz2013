@@ -3821,7 +3821,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
 	background-image: url(../images/bg-border.png);
 	display: block;
-	padding: 10px 15px;
+	/*padding: 10px 15px;*/
+	padding: 10px 31px;
 	background-repeat: no-repeat;
 	background-position: 0px 8px;
 }
