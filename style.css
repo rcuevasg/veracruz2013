@@ -86,6 +86,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .menuHeaderArea li a {
 	color: #686867;
+	font-family: 'GandhiSans';
+	font-size:11px;
 }
 
 .menuHeaderArea li:first-child a {
@@ -197,7 +199,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #mainMenu  ul ul li {
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #ccc;
     border-right: medium none;
     float: left;
     height: auto;
@@ -206,16 +208,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-top: 3px;
     padding-bottom: 3px;
     padding-top: 0;
-	width: 207px !important;
+	width: 100% !important;
     /*width: 185px !important; */
 }
-
-#mainMenu ul ul li:last-child  {
-	border-bottom: none;
-}
-
-#mainMenu ul ul li:nth-last-child(2) {
-	border-bottom: none;
+#mainMenu  ul ul li:last-child {
+	border-bottom:none;
 }
 
 #mainMenu ul ul li a:hover {
@@ -232,6 +229,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	text-transform: capitalize;
 	color: #666666;
 }
+
 #mainMenu  ul ul li a:hover {
 	text-decoration:none;
 	
@@ -1940,3 +1938,15 @@ a.over-infografia:hover  .overlay-infografia {
 .contenedorTituloPrincipal .tituloPrincipal h1{
 	margin-top:3.5%;
 	}
+.center-submenu .sub-menu{
+	width: 100% !important;
+}
+#topBar{
+	padding: 10px 0 6px;
+}
+.bottom-neg{
+	top: -12px;
+	right: 0;
+	position: absolute;
+	z-index: 100;
+}

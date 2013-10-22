@@ -71,46 +71,27 @@
     </script>
     </head>
 	<body <?php body_class(); ?>>
-	
 		<div class="container" id="page">
-				
 			<header id="header" role="banner">
-				
 				<section id="topBar" class="container">
-				
-				<?php
-					/* When we call the dynamic_sidebar() function, it'll spit out
-					* the widgets for that widget area. If it instead returns false,
-					* then the sidebar simply doesn't exist, so we'll hard-code in
-					* some default sidebar stuff just in case.
-					*/
-					if ( is_active_sidebar( 'menu-header-home-widget-area' ) ) : ?>
-
-						<div class="menuHeaderArea col-md-3 col-lg-3 pull-right">
-							<?php //print obtenFechaEspaniol(); ?>
-							<?php dynamic_sidebar( 'menu-header-home-widget-area' ); ?>
-						</div>
-					<?php endif; ?>
-				
-					
-				<hgroup id="site-title" class="col-md-12 col-lg-12 hidden-xs">
-					
-					<h1 >
-					<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						<span><?php bloginfo( 'name' ); ?></span>
-						<div class="img-responsive col-md-12 col-lg-12">
-						<img src="<?php bloginfo('template_url') ?>/images/imgHeader.png" border="0" class="img-responsive" />
-						</div>
-					</a>
-					</h1>
-			  
-					<h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
-					
-				</hgroup>
-				
-				
+                    <hgroup id="site-title" class="col-md-12 col-lg-12 hidden-xs">
+                        <?php
+                        if ( is_active_sidebar( 'menu-header-home-widget-area' ) ) : ?>
+                            <div class="menuHeaderArea col-md-3 col-lg-3 pull-right bottom-neg">
+                                <?php dynamic_sidebar( 'menu-header-home-widget-area' ); ?>
+                            </div>
+                        <?php endif; ?>
+                        <h1 >
+                        <a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                            <span><?php bloginfo( 'name' ); ?></span>
+                            <div class="img-responsive col-md-12 col-lg-12">
+                            <img src="<?php bloginfo('template_url') ?>/images/imgHeader.png" border="0" class="img-responsive" />
+                            </div>
+                        </a>
+                        </h1>
+                        <h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
+                    </hgroup>
 				</section>
-				
 				<nav id="mainMenu" class="navbar navbar-inverse col-md-12 col-lg-12" role="navigation">
 						<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" > 
