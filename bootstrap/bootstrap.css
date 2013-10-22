@@ -3819,9 +3819,15 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav > li > a {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
+	background-image: url(../images/bg-border.png);
+	display: block;
+	padding: 10px 15px;
+	background-repeat: no-repeat;
+	background-position: 0px 8px;
+}
+.nav > li:first-child > a {
+	background-image:none;
+
 }
 
 .nav > li > a:hover,
@@ -4087,8 +4093,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-collapse {
   max-height: 340px;
-  padding-right: 15px;
-  padding-left: 15px;
+  /*padding-right: 15px;
+  padding-left: 15px; */
   overflow-x: visible;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4504,8 +4510,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  /*background-color: #222222;
+  border-color: #080808; */
 }
 
 .navbar-inverse .navbar-brand {
