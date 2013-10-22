@@ -488,7 +488,7 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
+  margin-top: 11px; /*20px*/
   margin-bottom: 10px;
 }
 
@@ -4029,7 +4029,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   z-index: 1000;
   min-height: 50px;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   border: 1px solid transparent;
 }
 

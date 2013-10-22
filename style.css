@@ -111,7 +111,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border-top: 1px solid #D0D1D1;
    /* margin-left: 2%; */
     padding: 7px 0 8px; /*padding: 10px 0;*/
-    width: 95.7%; /*width: 96%*/
+    /*width: 95.7%; width: 96%*/
 	margin: 0 auto;
 }
 
@@ -124,7 +124,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .input-group .form-control {
-	height: 35px;
+	height: 30px;
 }
 
 .searchHeaderArea div {
@@ -349,15 +349,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #popular {
-	background: none repeat scroll 0 0 #E8E7E7;
+	background: none repeat scroll 0 0 #F2F2F2;
     box-shadow: 5px 5px 5px #DFDFDF;
     margin-bottom: 15px;
-    margin-left: 21px;
+    /*margin-left: 21px;*/
     padding-left: 0;
     padding-top: 15px;
     padding-right: 0;
     text-align: center;
-    width: 96%;
+    /*width: 96%;*/
 	color:#3C3C3B;
 	font-size:0.929em;
     font-family:"GandhiSans";
@@ -415,7 +415,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	z-index:100;
   }
 .post-home h3{
-	border-bottom: 1px solid #6D6D6C;
+	border-bottom: 1px solid #c5c5c5;
   	font-family:"GandhiSerif";
   }
 @media (max-width: 768px) {
@@ -427,7 +427,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .lista-post-home{
 	font-family:"GandhiSans";
 	color:#3c3c3b;
-	font-size:1.143em;
+	font-size: 1.000em;
 	text-align:justify;
 	/* padding-bottom: 250px;
 	margin: 20px 0;
@@ -435,8 +435,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	}
 .lista-post-home h3{    
 	color: #4d4d4d !important;
-	line-height:30px;
-	font-size:1.714em;
+	line-height: 22px;
+	font-size: 1.2857em;
 	font-family:"GandhiSerif";
 	text-align:left !important;
 	}	
@@ -935,7 +935,9 @@ footer .widget-footer ul a:hover{
 
 
 #content-list {
-	margin: 15px;
+	/*margin: 15px;*/
+	margin: 0 auto;
+	width: 96%;
 	
 }
 
@@ -943,7 +945,7 @@ footer .widget-footer ul a:hover{
   /*  padding:10px 10px 10px 10px; */
 }
 .listadoShareItem {
-	background: none repeat scroll 0 0 #E3E1E1;
+	background: none repeat scroll 0 0 #F2F2F2;
     border-top: 1px solid #C4C2C2;
     width: 100%;
 	/* 
@@ -1013,7 +1015,7 @@ footer .widget-footer ul a:hover{
 display: inline-block;
 }
 .searchHeaderArea .widget_search{
-	width: 30.5%;
+	width: 23.5%;
 }
 /* estilo page principal */
 .principalContent{
@@ -1061,13 +1063,16 @@ display: inline-block;
 	height:50%;
 	background:#f2f2f2 url('images/degradado.png') repeat-x;
 	background-position:top center;	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	}
 	
 .tituloSingleArea h2 {
 	text-transform:uppercase;
 	color: #6a6a69 !important;
 	font-family:"GandhiSerif" !important;
-	font-size:3.000em;
+	font-size:2.285714em;
 	padding-top:1%;
 }
 
@@ -1078,7 +1083,7 @@ display: inline-block;
 	background-position:top center;
 	}
 .blog-contenedor .tituloSingleArea{
-	margin:0 20px;
+	/*margin:0 20px;*/
 	}
 .blog-contenedor .time-blog{
 	margin-top:-3%;
@@ -1687,10 +1692,11 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 }
 .video-holder{
 	background-color:#262626;
-	width: 96%;
+	/*width: 96%; */
 	overflow:hidden;
 	margin: 15px auto 0;
 	border-bottom: 4px solid #6D6D6C;
+	
 }
 .video-holder #contenido p{
 	color:#E6E6E6;
@@ -1785,7 +1791,8 @@ background: url(images/flecha-arriba.png) no-repeat center center;
 	background-size:auto;
 }
 .border-dotted-grey{
-	width: 96%;
+	/*width: 96%;*/
+	width:100%;
 	display: block;
 	margin: 12px auto 2px;
 	border-bottom: dotted #CCC 1px;
@@ -1904,4 +1911,7 @@ a.over-infografia:hover  .overlay-infografia {
 .overlay-responsive{
 	position:relative;
 	display:block;
+}
+.lista-post-home h3{
+	padding-bottom:9px;
 }
