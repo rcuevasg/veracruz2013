@@ -5,8 +5,6 @@ Template Name: Semblanza page
 ?>
 <?php get_header(); ?>
 <section class="container principalContent" id="content-list">
-<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages contieneTituloSemblanza">
-<?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="tituloSingleArea">
 <h2> 
 <?php
@@ -14,6 +12,8 @@ echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
+<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages contieneTituloSemblanza">
+<?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="back-img"></div>
 <?php
   $nombre = get_post_meta($post->ID, 'nombre', true);
@@ -49,8 +49,8 @@ if($siglas){
 	<span class="titulo-single-siglas">Ir a: <a href="<?php echo esc_url( $category_link ); ?>"><i><?php echo $siglas;?></i><img src='<?php bloginfo('template_url') ?>/images/logo-dependencias-single.png'></a></span>
 	<?php }
 ?>
-<span class="titulo-single-redes ">Síguele en:</span>
-<ul id="single-redes" class="menu">
+<span class="titulo-single-redes">Síguele en:</span>
+<ul id="single-redes" class="menu" >
 <?php
   
 	  if($facebook){

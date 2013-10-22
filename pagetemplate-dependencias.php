@@ -10,8 +10,6 @@ function doclick(linkea){
 	}
 </script>
 <section class="container principalContent" id="content-list">
-<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
-<?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="tituloSingleArea">
 <h2>
 <?php
@@ -19,6 +17,8 @@ echo get_the_title();//$post->post_parent
 ?>
 </h2>
 </div>
+<div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
+<?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="back-img"></div>
 <div class="col-md-12 col-lg-12">
 

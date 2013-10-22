@@ -785,6 +785,7 @@ a.iconPlusBlog:hover{
 	border-bottom:1px solid #c5c5c5;
 	margin-bottom:5%;
 	width: 97%;
+	padding:0 46px;
 	}
 .border-bottom{
 	margin-bottom:5%;
@@ -1041,7 +1042,7 @@ display: inline-block;
 .principalContent{
 	margin-bottom:3%;
 	color:#333333;
-	padding:0 36px;
+	/* padding:0 36px; */
 	margin-top:-39px;
 	border-bottom:1px solid #c5c5c5;
 	}
@@ -1938,7 +1939,9 @@ a.over-infografia:hover  .overlay-infografia {
 .contenedorTituloPrincipal .tituloPrincipal h1{
 	margin-top:3.5%;
 	}
-.center-submenu .sub-menu{
+.gabineteTop{
+	padding-top:3.5%;
+	}.center-submenu .sub-menu{
 	width: 100% !important;
 }
 #topBar{

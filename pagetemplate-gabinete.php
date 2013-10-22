@@ -10,7 +10,7 @@ $( document ).ready(function() {
 		e.preventDefault();
 		$(this).children().find('img').addClass('z_index-2');
 		$(this).children().find('h3').addClass('z_index-2-top');
-		$(this).find('.gabinete-over').show().animate({height: "325px", width: "506px", opacity: 1 }, 900);
+		$(this).find('.gabinete-over').show().animate({height: "360px", width: "506px", opacity: 1 }, 900);
 		$(this).siblings().find('.read-more').hide();
 		$(this).children().find('.siglas-depencia').hide();
 	}, function(e) {
@@ -23,7 +23,7 @@ $( document ).ready(function() {
 	})
 });
 </script>
-    <div id="content-list" class="container principalContent">
+    <div id="content-list" class="container principalContent gabineteTop">
 		<?php
 			$args = array('post_type' => 'page', 'post_parent' => $post->ID, 'order' => 'ASC');
             $the_query = new WP_Query($args);
