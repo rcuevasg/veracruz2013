@@ -105,7 +105,10 @@ jQuery(document).ready(function() {
 						 <div class="tituloShare">
                          <div class="link-noticia">
 						<a class="title" href="<?php the_permalink() ?>" title="Continuar leyendo <?php the_title() ?>">
-							<?php cutString(get_the_title(),65,''); ?>
+							<?php 
+							$textoCortar=get_the_title();
+							echo myTruncate($textoCortar, 65, ' ', '…'); 
+							?>
                         </a>
 						</div>
 						<!-- botones redes sociales -->

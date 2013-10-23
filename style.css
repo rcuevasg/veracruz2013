@@ -115,8 +115,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding: 7px 0 8px; /*padding: 10px 0;*/
     /*width: 95.7%; width: 96%*/
 	margin: 0 auto;
+	width: 96%;
 }
-
+.blog-contenedor .searchHeaderArea{
+	width:100%;
+	}
 .searchHeaderArea .input-group {
 	-moz-box-shadow: 0 0 5px #999;
 	-webkit-box-shadow: 0 0 5px #999;
@@ -784,7 +787,7 @@ a.iconPlusBlog:hover{
 #principalContent{
 	border-bottom:1px solid #c5c5c5;
 	margin-bottom:5%;
-	width: 97%;
+	width: 96%;
 	padding:0 46px;
 	}
 .border-bottom{
@@ -1064,6 +1067,8 @@ display: inline-block;
 	font-family:"GandhiSerif";
 	color: #5b5b5b !important;
 	text-transform:uppercase;
+	width:96%;
+	margin:0 auto;
 	}
 @media (max-width: 768px) {
 		.tituloPrincipal{
