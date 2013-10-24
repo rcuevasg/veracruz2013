@@ -37,7 +37,7 @@
 			var ID = $(this).data('id');
 			$.ajax({
 			    type: "POST",
-				url: "/GEV/wp-admin/admin-ajax.php", 
+				url: "<?= get_bloginfo('url') ?>/wp-admin/admin-ajax.php", 
 				data: {'action':'get_video_ajax', post_id: ID },
 				beforeSend:function(data){
                     $('.video-holder').addClass("loader-ajax");
@@ -66,7 +66,7 @@
 			var ID  = $(this).children().data('id');
 			$.ajax({
 			    type: "POST",
-				url: "/GEV/wp-admin/admin-ajax.php", 
+				url: "<?= get_bloginfo('url') ?>/wp-admin/admin-ajax.php", 
 				data: {'action':'get_images_gallery', post_id: ID },
 				dataType: 'json',
 				beforeSend:function(data){
@@ -94,7 +94,7 @@
 			}
 			$.ajax({
 			    type: "POST",
-				url: "/GEV/wp-admin/admin-ajax.php", 
+				url: "<?= get_bloginfo('url') ?>/wp-admin/admin-ajax.php", 
 				data: {'action':'get_images_gallery', post_id: ID },
 				dataType: 'json',
 				beforeSend:function(data){

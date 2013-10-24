@@ -35,31 +35,31 @@
             </div><!-- end .row -->
 			<?php
             if ( is_active_sidebar( 'first-footer-widget-area' ) ) : ?>
-                <div class="widget-footer col-md-2 col-lg-2">
+                <div class="widget-footer col-md-2 col-lg-2 col-sm-2 nav-footer-resp">
                 	<?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ( is_active_sidebar( 'second-footer-widget-area' ) ) : ?>
-                <div class="widget-footer col-md-2 col-lg-2">
+                <div class="widget-footer col-md-2 col-lg-2 col-sm-2 nav-footer-resp">
                 	<?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ( is_active_sidebar( 'third-footer-widget-area' ) ) : ?>
-                <div class="widget-footer col-md-3 col-lg-3">
+                <div class="widget-footer col-md-3 col-lg-3 col-sm-3 nav-footer-resp">
                 	<?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) : ?>
-                <div class="widget-footer col-md-3 col-lg-3">
+                <div class="widget-footer col-md-3 col-lg-3 col-sm-3 nav-footer-resp">
                 	<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
                 </div>
             <?php endif; ?>
             
             <?php if ( is_active_sidebar( 'fifth-footer-widget-area' ) ) : ?>
-                <div class="widget-footer col-md-2 col-lg-2">
+                <div class="widget-footer col-md-2 col-lg-2 col-sm-2 nav-footer-resp">
                 	<?php dynamic_sidebar( 'fifth-footer-widget-area' ); ?>
                 </div>
             <?php endif; ?>

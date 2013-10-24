@@ -87,7 +87,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .menuHeaderArea li a {
 	color: #686867;
 	font-family: 'GandhiSans';
-	font-size:11px;
+	font-size:0.786em;
 }
 
 .menuHeaderArea li:first-child a {
@@ -170,16 +170,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #mainMenu li:first-child {
-	width: 12%; /*16%*/
+	/*width: 12%; *//*16%*/
 }
 
 #mainMenu li:last-child {
-	width: 16%;
+	/*width: 16%; */
 	border-right: none; 
 }
 
 #mainMenu li a {
-	font-size: 18px;
+	font-size: 1.286em;
 	color:#6A6968;
 	font-family:"GandhiSerif";
 	padding-bottom: 12px;
@@ -231,6 +231,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	text-align: left;
 	text-transform: capitalize;
 	color: #666666;
+	font-size: 1.214em;
 }
 
 #mainMenu  ul ul li a:hover {
@@ -1958,3 +1959,99 @@ a.over-infografia:hover  .overlay-infografia {
 	position: absolute;
 	z-index: 100;
 }
+/*media-query validate footer reponsive*/
+@media screen and (max-width:991px){
+	.post-home {
+		border-right: none;  
+	}
+	.searchHeaderArea .widget_search {
+		width: 50.5%;
+	}
+} 
+@media screen and (max-width:767px){  
+	.nav-footer-resp{
+		float:left;
+		width:33%;
+	}
+	.navbar-collapse {	
+		background: #f6f6f6; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI0MSUiIHN0b3AtY29sb3I9IiNmNmY2ZjYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MiUiIHN0b3AtY29sb3I9IiNkN2Q3ZDciIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZDdkN2Q3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+		background: -moz-linear-gradient(top, #f6f6f6 41%, #d7d7d7 62%, #d7d7d7 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(41%,#f6f6f6), color-stop(62%,#d7d7d7), color-stop(100%,#d7d7d7)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #f6f6f6 41%,#d7d7d7 62%,#d7d7d7 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #f6f6f6 41%,#d7d7d7 62%,#d7d7d7 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #f6f6f6 41%,#d7d7d7 62%,#d7d7d7 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #f6f6f6 41%,#d7d7d7 62%,#d7d7d7 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#d7d7d7',GradientType=0 ); /* IE6-8 */
+		 -webkit-border-radius: 5px;
+	  	-moz-border-radius: 5px;
+	  	border-radius: 5px;
+	    border: 1px solid #CCC;
+	}
+	#mainMenu .navbar-nav > li{
+		width: 100%;
+		text-align:left;
+		height: auto;
+		
+	}
+	.nav > li > a {
+		background-image:none;
+		padding: 10px 17px;
+	}
+	#mainMenu ul ul {
+		overflow: hidden;
+		height:auto;
+		padding: 0;
+		border-bottom:none;
+		width:100%;
+		display:none;
+		position:inherit;
+		top:inherit;
+	}
+	#mainMenu ul ul li{
+		float:none;
+	}
+	li.active-sub > ul{
+		display:block !important;
+	}
+	#mainMenu ul ul li a{
+		padding: 4px 24px;
+	}
+	.navbar-collapse{
+		position: absolute;
+		margin-top: 12px;
+		width: 100%;	
+	}
+}
+@media screen and (max-width:640px){  
+	.buscadorBottom .widget_search {
+		width:100%;
+	}
+	#redesSocialesFooter{
+		display:none;
+	}
+}  
+@media screen and (max-width:568px){
+	.pull-left{
+		float:inherit !important;
+	}
+	.post-home img {
+		width:100%;
+	}
+} 
+@media screen and (max-width:480px){  
+	.nav-footer-resp{
+		float:left;
+		width:50%;
+	}
+	body{
+		font-size:12px;
+	}
+} 
+@media screen and (max-width:320px){  
+	.nav-footer-resp{
+		text-align:center;
+		width:100%;
+	}
+}  

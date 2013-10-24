@@ -68,7 +68,21 @@
     function show_url_social(url){
         $('#social').attr('addthis:url', url);	
     }
-    </script>
+	
+	$(document).ready(function(){
+		$( ".navbar-nav  > li " ).mouseover(function() {
+			if($(this).find(".sub-menu").length){
+				if (!$(this).hasClass("active-sub")){
+					$(".active-sub").removeClass("active-sub");
+					$(this).addClass("active-sub");
+				}
+			}
+		}).mouseout(function() {
+				   $(".active-sub").removeClass("active-sub");
+		});
+	});
+
+	</script>
     </head>
 	<body <?php body_class(); ?>>
 		<div class="container" id="page">
