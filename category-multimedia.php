@@ -14,14 +14,14 @@
 <script type="text/javascript">	
 	$(function() {
 		$( '#ri-grid' ).gridrotator( {
-			w1024 : { rows : 3, columns : 4 },
-			w768 : {rows : 3,columns : 4 },
+			w1024 : { rows : 2, columns : 2 },
+			w768 : {rows : 2,columns : 2},
 			w320 : {
-				rows : 1,
+				rows : 2,
 				columns : 2
 			},
 			w240 : {
-				rows : 1,
+				rows : 2,
 				columns : 2
 			},
 			preventClick : false,

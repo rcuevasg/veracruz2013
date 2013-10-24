@@ -85,7 +85,8 @@
 	</script>
     </head>
 	<body <?php body_class(); ?>>
-		<div class="container" id="page">
+		<div class="cover"></div>
+        <div class="container" id="page">
 			<header id="header" role="banner">
 				<section id="topBar" class="container">
                     <hgroup id="site-title" class="col-md-12 col-lg-12 hidden-xs">
