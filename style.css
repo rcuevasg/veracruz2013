@@ -1372,6 +1372,10 @@ display: inline-block;
 	margin-top: 11px !important;
 	float: right;
 	margin-right: 15% !important;
+	display:block !important;
+}
+.divNotaGabinete .read-more{
+	display:none;
 }
 .mirror .read-more{
 	margin-top: 11px !important;
@@ -1974,6 +1978,13 @@ a.over-infografia:hover  .overlay-infografia {
 	#mainMenu li a{
 		font-size: 1em;
 	}
+	.gabinete-over{
+		display:none !important;
+	}
+	.divNotaGabinete .read-more{
+		display:block !important;
+		width: 32%;
+	}
 	
 } 
 @media screen and (max-width:767px){  
@@ -2038,18 +2049,6 @@ a.over-infografia:hover  .overlay-infografia {
 		display:block;
 		margin:0;
 	}
-	.cover {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 10;
-		display: none;
-		background-color: #000000;
-		opacity: .7;
-		filter:progid:DXImageTransform.Microsoft.BasicImage(opacity=.7);
-	}
 }
 @media screen and (max-width:640px){  
 	.buscadorBottom .widget_search {
@@ -2099,6 +2098,9 @@ a.over-infografia:hover  .overlay-infografia {
 	.nav-footer-resp{
 		text-align:center;
 		width:100%;
+	}
+	.divNotaGabinete .read-more{
+		width: 100%;
 	}
 }  
 

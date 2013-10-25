@@ -11,14 +11,14 @@ $( document ).ready(function() {
 		$(this).children().find('img').addClass('z_index-2');
 		$(this).children().find('h3').addClass('z_index-2-top');
 		$(this).find('.gabinete-over').show().animate({height: "360px", width: "506px", opacity: 1 }, 900);
-		$(this).siblings().find('.read-more').hide();
-		$(this).children().find('.siglas-depencia').hide();
+		/*$(this).siblings().find('.read-more').hide();*/
+		/*$(this).children().find('.siglas-depencia').hide();*/
 	}, function(e) {
 		e.preventDefault();
 		$(this).children().find('h3').removeClass('z_index-2-top');
 		$(this).find('.gabinete-over').hide()/*.animate({height: "0px", width: "0px", opacity: 0}, 800)*/;
-		$(this).siblings().find('.read-more').show();
-		$(this).children().find('.siglas-depencia').show();
+		//$(this).siblings().find('.read-more').show();
+		/*$(this).children().find('.siglas-depencia').show();*/
 		$(this).children().find('img').removeClass('z_index-2');
 	})
 });
@@ -70,7 +70,7 @@ $( document ).ready(function() {
                                 <a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a>
                             </div>
                         </div>
-                       <!--<center><a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a></center>-->
+                        <center><a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a></center>
                         <?php if($cont%4==0){ ?>
                         	</div><div class="clear">
 						<?php } ?>
