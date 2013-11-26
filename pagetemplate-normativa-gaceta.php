@@ -14,15 +14,16 @@ Template Name: Link Page
         <div class="back-img"></div>
         <div class="content-normativa">
                 <div class="item-normativa">
-                	<?php the_content(); ?>
-                	<div class="clear"></div>
                     <?php if($my_meta!=''){ ?>	
 						<?php if($my_meta['image_src']!=""){ ?>
                             <img src="<?php echo esc_url($my_meta['image_src']) ?>" class="img-responsive">
                         <?php } ?>
+		               	<div class="clear"></div>
+                        <?php the_content(); ?>
                         <div class="clear"></div>
+                        <br><br>
                         <?php if($my_meta['descripcion_normativa_gaceta']!=""){ ?>
-                            <p class="bottom-23"><?php echo esc_html($my_meta['descripcion_normativa_gaceta']); ?></p>
+                            <p class="bottom-23" style="font-style:italic;"><?php echo esc_html($my_meta['descripcion_normativa_gaceta']); ?></p>
                         <?php } ?>
                         <div class="clear"></div>
                         <?php if($my_meta['url_normativa_gaceta']!=""){ ?>

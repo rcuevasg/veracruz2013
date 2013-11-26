@@ -2,7 +2,11 @@
 /* CSS Document */
 
 .my_meta_control table{
+	border:none !important;
 	width:100%;
+}
+.my_meta_control table td{
+	border:none;
 }
 .my_meta_control input[type="text"]{
 	width:70%;

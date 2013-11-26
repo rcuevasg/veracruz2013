@@ -10,7 +10,7 @@ $( document ).ready(function() {
 		e.preventDefault();
 		$(this).children().find('img').addClass('z_index-2');
 		$(this).children().find('h3').addClass('z_index-2-top');
-		$(this).find('.gabinete-over').show().animate({height: "360px", width: "506px", opacity: 1 }, 900);
+		$(this).find('.gabinete-over').show();
 		/*$(this).siblings().find('.read-more').hide();*/
 		/*$(this).children().find('.siglas-depencia').hide();*/
 	}, function(e) {
@@ -23,9 +23,27 @@ $( document ).ready(function() {
 	})
 });
 </script>
-    <div id="content-list" class="container principalContent gabineteTop">
+    <div id="content-list" class="container principalContent">
+    <div class="tituloSingleArea">
+            <h2><?php the_title(); ?></h2>
+        </div>
+        <div class="back-img"></div>
+        <div class="entrytext subirTop">
+                    <div class="item-normativa gabineteDesc">
+                      <div class="back-img"></div>
+                      <p>
+                      El Gabinete está conformado por los Titulares de cada una de las Dependencias del Gobierno del Estado de Veracruz. En ejercicio de su función, el Gobernador del Estado es el encargado del nombramiento de los titulares de las dependencias de Gobierno.
+                      </p>
+                      <div class="back-img"></div>
+                     </div>
+        </div>
 		<?php
-			$args = array('post_type' => 'page', 'post_parent' => $post->ID, 'order' => 'ASC');
+			$args = array(
+				'post_type' => 'page', 
+				'post_parent' => $post->ID, 
+				'order' => 'ASC', 
+				'posts_per_page' => -1,
+			);
             $the_query = new WP_Query($args);
             if ( $the_query->have_posts() ) {
                 $cont=1;
@@ -35,7 +53,7 @@ $( document ).ready(function() {
 					$logo_dependencia=get_post_meta($the_query->post->ID, 'logo-dependencia', true);
 					$link_dependencia=get_post_meta($the_query->post->ID, 'link-dependencia', true);
                     ?>
-					<div class="divNotaGabinete col-md-3 col-lg-3">
+					<div class="divNotaGabinete col-md-3 col-lg-3 item-nota">
                     	<?php if($cont%4!=0){ ?>
                         	<div class="item-gabinete">
 						<?php }else{ ?>
@@ -62,12 +80,21 @@ $( document ).ready(function() {
                                         </div>
                                     <?php } ?>
                                     <div class="link-dependecia">
-                                     	<a href="<?php echo $link_dependencia; ?>">Visitar sitio >></a>
+                                     	<a href="<?php echo $link_dependencia; ?>"  target="_blank">Visitar sitio ></a>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="bg-card-gabinete"></div>
+                                <?php 
+								$nombreSub = get_the_title();
+								if($nombreSub=="Mauricio Audirac Murillo"){
+								?>
+                                <a href="#" style="display:none;" >SEMBLANZA</a>
+								<?php 
+								}else{
+								?>
                                 <a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a>
+                                <?php }?>
                             </div>
                         </div>
                         <center><a href="<?php the_permalink(); ?>" class="read-more margin-0">SEMBLANZA</a></center>
@@ -75,10 +102,11 @@ $( document ).ready(function() {
                         	</div><div class="clear">
 						<?php } ?>
                 	</div>
-			<?php $cont++; }
+			<?php 
+				$cont++; }
             }
-            wp_reset_postdata();
         ?>
+		<?php wp_reset_postdata();?>	
     </div>
     <div class="border-bottom"></div>
 <?php get_footer(); ?>

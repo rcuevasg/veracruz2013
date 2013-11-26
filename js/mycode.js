@@ -1,3 +1,3 @@
-jQuery(function($j) {
-	jQuery('.carousel').carousel();
-	});
+$(function($) {
+	$('.carousel').carousel();
+});

@@ -22,7 +22,7 @@ Template Name: Eventos especiales
                         <?php
 							
 							$counterActive = 1;
-							$args=array('post_type'=>'attachment','post_parent'=>get_the_ID(),'order' => 'ASC', 'orderby' => 'menu_order ID', 'posts_per_page'=>99);
+							$args=array('post_type'=>'attachment','post_parent'=>get_the_ID(),'order' => 'ASC', 'orderby' => 'menu_order ID', 'posts_per_page'=>4);
 							$attachments=get_posts($args);
 							if($attachments){
 								foreach($attachments as $attachment){
@@ -57,9 +57,9 @@ Template Name: Eventos especiales
                         <ol class="carousel-indicators">
                         <?php $cont_item=0;  while(count($attachments)> $cont_item){ ?>
                             <?php if($cont_item == 0){ ?>
-                            <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>" class="active"></li>
+                            <li data-target="#carousel-destacados" data-slide-to="<?php echo $cont_item ?>" class="active"></li>
                         	<?php } else{ ?>
-							<li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>"></li>
+							<li data-target="#carousel-destacados" data-slide-to="<?php echo $cont_item ?>"></li>
 							<?php } ?>
 						<?php $cont_item++; }?>
 						</ol>
@@ -74,35 +74,35 @@ Template Name: Eventos especiales
                 </div><!-- end #carousel-destacados -->
             </div><!-- end #divCarrusel -->
         </section> <!-- end #mainCarrusel -->
-        <div class="content-eventos">
-            <table>
+        <div class="content-eventos col-lg-12 col-md-12 col-sm-12">
             <?php 
             if($my_meta!=''){ 
-                foreach($my_meta['eventos'] as $evento){  ?>
-                    <tr>                  
-                        <td class="col-xs-6 col-sm-4 col-lg-4">
+                foreach($my_meta['eventos'] as $evento){  ?>                  
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <?php if($evento['image_src']!=""){ ?>
+                            <span class='img img-responsive'>
                                 <img src="<?php echo esc_url($evento['image_src']) ?>" class="img-responsive">
+                            </span>    
                             <?php } ?>
-                        </td>
-                        <td class="col-xs-12 col-md-8">
-                            <div class='title-evento'>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div class='title-evento col-lg-8 pull-left col-md-8 pull-left'>
                             <?php if($evento['name_evento']!=""){ ?>
                                 <?php echo $evento['name_evento']; ?>
                             <?php } ?>
-                            <?php if($evento['url_evento']!=""){ ?>
+                            </div>
+                            <div class="descripcion-evento pull-left col-lg-8 col-md-8 col-xs-12">
+                                <?php echo $evento['desc_evento']; ?>
+                                <?php if($evento['url_evento']!=""){ ?>
+                            	<div class="pull-right">
                                 <a href="<?php echo esc_url($evento['url_evento']); ?>" class="read-more" target="_blank">VISITAR SITIO</a>
+                                </div>
                             <?php } ?>
                             </div>
-                            <div class="descripcion-evento">
-                                <?php echo $evento['desc_evento']; ?>
-                            </div>
-                        </td>
-                    </tr>
+                        </div>
             <?php }
             }
             ?>
-            </table>
         <?php endwhile; // end of the loop. ?>
         </div>
     </div>

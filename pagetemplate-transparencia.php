@@ -20,7 +20,7 @@ echo get_the_title();//$post->post_parent
 <div class="col-sm-12 col-md-12 col-lg-12 contenedor-pages">
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 <div class="back-img"></div>
-<div class="col-md-12 col-lg-12">
+<div class="col-md-12 col-lg-12" style="margin-top:7%;">
  		<?php 
 			$descripcion = get_post_meta($post->ID, 'descripcion', true);
 		?>
@@ -32,7 +32,7 @@ echo get_the_title();//$post->post_parent
 						}
 					?>
                     </div>
-    <div class="text-dependencias">
+    <div class="text-dependencias centrarTexto">
 <div class="content-dependencia"> <h3><?php echo get_the_title();//$post->post_parent	?></h3></div>
 				<?php
                     if($descripcion){
@@ -50,7 +50,7 @@ echo get_the_title();//$post->post_parent
 <div class="listado-categorias-comunicados col-md-12 col-lg-12">
 <table align="center">
 <?php
-$category_id = get_cat_ID('Comunicados');
+$category_id = get_cat_ID('Dependencias');
 //$categories = get_categories('child_of=$category_id'); 	
 $args = array(
   'show_option_all'    => '',
@@ -66,7 +66,7 @@ foreach ( $categories as $category ) {
 	<div class="categorias-hover">
 	<tr class="categorias-hover-tr" onclick="doclick('<?php echo $hello; ?>')">
 	<td class="flecha-verde">&nbsp;</td>
-	<td class="link-hover"><br><?php echo $category->name; ?><br><br></td>
+	<td class="link-hover" style="padding-right: 6%; text-align: center; font-size: 1.500em;"><br><?php echo $category->name; ?><br><br></td>
 	<td><br><?php echo $category->description; ?><br><br></td>
 	</tr>
 	</div>

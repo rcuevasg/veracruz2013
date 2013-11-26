@@ -32,7 +32,7 @@ endif;*/
 
 if( !is_admin()){
    wp_deregister_script('jquery');
-   wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '');
+   wp_register_script('jquery', (get_bloginfo('template_directory').'/js/jquery.min.js'), false, '');
    wp_enqueue_script('jquery');
    /**
 	* jQuery Cycle*/
@@ -52,9 +52,9 @@ if( !is_admin()){
 	
 	/**
 	* My code for jquery*/
-	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/typeface-0.15.js');
+	/*wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/typeface-0.15.js');
 	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/trajan_pro_bold.typeface.js');
-	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/gandhi_serif_regular.typeface.js');
+	wp_enqueue_script('typeface', get_bloginfo('template_directory').'/js/gandhi_serif_regular.typeface.js');*/
 	wp_enqueue_script('mycode', get_bloginfo('template_directory').'/js/mycode.js'); 
 	
 }
@@ -88,12 +88,12 @@ add_theme_support('automatic-feed-links');
 
 
 // Replaces the excerpt "more" text by a link
-function new_excerpt_more($more) {
+/*function new_excerpt_more($more) {
        global $post;
 	return '<div class="clear"></div><a class="moretag btn btn-default read-more" title="'.get_the_title($post->ID).'" href="'. get_permalink($post->ID) . '"> Leer m&aacute;s</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
+*/
 /**
  *MENU AREAS
  *Defining a top menu, main menu and bottom menu
@@ -116,7 +116,7 @@ register_nav_menus(array(
 function veracruz2013_widgets_init() {
 	// Area 1, located int the header.
 	register_sidebar( array(
-		'name' => __( 'Buscador Widget Area Header', 'veracruz2013' ),
+		'name' => __( 'Buscador en Header', 'veracruz2013' ),
 		'id' => 'buscador-widget-area',
 		'description' => __( 'Buscador Widget para el area header.', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -127,7 +127,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 2, located at the top of the sidebar
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'veracruz2013' ),
+		'name' => __( 'Sidebar Home y Single', 'veracruz2013' ),
 		'id' => 'sidebar-widget-area',
 		'description' => __( 'Sidebar widgets on the right column of the page', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -138,7 +138,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 3, first area on the footer
 	register_sidebar( array(
-		'name' => __( 'First footer widget area', 'veracruz2013' ),
+		'name' => __( 'Widget => Footer Blog (Menu) ', 'veracruz2013' ),
 		'id' => 'first-footer-widget-area',
 		'description' => __( 'First widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -149,7 +149,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 4, second area on the footer
 	register_sidebar( array(
-		'name' => __( 'Second footer widget area', 'veracruz2013' ),
+		'name' => __( 'Widget => Footer Gobierno (Menu)', 'veracruz2013' ),
 		'id' => 'second-footer-widget-area',
 		'description' => __( 'Second widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -160,7 +160,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 5, third area on the footer
 	register_sidebar( array(
-		'name' => __( 'Third footer widget area', 'veracruz2013' ),
+		'name' => __( 'Widget => Footer Servicios (Menu)', 'veracruz2013' ),
 		'id' => 'third-footer-widget-area',
 		'description' => __( 'Third widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -171,7 +171,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 6, first area on the footer
 	register_sidebar( array(
-		'name' => __( 'Fourth footer widget area', 'veracruz2013' ),
+		'name' => __( 'Widget => Footer Sala de prensa (Menu)', 'veracruz2013' ),
 		'id' => 'fourth-footer-widget-area',
 		'description' => __( 'Fourth widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -182,7 +182,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 7, first area on the footer
 	register_sidebar( array(
-		'name' => __( 'Fifth footer widget area', 'veracruz2013' ),
+		'name' => __( 'Widget => Footer Contacto (Menu)', 'veracruz2013' ),
 		'id' => 'fifth-footer-widget-area',
 		'description' => __( 'Fifth widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -193,7 +193,7 @@ function veracruz2013_widgets_init() {
 	
 	//Area 8, first area on the footer
 	register_sidebar( array(
-		'name' => __( 'Search footer widget area', 'veracruz2013' ),
+		'name' => __( 'Buscador en footer', 'veracruz2013' ),
 		'id' => 'search-footer-widget-area',
 		'description' => __( 'Search widget area on the footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -203,7 +203,7 @@ function veracruz2013_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Widget para la direccion en el footer', 'veracruz2013' ),
+		'name' => __( 'Copyright en footer', 'veracruz2013' ),
 		'id' => 'copyright-footer',
 		'description' => __( 'Colocar en el sidebar copyright footer', 'veracruz2013' ),
 		'before_widget' => '<div id="%1$s" class="widget-container-copyright %2$s">',
@@ -277,7 +277,7 @@ add_action( 'init', 'cets_media_tags_init', 0 );
 //next child page
 function siblings($link) {
     global $post;
-    $siblings = get_pages('child_of='.$post->post_parent.'&parent='.$post->post_parent);
+    $siblings = get_pages('child_of='.$post->post_parent.'&parent='.$post->post_parent.'&sort_column=post_date&sort_order=DESC');
     foreach ($siblings as $key=>$sibling){
         if ($post->ID == $sibling->ID){
             $ID = $key;
@@ -317,10 +317,10 @@ function get_video_ajax(){
 	$query = new WP_Query( 'p='.$_POST['post_id'] );
 	if ( $query->have_posts() ) :
 		while ($query->have_posts()):$query->the_post(); 
-				$link = get_post_meta($query->post->ID, 'Video_youtube' , true); 
+				$link = get_post_meta($query->post->ID, 'youtube-link' , true); 
 				echo "<div class='col-md-8 video-container'>";
-					$pieces=explode('=',$link);
-					echo "<iframe width='598' height='330' src='http://www.youtube.com/embed/".end($pieces)."?rel=0&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe>";
+					//$pieces=explode('=',$link);
+					echo "<iframe width='598' height='330' src='http://www.youtube.com/embed/".$link."?rel=0&amp;wmode=transparent' frameborder='0' allowfullscreen></iframe>";
 				echo "</div>";
 				echo "<div class='col-md-4 padding-30'>";
 					echo "<h6 class='date'>";
@@ -351,14 +351,15 @@ function get_images_gallery(){
 			if($attachments){
 				foreach($attachments as $attachment){
 					$img_full=wp_get_attachment_image_src( $attachment->ID, 'full' );
-					$data_images[$cont] = "$img_full[0]";
-					$data_title[$cont] = "'".get_the_title()."'";
+					$img_data_lightbox = get_bloginfo('template_url')."/timthumb.php?src=".urlencode($img_full[0])."&a=cc&w=900";
+					$data_images[$cont] = $img_data_lightbox;
+					$data_title[$cont] = get_the_title();
 				$cont++;}
 			}
 	endwhile; endif; 
 	$arr_return = array(
-	  'images'=> $data_images,
-	  'title'=> $data_title
+	  'images' => $data_images,
+	  'title' => $data_title
 	);
 	echo json_encode($arr_return);
 	wp_reset_query(); 
@@ -366,6 +367,28 @@ function get_images_gallery(){
 }
 add_action('wp_ajax_get_images_gallery', 'get_images_gallery');
 add_action('wp_ajax_nopriv_get_images_gallery', 'get_images_gallery');
+
+/*get_load_more*/
+function get_load_more(){
+	$args = array(
+		'post_type' => 'post',
+		'category_name' => 'fotos',
+		'posts_per_page'=> 3,
+		'paged' => $_POST['page']
+	);
+	$notas = new WP_Query($args);
+	if ($notas->have_posts()) :
+		while ($notas->have_posts()):$notas->the_post(); 
+			the_title();
+		endwhile; 
+	endif; 
+	wp_reset_query(); 
+	die(); 
+}
+add_action('wp_ajax_get_load_more', 'get_load_more');
+add_action('wp_ajax_nopriv_get_load_more', 'get_load_more');
+
+
 
 //-----Función para limitar caracteres-----//
 function cutString($string,$charlength,$key) {
@@ -419,4 +442,69 @@ function myTruncate($string, $limit, $break=".", $pad="…") {
 		} 
 	return $string; 
 }
+
+function get_post_destacado($category_slug){
+	global $wpdb;
+	$query = $wpdb->prepare("
+	SELECT SUBQ.ID FROM (      
+		SELECT ID,
+			    (SELECT COUNT(object_id) FROM gev_term_relationships WHERE object_id = POST.ID AND term_taxonomy_id IN ((SELECT term_taxonomy_id FROM gev_term_taxonomy WHERE term_id IN ( SELECT term_id FROM `gev_terms` WHERE slug = '$category_slug')))) AS BLOG,
+			    (SELECT COUNT(object_id) FROM gev_term_relationships WHERE object_id = POST.ID AND term_taxonomy_id = 64) AS DESTACADOS
+				FROM gev_posts AS POST
+				WHERE id IN (
+						SELECT DISTINCT object_id 
+						FROM gev_term_relationships 
+						WHERE term_taxonomy_id IN 
+							(SELECT term_taxonomy_id FROM gev_term_taxonomy
+							 WHERE term_id IN ( SELECT term_id FROM 
+									  `gev_terms`
+									  WHERE slug = 'destacados' OR slug = '$category_slug'
+									  )
+							 )
+						) AND POST.post_type = 'post'
+					) AS SUBQ
+					WHERE SUBQ.BLOG = 1 AND SUBQ.DESTACADOS = 1 ORDER BY ID DESC LIMIT 1;",array($category_slug));
+	
+	 $result_query = $wpdb->get_var($query);
+	 //print_r($wpdb->last_query);
+	 return $result_query;
+}
+
+function get_cat_slug($cat_id) {
+	$cat_id = (int) $cat_id;
+	$category = &get_category($cat_id);
+	return $category->slug;
+}	
+function get_cat_slug_by_id($id) {
+	$cat_test = get_the_category( $id );
+	$count=0;
+	foreach($cat_test as $cat_index){
+		if($cat_index->slug == 'fotos'){
+			return "foto";
+			break;
+		}else if($cat_index->slug == 'videos'){
+			return "video";
+			break;
+		}else{
+			return "nota";
+			break;
+		}
+		$count++;	
+	}
+}
+function mySearchFilter($query) {
+	if( !is_admin()){
+		if ($query->is_search) {
+			$query->set('post_type', 'post');
+		}
+		return $query;
+	}
+}
+add_filter('pre_get_posts','mySearchFilter');	
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+	 add_post_type_support( 'page', 'excerpt' );
+}
+
 ?>

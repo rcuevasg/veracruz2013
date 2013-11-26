@@ -10,3 +10,7 @@
 .ri-grid ul li a img{
 	width: 100%;
 }
+.ri-grid ul li a {
+	width: 100% !important;
+	height: 100% !important;
+}

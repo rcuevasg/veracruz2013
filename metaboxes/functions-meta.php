@@ -26,3 +26,12 @@ $custom_select_mb3 = new WPAlchemy_MetaBox(array
 	'hide_editor' => false,
 	'include_template' => array('pagetemplate-normativa-gaceta.php'),
 ));
+
+$custom_select_mb3 = new WPAlchemy_MetaBox(array
+(
+	'id' => '_img_alinear',
+	'title' => 'Elija la alineación de la imagen',
+	'template' => get_stylesheet_directory() . '/metaboxes/meta-alinear.php',
+	'types' => array('post'),
+	'hide_editor' => false
+));

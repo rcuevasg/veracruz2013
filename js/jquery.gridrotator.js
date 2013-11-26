@@ -116,7 +116,7 @@
 		// number of rows
 		rows : 2,
 		// number of columns 
-		columns : 2,
+		columns : 3,
 		w1024 : { rows : 3, columns : 8 },
 		w768 : {rows : 3,columns : 7 },
 		w480 : {rows : 3,columns : 5 },
@@ -146,7 +146,7 @@
 		animEasingIn: 'linear',
 		// the item(s) will be replaced every 3 seconds
 		// note: for performance issues, the time "can't" be < 300 ms
-		interval : 5000,
+		interval : 3000,
 		// if false the animations will not start
 		// use false if onhover is true for example
 		slideshow : true,

@@ -16,59 +16,51 @@
 <!--[if IE 9 ]><html <?php language_attributes(); ?> class="no-js ie ie9 lte9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-	<head>
-		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		<title><?php
-			/*
-			 * Print the <title> tag based on what is being viewed.
-			 * We filter the output of wp_title() a bit -- see
-			 * boilerplate_filter_wp_title() in functions.php.
-			 */
-			wp_title( '|', true, 'right' ); bloginfo('name'); print " | "; bloginfo('description');
-		?></title>
-			
-	    <meta name="description" content="<?php echo '' . get_bloginfo ( 'description' );  ?>">
-	    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-	    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> 
-	   
-	    
-		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-		
-		
-
-		
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <title>
+        <?php
+            wp_title( '|', true, 'right' ); bloginfo('name'); bloginfo('description');
+        ?>
+    </title>
+    <meta charset="UTF-8">
+    <meta content="<?php bloginfo( 'html_type' ) ?>; charset=<?php bloginfo( 'charset' ) ?>" http-equiv="Content-Type" />
+    <meta name="description" content="Portal Oficial del Gobierno del Estado de Veracruz">
+    <meta name="keywords" content="veraruz, gobierno, javier duarte, adelante, desarrollo, progreso">
+    <meta name="author" content="Departamento de Servicios Electrónicos Multicanal - Gobierno Electrónico">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> 
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
-		/* We add some JavaScript to pages with the comment form
-		 * to support sites with threaded comments (when in use).
-		 */
-		if ( is_singular() && get_option( 'thread_comments' ) )
-			wp_enqueue_script( 'comment-reply' );
-
-		
-			
-		/* Always have wp_head() just before the closing </head>
-		 * tag of your theme, or you will break many plugins, which
-		 * generally use this hook to add elements to <head> such
-		 * as styles, scripts, and meta tags.
-		 */
-		wp_head();
-?>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
-	<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $("a[rel^='prettyPhoto']").prettyPhoto({
-            social_tools: '<div id="social" class="addthis_toolbox addthis_default_style" addthis:url=""> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a> <a class="addthis_button_pinterest_share"></a> <a class="addthis_button_google_plusone_share"></a> <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a><br><br></div>',
-            changepicturecallback: function(){ var addthis_share = $('#fullResImage, #pp_full_res iframe').attr('src'); show_url_social(addthis_share); addthis.toolbox("#social"); },
-            //ajaxcallback: function() { var addthis_share = $('#fullResImage, #pp_full_res iframe').attr('src'); show_url_social(addthis_share); addthis.toolbox("#social");}
-        });
-    });
-    function show_url_social(url){
-        $('#social').attr('addthis:url', url);	
-    }
-	
+	/* We add some JavaScript to pages with the comment form
+	 * to support sites with threaded comments (when in use).
+	 */
+	if ( is_singular() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' );
+	/* Always have wp_head() just before the closing </head>
+	 * tag of your theme, or you will break many plugins, which
+	 * generally use this hook to add elements to <head> such
+	 * as styles, scripts, and meta tags.
+	 */
+	wp_head();
+?>	
+    <!--//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js-->
+<script src="<?php bloginfo('template_url')?>/js/bootstrap.min.js"></script>
+<script src="<?php bloginfo('template_url')?>/picturefill-master/picturefill.js"></script>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50bb6a904ee20c54"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			social_tools: '<div id="social" class="addthis_toolbox addthis_default_style" addthis:url=""> <a class="addthis_button_facebook"></a> <a class="addthis_button_twitter"></a> <a class="addthis_button_pinterest_share"></a> <a class="addthis_button_google_plusone_share"></a> <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a><br><br></div>',
+			changepicturecallback: function(){ var addthis_share = $('#fullResImage, #pp_full_res iframe').attr('src'); show_url_social(addthis_share); addthis.toolbox("#social"); },
+			//ajaxcallback: function() { var addthis_share = $('#fullResImage, #pp_full_res iframe').attr('src'); show_url_social(addthis_share); addthis.toolbox("#social");}
+		});
+	});
+	function show_url_social(url){
+		$('#social').attr('addthis:url', url);	
+	}
 	$(document).ready(function(){
 		$( ".navbar-nav  > li " ).mouseover(function() {
 			if($(this).find(".sub-menu").length){
@@ -78,17 +70,16 @@
 				}
 			}
 		}).mouseout(function() {
-				   $(".active-sub").removeClass("active-sub");
+			$(".active-sub").removeClass("active-sub");
 		});
 	});
-
-	</script>
-    </head>
+</script>
+</head>
 	<body <?php body_class(); ?>>
 		<div class="cover"></div>
         <div class="container" id="page">
 			<header id="header" role="banner">
-				<section id="topBar" class="container">
+                <section id="topBar" class="container">
                     <hgroup id="site-title" class="col-md-12 col-lg-12 hidden-xs">
                         <?php
                         if ( is_active_sidebar( 'menu-header-home-widget-area' ) ) : ?>
@@ -106,16 +97,20 @@
                         </h1>
                         <h4 ><span><?php bloginfo( 'description' ); ?></span></h4>
                     </hgroup>
-				</section>
+                </section>
 				<nav id="mainMenu" class="navbar navbar-inverse col-md-12 col-lg-12" role="navigation">
-						<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" > 
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						</button> 
-						<center><img src="<?php bloginfo('template_url') ?>/images/logo.png" border="0" class="img-responsive visible-xs" /></center>
-						</div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" > 
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button> 
+                        <center>
+                        	<a href="<?php print home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+                            	<img src="<?php bloginfo('template_url') ?>/images/logo.png" border="0" class="img-responsive visible-xs" />
+                            </a>
+                        </center>
+                    </div>
 					<?php
 					//Checks if there is something on top-menu
 					if (has_nav_menu('top-menu')):
@@ -128,22 +123,17 @@
 					endif; 
 					?>
 				</nav>
-				
-				<?php if (is_home() || is_front_page()) : ?>
+				<?php if (is_home() || is_front_page() || is_page('pagina_principal')) : ?>
 				<section id="mainCarousel" class="container">
-				
 				<div id="divCarrusel" class="col-lg-12">
-
 					<div id="carousel-destacados" class="carousel slide col-lg-12" data-interval="4000">
-
-					
 					<div class="carousel-inner">
 						<?php
 						$categoriaSlider = get_category_by_slug('slider');
 						$categoriaSlider = $categoriaSlider->term_id;
 						$counterActive = 1;
 						      
-						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=4&post_type=post');
+						 $notasSlider = new WP_Query('cat=' . $categoriaSlider . '&showposts=4&post_type=post&orderby=menu_order&order=ASC');
 						 while ($notasSlider->have_posts()) :
 						 	$notasSlider->the_post();
 						 	$wp_query->in_the_loop = true;
@@ -162,18 +152,21 @@
 							   
 								if (!empty($thumbnailsrc)):
 								?>
-									<div style="display:inline-block;" class="">
-								 	<span class='img img-responsive'><img class="img-responsive" src='<?php bloginfo('template_url') ?>/timthumb.php?src=<?php print $thumbnailsrc; ?>&w=1100&h=400' border=0 /></span>
-								 	</div>
+                                	<!--<a href="http://tercerinforme.veracruz.gob.mx" target="_blank">-->
+                                        <div style="display:inline-block;">
+                                            <span class='img img-responsive'><img class="img-responsive" src='<?php print $thumbnailsrc; ?>' border=0 /></span>
+                                        </div>
+								 	<!--</a>-->
 								 <?php
 								 endif;
 								 ?>
-				
 								<div style="display:inline-block;" class="carousel-caption">
-								<?php
-								print "<h4><a href='". get_permalink() ."' title='Ir a ". get_the_title() ."'>" . get_the_title() . "</a></h4>";
-								?>
-								<a class="btn btn-default read-more pull-right" href="<?php print get_permalink(); ?>" title="Leer m&aacute;s de <?php print get_the_title(); ?>">Leer m&aacute;s</a>
+									<?php
+                                    print "<h4><a href='". get_permalink() ."' title='Ir a ". get_the_title() ."'>" . get_the_title() . "</a></h4>";
+									?>
+                                    <a class="btn btn-default read-more pull-right" href="<?php print get_permalink(); ?>" title="Leer m&aacute;s de <?php print get_the_title(); ?>">
+                                    Leer m&aacute;s
+                                    </a>
 								</div>
 							</div>
 								<?php
@@ -187,14 +180,13 @@
 						<ol class="carousel-indicators">
 							<?php $cont_item=0;  while($notasSlider->post_count > $cont_item){ ?>
 								<?php if($cont_item == 0){ ?>
-                                    <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>" class="active"></li>
+                                    <li data-target="#carousel-destacados" data-slide-to="<?php echo $cont_item ?>" class="active"></li>
                                 <?php } else{ ?>
-                                    <li data-target="#carousel-destacados" data-slide-to="<?=$cont_item ?>"></li>
+                                    <li data-target="#carousel-destacados" data-slide-to="<?php echo $cont_item ?>"></li>
                                 <?php } ?>
 							<?php $cont_item++; }?>
 						</ol>
 					</div><!-- end .carousel-indicators-wrapper -->
-					
 					<!-- Controls -->
 					  <a class="left carousel-control" href="#carousel-destacados" data-slide="prev">
 					    <span class="icon-prev"></span>
@@ -202,17 +194,12 @@
 					  <a class="right carousel-control" href="#carousel-destacados" data-slide="next">
 					    <span class="icon-next"></span>
 					  </a>
-					
 					</div><!-- end #carousel-destacados -->
-
 				</div><!-- end #divCarrusel -->
-				
 				</section> <!-- end #mainCarrusel -->
 				<?php endif; ?>
-				
-				
 				<?php
-					if (is_front_page() || is_single()):
+					if (is_front_page() || is_single() ):
 					/* When we call the dynamic_sidebar() function, it'll spit out
 					* the widgets for that widget area. If it instead returns false,
 					* then the sidebar simply doesn't exist, so we'll hard-code in
@@ -228,9 +215,5 @@
 						
 					endif;
 					?>
-	
 			</header>
-			
-
 			<section id="main" role="main" class="row">
-			

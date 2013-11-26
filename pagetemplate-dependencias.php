@@ -34,15 +34,16 @@ echo get_the_title();//$post->post_parent
 <div class="content-dependencia"> <h3><?php echo get_the_title();//$post->post_parent	?></h3></div>
    	<?php the_content(); ?>
 <div class="listado-categorias-comunicados col-md-12 col-lg-12">
-<table align="center">
+<table align="center" class="col-md-12 col-lg-12">
 <?php
-$category_id = get_cat_ID('Comunicados');
+$category_id = get_cat_ID('Dependencias');
 //$categories = get_categories('child_of=$category_id'); 	
 $args = array(
   'show_option_all'    => '',
   'order' => 'DESC',
   'hide_empty'         => 0,
   'hierarchical'       => 1,
+  'exclude'            => '5038', //id category verecruz
   'parent' => $category_id
   );
 $categories = get_categories( $args );
@@ -51,7 +52,7 @@ foreach ( $categories as $category ) {
 	<div class="categorias-hover">
 	<tr class="categorias-hover-tr" onclick="doclick('<?php echo get_category_link( $category->term_id ); ?>')">
 	<td class="flecha-verde">&nbsp;</td>
-	<td class="link-hover"><br><?php echo $category->name; ?><br><br></td>
+	<td class="link-hover" style="padding-right: 6%; text-align: center; font-size: 1.500em;"><br><?php echo $category->name; ?><br><br></td>
 	<td><br><?php echo $category->description; ?><br><br></td>
 	</tr>
 	</div>

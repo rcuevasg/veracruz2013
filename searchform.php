@@ -1,4 +1,21 @@
-<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+<script>
+jQuery(document).ready(function() {
+	jQuery(function () {
+		
+		jQuery('#validarForm').click(function () {
+			$.ajaxSetup({cache:false});
+				if($("#s").val().length < 1){
+					$("#s").focus();								 
+					return false;
+					}else{
+						return true;
+						}
+				});
+	});
+
+});
+</script>
+<form role="search" method="get" class="search-form" autocomplete="off" action="<?php echo home_url( '/' ); ?>">
 	<!-- <div class="input-group">
 		<input type="search" class="search-field form-control" placeholder="Buscar" value="" name="s" />
 		<span class="input-group-btn">
@@ -11,9 +28,14 @@
 	
 	
 	<div class="input-group">
-      <input type="text" class="search-field form-control" placeholder="¿Qué estás buscando?" value="" name="s">
+    <?php 
+		$categoriaBlog = get_category_by_slug('blog');
+		$categoriaBlog = $categoriaBlog->term_id;
+	?>
+	  <input type="hidden" value="<?php echo $categoriaBlog; ?>" name="cat">
+      <input type="text" class="search-field form-control" placeholder="¿Qué estás buscando?" value="" name="s" id="s">
       <span class="input-group-btn">
-        <button class="btn btn-default " type="submit"><span class="glyphicon glyphicon-search"></span></button>
+        <button class="btn btn-default " id="validarForm" type="submit" onClick="validar()"><span class="glyphicon glyphicon-search"></span></button>
       </span>
     </div><!-- /input-group -->
 </form>
